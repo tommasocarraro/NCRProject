@@ -30,7 +30,7 @@ class Dataset(object):
         self.n_users = self.dataset['userID'].nunique()
         self.n_items = self.dataset['itemID'].nunique()
 
-        # self.user_item_matrix = self.compute_sparse_matrix()
+        self.user_item_matrix = self.compute_sparse_matrix()
 
 
     def compute_sparse_matrix(self):
@@ -161,7 +161,7 @@ class Dataset(object):
             hist_len = [] # each element of this list indicates the number of history items of a single interaction
             uids, iids, feedbacks = df['userID'].tolist(), df['itemID'].tolist(), df['rating'].tolist()
             for i, uid in enumerate(uids):
-                iid, feedback = str(iids[i]), feedbacks[i]
+                iid, feedback = iids[i], feedbacks[i]
 
                 if uid not in history_dict:
                     history_dict[uid] = []
