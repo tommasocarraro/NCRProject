@@ -2,7 +2,7 @@ from ncr.data import Dataset
 
 if __name__ == '__main__':
     #dataset = Dataset("datasets/u.data")
-    dataset = Dataset("datasets/fake.csv", sep=',', convert_to_indexes=True)
+    dataset = Dataset("datasets/toy-dataset/fake.csv", sep=',', convert_to_indexes=True)
 
     dataset.process_data(threshold=4, order=True)
 
