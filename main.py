@@ -13,10 +13,10 @@ if __name__ == '__main__':
     print(dataset.proc_dataset)
 
     print("Train set interactions")
-    print(dataset.train)
+    print(dataset.train_set)
 
     print("Validation set interactions")
-    print(dataset.validation)
+    print(dataset.validation_set)
 
     print("Test set interactions")
-    print(dataset.test)
+    print(dataset.test_set)
