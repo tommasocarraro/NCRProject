@@ -144,9 +144,11 @@ class Dataset(object):
         """
         Generate history interaction sequence (items at the left side of implication) for each interaction in train,
         validation, and test sets, and appends it to the dataframe.
-        In particular, it adds to the dataframe two columns:
-            - history column: it contains the items to be put at the left side of implication
-            - feedback_of_history column: it contains the feedback for the items in the history
+        In particular, it adds to the dataframe three columns:
+            - history column: it contains the items to be put at the left side of implication;
+            - history_feedback column: it contains the feedback for the items in the history;
+            - history_length column: it contains the length of the history. This is needed for creating batches.
+            In particular, we force each batch to have only samples with the same history length.
         :param max_hist_length: the max history length to keep (max number of items at the left side of the
         implication), ==0 value means keeps all.
         """
@@ -156,6 +158,7 @@ class Dataset(object):
             history = [] # each element of this list is a list containing the history items of a single interaction
             fb = [] # each element of this list is a list containing the feedback for the history items of a
             # single interaction
+            hist_len = [] # each element of this list indicates the number of history items of a single interaction
             uids, iids, feedbacks = df['userID'].tolist(), df['itemID'].tolist(), df['rating'].tolist()
             for i, uid in enumerate(uids):
                 iid, feedback = str(iids[i]), feedbacks[i]
@@ -171,12 +174,14 @@ class Dataset(object):
 
                 history.append(tmp_his)
                 fb.append(fb_his)
+                hist_len.append(len(tmp_his))
 
                 history_dict[uid].append(iid)
                 feedback_dict[uid].append(feedback)
 
             df['history'] = history
-            df['feedback_of_history'] = fb
+            df['history_feedback'] = fb
+            df['history_length'] = hist_len
         self.clean_data()
 
 
@@ -188,8 +193,8 @@ class Dataset(object):
         Then, it removes all the interactions that have an empty history (the left side of implication would be empty).
         """
         self.train_set = self.train_set[self.train_set['rating'] > 0].reset_index(drop=True)
-        self.train_set = self.train_set[self.train_set['feedback_of_history'].map(len) > 0].reset_index(drop=True)
+        self.train_set = self.train_set[self.train_set['history_feedback'].map(len) > 0].reset_index(drop=True)
         self.validation_set = self.validation_set[self.validation_set['rating'] > 0].reset_index(drop=True)
-        self.validation_set = self.validation_set[self.validation_set['feedback_of_history'].map(len) > 0].reset_index(drop=True)
+        self.validation_set = self.validation_set[self.validation_set['history_feedback'].map(len) > 0].reset_index(drop=True)
         self.test_set = self.test_set[self.test_set['rating'] > 0].reset_index(drop=True)
-        self.test_set = self.test_set[self.test_set['feedback_of_history'].map(len) > 0].reset_index(drop=True)
+        self.test_set = self.test_set[self.test_set['history_feedback'].map(len) > 0].reset_index(drop=True)
