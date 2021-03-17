@@ -1,5 +1,6 @@
 from ncr.data import Dataset
 from ncr.samplers import DataSampler
+from ncr.nets import NCR
 import torch
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") # set pytorch device for computation
@@ -11,6 +12,8 @@ if __name__ == '__main__':
 
     train_loader = DataSampler(dataset.train_set, dataset.user_item_matrix, batch_size=128, device=device)
 
+    ncr = NCR(dataset.n_users, dataset.n_items)
+
     for batch_idx, batch_data in enumerate(train_loader):
-        print(batch_data)
-        break
+        pos, neg, const = ncr(batch_data)
+        print()

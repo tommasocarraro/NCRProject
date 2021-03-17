@@ -61,10 +61,19 @@ class DataSampler(Sampler):
         random.seed(self.seed)
 
     def __len__(self):
-        return int(np.ceil(self.data.shape[0] / self.batch_size))
+        # here, it is not sufficient to return int(np.ceil(self.data.shape[0] / self.batch_size)) since we have
+        # grouped the dataset into small datasets each of one correspond to a history length
+        dataset_size = 0
+        length = self.data.groupby("history_length")  # histories could be of different lengths, so we need to group
+        # histories of the same length in the same batch
+        for i, (_, l) in enumerate(length):
+            dataset_size += int(np.ceil(l.shape[0] / self.batch_size))
+        return dataset_size
 
     def __iter__(self):
-        # self.generate_neg_samples() # generate negative samples before training the epoch
+        # for each epoch, each positive interaction has a random sampled negative interaction for the pair-wise learning
+        # instead, in validation, each positive interaction has 100 random sampled negative interactions for the
+        # computation of the metrics
         length = self.data.groupby("history_length") # histories could be of different lengths, so we need to group
         # histories of the same length in the same batch
 
@@ -104,36 +113,3 @@ class DataSampler(Sampler):
 
                 yield batch_users.to(self.device), batch_items.to(self.device), batch_histories.to(self.device), \
                       batch_feedbacks.to(self.device), batch_negative_items.to(self.device)
-
-    # it seems this is not necessary
-    def generate_neg_samples(self):
-        """
-        Generates negative samples for each interaction in the fold. It adds a column to the fold dataframe, where each
-        element is a list containing the negative samples for the interaction.
-        """
-        # record sampled iids to get avoid of sampled items to be selected again
-        # the zeros in the user-item matrix are the items on which we have to perform negative sampling
-
-        # i need to iterate using batches
-        users = self.data['userID'].to_numpy()
-        n = users.shape[0]
-        idxlist = list(range(n))
-        negative_samples = [] # this list contains a list of negative samples for each interaction in the fold
-        user_item_matrix = self.user_item_matrix.copy()
-
-        for _, start_idx in enumerate(range(0, n, self.batch_size)):
-            end_idx = min(start_idx + self.batch_size, n)
-            batch_user_indexes = users[idxlist[start_idx:end_idx]]
-            batch_user_item_matrix = user_item_matrix[batch_user_indexes].toarray()
-            batch_user_unseen_items = 1 - batch_user_item_matrix  # this matrix contains the items that each user in
-            # the batch has never seen
-
-            for u in range(batch_user_unseen_items.shape[0]):
-                u_unseen_items = batch_user_unseen_items[u].nonzero()[0]
-                #assert len(u_unseen_items) >= self.n_neg_samples # check if there are enough items to perform the sampling
-                rnd_negatives = u_unseen_items[random.sample(range(u_unseen_items.shape[0]), self.n_neg_samples)]
-                #user_item_matrix[batch_user_indexes[u], rnd_negatives] = 1  # we update the matrix in such a way
-                # to avoid to sample the same negative items for a user
-                negative_samples.append(rnd_negatives)
-
-        self.data['negative_samples'] = negative_samples
