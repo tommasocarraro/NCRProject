@@ -3,7 +3,7 @@ from ncr.samplers import DataSampler
 from ncr.nets import NCR
 import torch
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") # set pytorch device for computation
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # set pytorch device for computation
 
 if __name__ == '__main__':
     dataset = Dataset("datasets/movielens-100k/u.data")

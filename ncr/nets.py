@@ -10,7 +10,7 @@ class NCR(torch.nn.Module):
     :param n_users: the number of users in the dataset. This is needed to know how many user embeddings we have.
     :param n_items: the number of items in the dataset. This is needed to know how many item embeddings we have.
     :param emb_size: this is the dimension of the embeddings of the model. Default is 64, as suggested in the paper.
-    :seed: this is the seed for the setting of the pytorch seed. This is needed in order to have reproducible results.
+    :param seed: this is the seed for the setting of the pytorch seed. This is needed in order to have reproducible results.
     """
     def __init__(self, n_users, n_items, emb_size=64, seed=2022):
         super(NCR, self).__init__()
