@@ -330,4 +330,4 @@ class NCRTrainer(object):
 
         for metric in metric_dict:
             logger.info('%s: %.3f (%.4f)', metric, metric_dict[metric]["mean"] / n_times,
-                        metric_dict[metric]["mean"] / n_times)
+                        metric_dict[metric]["std"] / n_times)
