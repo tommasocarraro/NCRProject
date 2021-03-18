@@ -299,3 +299,32 @@ class NCRTrainer(object):
         self.optimizer.load_state_dict(checkpoint['optimizer'])
         logger.info("Model checkpoint loaded!")
         return checkpoint
+
+    def test(self, test_loader, metric_list=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'], n_times=10):
+        """
+        This method performs the test of a trained NCR model.
+        :param test_loader: this is the DataSampler that loads the test set interactions.
+        :param metric_list: this is a list containing the test metrics that have to be computed.
+        :param n_times: this is the number of times that the evaluation has to be computed. Since the test loader
+        generates 100 random negative items for each interaction in the test set, different random generations
+        could lead to different test performances. The evaluation will be computed n_times times and then each metric
+        will be averaged among these n_times evaluations.
+        This method will log the value of each one of the metrics (plus std error) once this procedure has finished.
+        """
+        metric_dict = {}
+        for i in range(n_times):  # compute test metrics n_times times and take the mean since negative samples are
+            # randomly generated
+            evaluation_dict = evaluate(self.network, test_loader, metric_list)
+            for metric in evaluation_dict:
+                metric_mean = np.mean(evaluation_dict[metric])
+                metric_std_err_val = np.std(evaluation_dict[metric]) / np.sqrt(len(evaluation_dict[metric]))
+                if "mean" not in metric_dict[metric]:
+                    metric_dict[metric]["mean"] = metric_mean
+                    metric_dict[metric]["std"] = metric_std_err_val
+                else:
+                    metric_dict[metric]["mean"] += metric_mean
+                    metric_dict[metric]["std"] += metric_std_err_val
+
+        for metric in metric_dict:
+            logger.info('%s: %.3f (%.4f)', metric, metric_dict[metric]["mean"] / n_times,
+                        metric_dict[metric]["mean"] / n_times)

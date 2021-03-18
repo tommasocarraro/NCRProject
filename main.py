@@ -15,7 +15,7 @@ if __name__ == '__main__':
     save_path = "saved-models/best_ncr_model.json"
     dataset = Dataset("datasets/movielens-100k/u.data")
 
-    dataset.process_data(threshold=4, order=True)
+    dataset.process_data(threshold=4, order=True, leave_n=1, keep_n=5, max_history_length=5)
 
     train_loader = DataSampler(dataset.train_set, dataset.user_item_matrix, n_neg_samples=1, batch_size=128,
                                shuffle=True, seed=2022, device=device)
@@ -33,9 +33,4 @@ if __name__ == '__main__':
 
     model.load_model(save_path)
 
-    evaluation_dict = evaluate(model, test_loader, ['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'])
-
-    for metric in evaluation_dict:
-        metric_mean = np.mean(evaluation_dict[metric])
-        metric_std_err_val = np.std(evaluation_dict[metric]) / np.sqrt(len(evaluation_dict[metric]))
-        print(metric, ": ", metric_mean, " +/- ", metric_std_err_val)
+    model.test(test_loader, metric_list=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'], n_times=10)
