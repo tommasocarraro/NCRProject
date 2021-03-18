@@ -316,6 +316,8 @@ class NCRTrainer(object):
             # randomly generated
             evaluation_dict = evaluate(self, test_loader, metric_list)
             for metric in evaluation_dict:
+                if metric not in metric_dict:
+                    metric_dict[metric] = {}
                 metric_mean = np.mean(evaluation_dict[metric])
                 metric_std_err_val = np.std(evaluation_dict[metric]) / np.sqrt(len(evaluation_dict[metric]))
                 if "mean" not in metric_dict[metric]:
