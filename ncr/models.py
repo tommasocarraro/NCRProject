@@ -7,6 +7,10 @@ import torch.nn.functional as F
 import torch.optim as optim
 from .evaluation import ValidFunc, evaluate
 
+__all__ = ['NCRTrainer']
+
+logger = logging.getLogger(__name__)
+
 class NCRTrainer(object):
     """
     This is the class that has to be used to train the NCR model. It has the following parameters:
@@ -133,7 +137,7 @@ class NCRTrainer(object):
         # this is required because we could have more than one negative expression for each positive expression
         positive_preds = positive_preds.view(positive_preds.size(0), 1)
         positive_preds = positive_preds.expand(positive_preds.size(0), negative_preds.size(1))
-        loss = -(positive_preds - negative_preds).sigmoid().log().sum()
+        loss = -(positive_preds - negative_preds).sigmoid().log().sum()  # this is the formula in the paper
 
         # here, we compute the regularization loss
         r_loss = self.reg_loss(constraints)
@@ -146,19 +150,20 @@ class NCRTrainer(object):
               valid_metric=None,
               valid_func=ValidFunc(evaluate),
               num_epochs=100,
-              early_stop=5,  # TODO
+              early_stop=5,
               verbose=1):
         """
         This method performs the traning of the NCR model.
-        :param train_data: it is a DataLoader for the training set.
-        :param valid_data: it is a DataLoader for the validation set.
-        :param val_metric: it is the metric that has to be computed during validation.
-        :param valid_func: it is the type of evaluation used.
+        :param train_data: it is a DataSampler for the training set. It loads the training data.
+        :param valid_data: it is a DataSampler for the validation set. It loads the validation data.
+        :param val_metric: it is the metric that has to be computed during the validation of the model.
+        :param valid_func: it is the type of evaluation used. See the evaluation mudule.
         :param num_epochs: it is the number of epochs for the training of the model.
         :param early_stop: it is the number of epochs for performing early stopping. If after early_stop epochs the
         validation metric does not increase, then the training of the model will be stopped.
         :param verbose: it is a flag indicating how many log messages have to be displayed during the training.
         """
+        # TODO early stopping here and also skip eval
         try:
             for epoch in range(1, num_epochs + 1):
                 self.train_epoch(epoch, train_data, verbose)
@@ -179,9 +184,9 @@ class NCRTrainer(object):
         This method performs the training of a single epoch.
         :param epoch: id of the epoch.
         :param train_loader: the DataLoader that loads the training set.
-        :param verbose: see train()
+        :param verbose: see train() method.
         """
-        self.network.train()
+        self.network.train()  # set the network in train mode
         train_loss = 0
         partial_loss = 0
         epoch_start_time = time.time()
@@ -234,7 +239,7 @@ class NCRTrainer(object):
                 The reconstructed input, i.e., the output of the autoencoder.
                 It is meant to be the reconstruction over the input batch ``x``.
         """
-        self.network.eval()
+        self.network.eval()  # we have to set the network in evaluation mode
         with torch.no_grad():
             x_tensor = x.to(self.device)
             recon_x = self.network(x_tensor)

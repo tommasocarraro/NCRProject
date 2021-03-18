@@ -2,6 +2,8 @@ import numpy as np
 import torch
 import random
 
+__all__ = ['Sampler', 'DataSampler']
+
 class Sampler(object):
     """Sampler base class.
     A sampler is meant to be used as a generator of batches useful in training neural networks.
@@ -31,7 +33,7 @@ class DataSampler(Sampler):
     dataset.
     Parameters/Attributes
     ----------
-    data : the dataset fold for which the batches have to be created
+    data : the dataset fold for which the batches have to be created.
     n_neg_samples: number of negative samples that have to be generated for each interaction (during training should be
     one, while in validation and test should be 100 (these are the specs reported in the paper))
     user_item_matrix: this is a scipy sparse matrix containing the user-item interactions in the dataset. This is needed

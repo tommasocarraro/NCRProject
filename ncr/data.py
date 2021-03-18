@@ -1,6 +1,8 @@
 import pandas as pd
 from scipy import sparse
 
+__all__ = ['Dataset']
+
 class Dataset(object):
     """This class manages a recommendation system dataset.
     It contains the information about the dataset, such as the number of users and items.

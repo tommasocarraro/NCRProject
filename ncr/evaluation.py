@@ -6,7 +6,9 @@ import inspect
 import numpy as np
 from .metrics import Metrics
 
-class ValidFunc():
+__all__ = ['ValidFunc']
+
+class ValidFunc(object):
     """Wrapper class for validation functions.
     When a validation function is passed to the method train() of a model, it must have a specific signature,
     that has three parameters: model, test_loader and metric_list.
@@ -47,11 +49,11 @@ class ValidFunc():
 def evaluate(model, test_loader, metric_list):
     """Evaluate the given model.
     The ``model`` evaluation is performed with all the provided metrics in ``metric_list``.
-    The test set is loaded through the provided DataLoader.
+    The test set is loaded through the provided DataSampler.
     Parameters
     ----------
     model : the model to evaluate.
-    test_loader : the DataLoader for the test loader.
+    test_loader : the DataSampler for the test set.
     metric_list : list of :obj:`str`
         The list of metrics to compute. Metrics are indicated by strings formed in the
         following way:
@@ -66,19 +68,19 @@ def evaluate(model, test_loader, metric_list):
     :obj:`dict` of :obj:`numpy.array`
         Dictionary with the results for each metric in ``metric_list``. Keys are string
         representing the metric, while the value is an array with the value of the metric
-        computed on the samples.
+        computed on the users.
     """
     results = {m:[] for m in metric_list}
     for batch_idx, batch_data in enumerate(test_loader):
-        positive_pred, negative_pred, _ = model.predict(batch_data)
-        # we concatenate the positive predictions to the negative predictions
-        # in each row of the final tensor we will have the positive prediction in the first columns
+        positive_pred, negative_pred = model.predict(batch_data)
+        # we concatenate the positive prediction to the negative predictions
+        # in each row of the final tensor we will have the positive prediction in the first column
         # and the 100 negative predictions in the last 100 columns
         positive_pred = positive_pred.view(positive_pred.size(0), 1)
         pred_scores = torch.cat((positive_pred, negative_pred), dim=1)
         # now, we need to construct the ground truth tensor
         ground_truth = np.zeros(pred_scores.size())
-        ground_truth[:, 0] = 1 # the positive item is always in the first column of pred_scores
+        ground_truth[:, 0] = 1  # the positive item is always in the first column of pred_scores, as we said before
         pred_scores = pred_scores.cpu().numpy()
         res = Metrics.compute(pred_scores, ground_truth, metric_list)
         for m in res:

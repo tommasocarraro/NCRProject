@@ -10,7 +10,7 @@ __all__ = ['Metrics']
 
 logger = logging.getLogger(__name__)
 
-class Metrics:
+class Metrics(object):
     """The class Metrics contains metric functions.
     All methods are static and no object of type :class:`Metrics` is needed to compute
     the metrics.
@@ -39,7 +39,7 @@ class Metrics:
         :obj:`dict` of :obj:`numpy.array`
             Dictionary with the results for each metric in ``metric_list``. Keys are string
             representing the metric, while the value is an array with the value of the metric
-            computed on the users.
+            computed for each user.
         """
         results = {}
         for metric in metrics_list:

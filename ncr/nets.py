@@ -3,6 +3,8 @@ import numpy as np
 from torch.nn.init import normal_ as normal_init
 import torch.nn.functional as F
 
+__all__ = ['NCR']
+
 class NCR(torch.nn.Module):
     """
     This is the class that implements the NCR neural architecture. This is only the architecture of the model.
@@ -10,13 +12,17 @@ class NCR(torch.nn.Module):
     :param n_users: the number of users in the dataset. This is needed to know how many user embeddings we have.
     :param n_items: the number of items in the dataset. This is needed to know how many item embeddings we have.
     :param emb_size: this is the dimension of the embeddings of the model. Default is 64, as suggested in the paper.
-    :param seed: this is the seed for the setting of the pytorch seed. This is needed in order to have reproducible results.
+    :param dropout: this is the percentage of units that are shut down in the hidden layers of the network during
+    training.
+    :param seed: this is the seed for the setting of the pytorch seed. This is needed in order to have reproducible
+    results.
     """
-    def __init__(self, n_users, n_items, emb_size=64, seed=2022):
+    def __init__(self, n_users, n_items, emb_size=64, dropout=0.0, seed=2022):
         super(NCR, self).__init__()
         self.n_users = n_users
         self.n_items = n_items
         self.emb_size = emb_size
+        self.dropout = dropout
         self.seed = seed
         # set pytorch and numpy seed
         torch.manual_seed(self.seed)
@@ -46,6 +52,8 @@ class NCR(torch.nn.Module):
         self.encoder_layer_1 = torch.nn.Linear(2 * self.emb_size, self.emb_size)
         # second layer of encoder
         self.encoder_layer_2 = torch.nn.Linear(self.emb_size, self.emb_size)
+        # dropout layer
+        self.dropout_layer = torch.nn.Dropout(self.dropout)
         # initialize the weights of the network
         self.init_weights()
 
@@ -86,6 +94,8 @@ class NCR(torch.nn.Module):
         """
         # ReLU is the activation function selected in the paper
         vector = F.relu(self.not_layer_1(vector))
+        if self.training:
+            vector = self.dropout_layer(vector)
         out = self.not_layer_2(vector)
         return out
 
@@ -100,6 +110,8 @@ class NCR(torch.nn.Module):
         """
         vector = torch.cat((vector1, vector2), dim)
         vector = F.relu(self.or_layer_1(vector))
+        if self.training:
+            vector = self.dropout_layer(vector)
         out = self.or_layer_2(vector)
         return out
 
@@ -114,6 +126,8 @@ class NCR(torch.nn.Module):
         """
         vector = torch.cat((vector1, vector2), dim)
         vector = F.relu(self.and_layer_1(vector))
+        if self.training:
+            vector = self.dropout_layer(vector)
         out = self.and_layer_2(vector)
         return out
 
@@ -126,6 +140,8 @@ class NCR(torch.nn.Module):
         :return: the event vector that represents the user-item pair in input.
         """
         event_vector = F.relu(self.encoder_layer_1(ui_vector))
+        if self.training:
+            event_vector = self.dropout_layer(event_vector)
         event_vector = self.encoder_layer_2(event_vector)
         return event_vector
 
