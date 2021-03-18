@@ -33,5 +33,4 @@ if __name__ == '__main__':
 
     model.load_model(save_path)
 
-    model.test(test_loader, valid_func=ValidFunc(evaluate), metric_list=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'],
-               n_times=10)
+    model.test(test_loader, metric_list=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'], n_times=10)
