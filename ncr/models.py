@@ -300,10 +300,12 @@ class NCRTrainer(object):
         logger.info("Model checkpoint loaded!")
         return checkpoint
 
-    def test(self, test_loader, metric_list=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'], n_times=10):
+    def test(self, test_loader, valid_func=ValidFunc(evaluate), metric_list=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'],
+             n_times=10):
         """
         This method performs the test of a trained NCR model.
         :param test_loader: this is the DataSampler that loads the test set interactions.
+        :param valid_func: it is the type of evaluation used. See the evaluation mudule.
         :param metric_list: this is a list containing the test metrics that have to be computed.
         :param n_times: this is the number of times that the evaluation has to be computed. Since the test loader
         generates 100 random negative items for each interaction in the test set, different random generations
@@ -314,7 +316,7 @@ class NCRTrainer(object):
         metric_dict = {}
         for i in range(n_times):  # compute test metrics n_times times and take the mean since negative samples are
             # randomly generated
-            evaluation_dict = evaluate(self.network, test_loader, metric_list)
+            evaluation_dict = valid_func(self, test_loader, metric_list)
             for metric in evaluation_dict:
                 metric_mean = np.mean(evaluation_dict[metric])
                 metric_std_err_val = np.std(evaluation_dict[metric]) / np.sqrt(len(evaluation_dict[metric]))
