@@ -19,7 +19,7 @@ import json
 def prepare_movielens_100k(path_to_file):
     """
     It prepares the MovieLens 100k dataset for the training with the NCR framework.
-    :param path_to_file: a string containing the path to the MovieLens 100k dataset file.
+    :param path_to_file: a string containing the path to the MovieLens 100k dataset file (named u.data).
     :return: a pandas dataframe with the structure explained in the header of this file.
     """
     dataset = pd.read_csv(path_to_file, sep='\t')
@@ -33,7 +33,8 @@ def prepare_movielens_100k(path_to_file):
 def prepare_amazon(path_to_file):
     """
     It prepares the Amazon (Movies and TV, or Electronics) dataset for the training with the NCR framework.
-    :param path_to_file: a string containing the path to the Amazon (Movies and TV, or Electronics) dataset file.
+    :param path_to_file: a string containing the path to the Amazon (Movies and TV, or Electronics) dataset file (json
+    extension).
     :return: a pandas dataframe with the structure explained in the header of this file.
     """
     dataset_dict = {"userID": [], "itemID": [], "rating": [], "timestamp": []}

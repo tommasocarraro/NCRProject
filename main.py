@@ -14,6 +14,8 @@ logging.getLogger().setLevel(logging.DEBUG)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # set pytorch device for computation
 
 if __name__ == '__main__':
+    # TODO create a main that can be parametrized on the dataset that one wants to learn and fix all the parameters
+    # TODO based on that (see paper parameters)
     save_path = "saved-models/best_ncr_model.json"
 
     #raw_dataset = prepare_movielens_100k("datasets/movielens-100k/u.data")
