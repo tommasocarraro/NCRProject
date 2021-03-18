@@ -19,7 +19,7 @@ class NCRTrainer(object):
     :param l2_weight: it is the weight for the L2 regularization of the weights of the model.
     :param logic_reg_weight: it is the weight for the logical regularization performed by the model.
     """
-    def __init__(self, net, learning_rate=0.01, l2_weight=1e-5, logic_reg_weight=0.01):
+    def __init__(self, net, learning_rate=0.001, l2_weight=1e-4, logic_reg_weight=0.01):
         self.network = net
         self.lr = learning_rate
         self.l2_weight = l2_weight
@@ -151,19 +151,24 @@ class NCRTrainer(object):
               valid_func=ValidFunc(evaluate),
               num_epochs=100,
               early_stop=5,
+              save_path="../saved_models/best_ncr_model.json",
               verbose=1):
         """
         This method performs the traning of the NCR model.
         :param train_data: it is a DataSampler for the training set. It loads the training data.
         :param valid_data: it is a DataSampler for the validation set. It loads the validation data.
-        :param val_metric: it is the metric that has to be computed during the validation of the model.
+        :param valid_metric: it is the metric that has to be computed during the validation of the model.
         :param valid_func: it is the type of evaluation used. See the evaluation mudule.
         :param num_epochs: it is the number of epochs for the training of the model.
         :param early_stop: it is the number of epochs for performing early stopping. If after early_stop epochs the
         validation metric does not increase, then the training of the model will be stopped.
         :param verbose: it is a flag indicating how many log messages have to be displayed during the training.
         """
-        # TODO early stopping here and also skip eval
+        best_val = 0.0
+        early_stop_counter = 0
+        early_stop_flag = False
+        if early_stop > 1:  # it means that the parameter is meaningful
+            early_stop_flag = True
         try:
             for epoch in range(1, num_epochs + 1):
                 self.train_epoch(epoch, train_data, verbose)
@@ -175,6 +180,20 @@ class NCRTrainer(object):
                     std_err_val = np.std(valid_res) / np.sqrt(len(valid_res))
                     logger.info('| epoch %d | %s %.3f (%.4f) |',
                                 epoch, valid_metric, mu_val, std_err_val)
+                    if mu_val > best_val:
+                        best_val = mu_val
+                        self.save_model(save_path, epoch)  # save model if an improved validation score has been
+                        # obtained
+                        early_stop_counter = 0  # we have reached a new validation best value, so we put the early stop
+                        # counter to zero
+                    else:
+                        # if we did not have obtained an improved validation metric, we have to increase the early
+                        # stopping counter
+                        if epoch >= 20 and early_stop_flag:  # we have to train for at least 20 epochs, they said that in the paper
+                            early_stop_counter += 1
+                            if early_stop_counter == early_stop:
+                                logger.info('Traing stopped at epoch %d due to early stopping', epoch)
+                                break
         except KeyboardInterrupt:
             logger.warning('Handled KeyboardInterrupt: exiting from training early')
 
@@ -220,55 +239,49 @@ class NCRTrainer(object):
         positive_preds, negative_preds, constraints = self.network(batch_data)
         loss = self.loss_function(positive_preds, negative_preds, constraints)
         loss.backward()
+        torch.nn.utils.clip_grad_value_(self.network.parameters(), 50)  # this has been inserted in the code provided
         self.optimizer.step()
         return loss.item()
 
-    def predict(self, x, remove_train=True):
-        r"""Perform the prediction using a trained Autoencoder.
+    def predict(self, batch_data):
+        """Performs the prediction on the given batch using the trained NCR network. It takes as input a batch of
+        logical expressions and it returns the predictions for the positive and negative logical expressions in the
+        batch. Note that during validation we have one positive expression and 100 negative expressions for each
+        interaction in the batch.
         Parameters
         ----------
-        x : :class:`torch.Tensor`
+        batch_data : :class:`torch.Tensor`
             The input for which the prediction has to be computed.
-        remove_train : :obj:`bool` [optional]
-            Whether to remove the training set from the prediction, by default True. Removing
-            the training items means set their scores to :math:`-\infty`.
         Returns
         -------
-        recon_x, : :obj:`tuple` with a single element
-            recon_x : :class:`torch.Tensor`
-                The reconstructed input, i.e., the output of the autoencoder.
-                It is meant to be the reconstruction over the input batch ``x``.
+        :return positive_predictions: the predictions for the positive logical expressions contained in the input batch.
+        There is one positive prediction for each row of the batch.
+        :return negative_predictions: the predictions for the negative logical expressions contained in the inpu batch.
+        There are 100 negative predictions for each row of the batch.
         """
         self.network.eval()  # we have to set the network in evaluation mode
         with torch.no_grad():
-            x_tensor = x.to(self.device)
-            recon_x = self.network(x_tensor)
-            if remove_train:
-                recon_x[tuple(x_tensor.nonzero().t())] = -np.inf
-            return (recon_x, )
+            positive_predictions, negative_predictions, _ = self.network(batch_data)
+        return positive_predictions, negative_predictions
 
     def save_model(self, filepath, cur_epoch):
-        r"""Save the model to file.
+        """Save the model into the given file.
         Parameters
         ----------
         filepath : :obj:`str`
-            String representing the path to the file to save the model.
+            String representing the path to the file where to save the model.
         cur_epoch : :obj:`int`
-            The last training epoch.
+            The current training epoch.
         """
-        state = {'epoch': cur_epoch,
+        logger.info("Saving model checkpoint to %s...", filepath)
+        torch.save({'epoch': cur_epoch,
                  'state_dict': self.network.state_dict(),
                  'optimizer': self.optimizer.state_dict()
-                }
-        self._save_checkpoint(filepath, state)
-
-    def _save_checkpoint(self, filepath, state):
-        logger.info("Saving model checkpoint to %s...", filepath)
-        torch.save(state, filepath)
+                }, filepath)
         logger.info("Model checkpoint saved!")
 
     def load_model(self, filepath):
-        r"""Load the model from file.
+        """Load the model from the given file.
         Parameters
         ----------
         filepath : :obj:`str`

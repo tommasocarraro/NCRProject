@@ -49,7 +49,11 @@ class ValidFunc(object):
 def evaluate(model, test_loader, metric_list):
     """Evaluate the given model.
     The ``model`` evaluation is performed with all the provided metrics in ``metric_list``.
-    The test set is loaded through the provided DataSampler.
+    The test set is loaded through the provided DataSampler. Note that the test loader contains one positive expression
+    and 100 negative expressions for each interaction in the test set. The network computes the predictions for all
+    these expressions and then the evaluation consists on computing evaluation metrics given the position of the target
+    item in the ranking. The position of an item in the ranking is given by the prediction that the network output for
+    the logical expression with that item at the right side of implication.
     Parameters
     ----------
     model : the model to evaluate.
