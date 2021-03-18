@@ -15,19 +15,18 @@ class Dataset(object):
     proc_dataset: this is a pandas dataframe containing the user-item interactions after preprocessing
     """
 
-    def __init__(self, path_to_raw_data_file, sep='\t', convert_to_indexes=True):
+    def __init__(self, raw_dataset):
         """
         It initializes a Dataset object, computes the user item sparse matrix and dataset information.
-        :param path_to_raw_data_file: path to raw dataset file *.csv (or similar) containing the user-item interactions.
-        :param sep: the separator used to parse the raw data file
-        :param convert_to_indexes: a flag indicating whether the user and item ids have to converted to indexes (this
-        should be set to true if user and item ids start from 1 instead of 0)
+        :param raw_dataset: pandas dataframe containing the user-item interactions of the dataset. This dataframe must
+        have the following structure:
+            - user id: the id of the user;
+            - item id: the id of the item;
+            - rating: the score gave by the user for the item (usually an integer between 1 and 5);
+            - timestamp: the timestamp related to the moment in which the user reviewed the item.
+        In the utils module there are functions that automatically create this structure based on the given dataset.
         """
-        self.dataset = pd.read_csv(path_to_raw_data_file, sep=sep)
-        self.dataset.columns = ["userID", "itemID", "rating", "timestamp"]
-        if convert_to_indexes:
-            self.dataset['userID'] -= 1  # convert user IDs in indexes strating from 0
-            self.dataset['itemID'] -= 1  # convert item IDs in indexes strating from 0
+        self.dataset = raw_dataset
 
         self.n_users = self.dataset['userID'].nunique()
         self.n_items = self.dataset['itemID'].nunique()

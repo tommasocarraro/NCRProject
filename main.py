@@ -3,8 +3,10 @@ from ncr.samplers import DataSampler
 from ncr.nets import NCR
 from ncr.models import NCRTrainer
 from ncr.evaluation import ValidFunc, evaluate
+from ncr.utils import prepare_movielens_100k, prepare_amazon
 import torch
 import numpy as np
+import pandas as pd
 import logging
 logging.basicConfig()
 logging.getLogger().setLevel(logging.DEBUG)
@@ -13,7 +15,11 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # set p
 
 if __name__ == '__main__':
     save_path = "saved-models/best_ncr_model.json"
-    dataset = Dataset("datasets/movielens-100k/u.data")
+
+    #raw_dataset = prepare_movielens_100k("datasets/movielens-100k/u.data")
+    raw_dataset = pd.read_csv("datasets/amazon_movies_tv/movies_tv.csv")
+
+    dataset = Dataset(raw_dataset)
 
     dataset.process_data(threshold=4, order=True, leave_n=1, keep_n=5, max_history_length=5)
 
