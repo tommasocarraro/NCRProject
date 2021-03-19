@@ -16,7 +16,10 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # set p
 if __name__ == '__main__':
     # TODO create a main that can be parametrized on the dataset that one wants to learn and fix all the parameters
     # TODO based on that (see paper parameters)
-    save_path = "saved-models/best_ncr_model.json"
+    # TODO put valid func in test too, put a new evaluation instead of substituting the evaluate method
+    # TODO see why in test we have very poor metrics compared to validation
+
+    save_path = "saved-models/best_movielens_100k.json"
 
     raw_dataset = prepare_movielens_100k("datasets/movielens-100k/u.data")
     #raw_dataset = pd.read_csv("datasets/amazon_electronics/electronics.csv")
