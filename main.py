@@ -32,7 +32,7 @@ if __name__ == '__main__':
     test_loader = DataSampler(dataset.test_set, dataset.user_item_matrix, n_neg_samples=100, batch_size=200,
                              shuffle=False, seed=2022, device=device)
 
-    ncr_net = NCR(dataset.n_users, dataset.n_items, emb_size=64, dropout=0.0, seed=2022).to(device)
+    ncr_net = NCR(dataset.n_users, dataset.n_items, emb_size=64, dropout=0.2, seed=2022).to(device)
 
     model = NCRTrainer(ncr_net, learning_rate=0.001, l2_weight=0.0001, logic_reg_weight=0.1)
 
