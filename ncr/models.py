@@ -240,7 +240,7 @@ class NCRTrainer(object):
         loss = self.loss_function(positive_preds, negative_preds, constraints)
         loss.backward()
         # this gradient clipping leads to lower results, so I removed it
-        torch.nn.utils.clip_grad_value_(self.network.parameters(), 50)  # this has been inserted in the code provided
+        # torch.nn.utils.clip_grad_value_(self.network.parameters(), 50)  # this has been inserted in the code provided
         self.optimizer.step()
         return loss.item()
 
