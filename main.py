@@ -18,8 +18,8 @@ if __name__ == '__main__':
     # TODO based on that (see paper parameters)
     save_path = "saved-models/best_ncr_model.json"
 
-    raw_dataset = prepare_movielens_100k("datasets/movielens-100k/u.data")
-    #raw_dataset = pd.read_csv("datasets/amazon_movies_tv/movies_tv.csv")
+    #raw_dataset = prepare_movielens_100k("datasets/movielens-100k/u.data")
+    raw_dataset = pd.read_csv("datasets/amazon_electronics/electronics.csv")
 
     dataset = Dataset(raw_dataset)
 
@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     ncr_net = NCR(dataset.n_users, dataset.n_items, emb_size=64, dropout=0.0, seed=2022).to(device)
 
-    model = NCRTrainer(ncr_net, learning_rate=0.001, l2_weight=0.0001, logic_reg_weight=0.1)
+    model = NCRTrainer(ncr_net, learning_rate=0.001, l2_weight=0.00001, logic_reg_weight=0.1)
 
     model.train(train_loader, valid_data=val_loader, valid_metric='ndcg@5', valid_func=ValidFunc(evaluate),
                 num_epochs=100, early_stop=5, save_path=save_path, verbose=1)
