@@ -36,10 +36,7 @@ class ValidFunc(object):
             metric_list"
 
     def __call__(self, model, test_loader, metric):
-        if isinstance(metric, str):
-            return self.function(model, test_loader, [metric])[metric]
-        else:
-            return self.function(model, test_loader, metric)
+        return self.function(model, test_loader, [metric])[metric]
 
     def __str__(self):
         kwdefargs = inspect.getfullargspec(self.function).kwonlydefaults
