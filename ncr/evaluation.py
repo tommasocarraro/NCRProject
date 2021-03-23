@@ -5,6 +5,7 @@ from functools import partial
 import inspect
 import numpy as np
 from .metrics import Metrics
+import random
 
 __all__ = ['ValidFunc', 'logic_evaluate', 'evaluate', 'one_plus_random']
 

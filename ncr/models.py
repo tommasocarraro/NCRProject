@@ -150,6 +150,7 @@ class NCRTrainer(object):
               valid_metric=None,
               valid_func=ValidFunc(logic_evaluate),
               num_epochs=100,
+              at_least=20,
               early_stop=5,
               save_path="../saved_models/best_ncr_model.json",
               verbose=1):
@@ -189,7 +190,7 @@ class NCRTrainer(object):
                     else:
                         # if we did not have obtained an improved validation metric, we have to increase the early
                         # stopping counter
-                        if epoch >= 20 and early_stop_flag:  # we have to train for at least 20 epochs, they said that in the paper
+                        if epoch >= at_least and early_stop_flag:  # we have to train for at least 20 epochs, they said that in the paper
                             early_stop_counter += 1
                             if early_stop_counter == early_stop:
                                 logger.info('Traing stopped at epoch %d due to early stopping', epoch)
