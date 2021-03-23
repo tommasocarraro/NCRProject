@@ -47,7 +47,7 @@ class NCRTrainer(object):
             self.network.logic_not(self.network.logic_not(self.network.true_vector)), self.network.true_vector,dim=0))
 
         # here, we maximize the similarity between not true and false
-        r_not_true = (1 - F.cosine_similarity(self.network.logic_not(self.network.true_vector), false_vector, dim=0))
+        #r_not_true = (1 - F.cosine_similarity(self.network.logic_not(self.network.true_vector), false_vector, dim=0))
 
         # here, we maximize the similarity between not not x and x
         r_not_not_self = \
@@ -114,9 +114,9 @@ class NCRTrainer(object):
         # here, we minimize the similarity between True and False
         true_false = 1 + F.cosine_similarity(self.network.true_vector, false_vector, dim=0)
 
-        r_loss = r_not_true + r_not_not_true + r_not_not_self + r_not_self + r_not_not_not + \
-                 r_or_true + r_or_false + r_or_self + r_or_not_self + r_or_not_self_inverse + true_false #+ \
-                 #r_and_true + r_and_false + r_and_self + r_and_not_self + r_and_not_self_inverse
+        r_loss = r_not_not_true + r_not_not_self + r_not_self + r_not_not_not + \
+                 r_or_true + r_or_false + r_or_self + r_or_not_self + r_or_not_self_inverse + true_false + \
+                 r_and_true + r_and_false + r_and_self + r_and_not_self + r_and_not_self_inverse
 
         return r_loss
 
