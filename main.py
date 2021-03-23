@@ -112,7 +112,7 @@ def main():
 
     ncr_model.load_model(init_args.save_load_path)
 
-    ncr_model.test(test_loader, metric_list=init_args.test_metrics, n_times=init_args.n_times)
+    ncr_model.test(test_loader, test_metrics=init_args.test_metrics, n_times=init_args.n_times)
 
 if __name__ == '__main__':
     # TODO see why in test we have very poor metrics compared to validation - try different seeds
