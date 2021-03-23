@@ -107,8 +107,8 @@ def main():
     if not init_args.test_only:
         ncr_model.train(train_loader, valid_data=val_loader, valid_metric=init_args.val_metric,
                         valid_func=ValidFunc(logic_evaluate), num_epochs=init_args.n_epochs,
-                        at_least=init_args.at_least,
-                        early_stop=init_args.early_stop, save_path=init_args.save_load_path, verbose=1)
+                        at_least=init_args.at_least, early_stop=init_args.early_stop,
+                        save_path=init_args.save_load_path, verbose=1)
 
     ncr_model.load_model(init_args.save_load_path)
 
@@ -116,4 +116,5 @@ def main():
 
 if __name__ == '__main__':
     # TODO see why in test we have very poor metrics compared to validation - try different seeds
+    # TODO try to change constraints and regularizers
     main()

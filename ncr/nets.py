@@ -220,8 +220,8 @@ class NCR(torch.nn.Module):
 
         # we begin to construct the constrains list containing all the intermediate event vectors used in the logical
         # regularization
-        constraints = list([left_side_events])
-        constraints.append(left_side_neg_events)
+        #constraints = list([left_side_events])
+        #constraints.append(left_side_neg_events)
 
         # here, we take the correct (negated or not depending on the feedbacks of the users) event vectors for the
         # logic expression
@@ -232,6 +232,8 @@ class NCR(torch.nn.Module):
         feedback_tensor = feedback_tensor.expand(history_feedbacks.size(0), history_feedbacks.size(1), self.emb_size)
         left_side_events = feedback_tensor * left_side_events + (1 - feedback_tensor) * left_side_neg_events
 
+        constraints = list([left_side_events])
+
         # now, we have the event vectors for the items in the history, we only need to build the logical expression
         # for building the logical expression we need to negate the events in the history and perform an OR operation
         # between them
@@ -239,6 +241,7 @@ class NCR(torch.nn.Module):
 
         # here, we negate the events in the history
         left_side_events = self.logic_not(left_side_events)
+        constraints.append(left_side_events)
 
         # now, we perform the logical OR between these negated left side events to build the event that is the logical
         # OR of all these events
