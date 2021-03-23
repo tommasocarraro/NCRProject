@@ -105,7 +105,7 @@ def main():
                            logic_reg_weight=init_args.r_weight)
 
     if not init_args.test_only:
-        ncr_model.train(train_loader, valid_data=val_loader, valid_metric=init_args.val_metric,
+        ncr_model.train(train_loader, valid_data=val_loader, test_data=test_loader, valid_metric=init_args.val_metric,
                         valid_func=ValidFunc(logic_evaluate), num_epochs=init_args.n_epochs,
                         at_least=init_args.at_least, early_stop=init_args.early_stop,
                         save_path=init_args.save_load_path, verbose=1)
