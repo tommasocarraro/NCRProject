@@ -108,9 +108,9 @@ def main():
         ncr_model.train(train_loader, valid_data=val_loader, valid_metric=init_args.val_metric,
                         valid_func=ValidFunc(logic_evaluate), num_epochs=init_args.n_epochs,
                         at_least=init_args.at_least,
-                        early_stop=init_args.early_stop, save_path=init_args.save_path, verbose=1)
+                        early_stop=init_args.early_stop, save_path=init_args.save_load_path, verbose=1)
 
-    ncr_model.load_model(init_args.save_path)
+    ncr_model.load_model(init_args.save_load_path)
 
     ncr_model.test(test_loader, metric_list=init_args.test_metrics, n_times=init_args.n_times)
 
