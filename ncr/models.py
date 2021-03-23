@@ -5,7 +5,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
-from .evaluation import ValidFunc, evaluate
+from .evaluation import ValidFunc, logic_evaluate
 
 __all__ = ['NCRTrainer']
 
@@ -148,7 +148,7 @@ class NCRTrainer(object):
               train_data,
               valid_data=None,
               valid_metric=None,
-              valid_func=ValidFunc(evaluate),
+              valid_func=ValidFunc(logic_evaluate),
               num_epochs=100,
               early_stop=5,
               save_path="../saved_models/best_ncr_model.json",
@@ -301,11 +301,12 @@ class NCRTrainer(object):
         logger.info("Model checkpoint loaded!")
         return checkpoint
 
-    def test(self, test_loader, metric_list=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'], n_times=10):
+    def test(self, test_loader, test_metrics=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'],
+             valid_func=ValidFunc(logic_evaluate), n_times=10):
         """
         This method performs the test of a trained NCR model.
         :param test_loader: this is the DataSampler that loads the test set interactions.
-        :param metric_list: this is a list containing the test metrics that have to be computed.
+        :param test_metrics: this is a list containing the test metrics that have to be computed.
         :param n_times: this is the number of times that the evaluation has to be computed. Since the test loader
         generates 100 random negative items for each interaction in the test set, different random generations
         could lead to different test performances. The evaluation will be computed n_times times and then each metric
@@ -315,7 +316,7 @@ class NCRTrainer(object):
         metric_dict = {}
         for i in range(n_times):  # compute test metrics n_times times and take the mean since negative samples are
             # randomly generated
-            evaluation_dict = evaluate(self, test_loader, metric_list)
+            evaluation_dict = valid_func(self, test_loader, test_metrics)
             for metric in evaluation_dict:
                 if metric not in metric_dict:
                     metric_dict[metric] = {}

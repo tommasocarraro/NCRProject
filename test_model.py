@@ -5,8 +5,6 @@ from ncr.models import NCRTrainer
 from ncr.evaluation import ValidFunc, logic_evaluate
 from ncr.utils import prepare_movielens_100k, prepare_amazon
 import torch
-import numpy as np
-import pandas as pd
 import logging
 logging.basicConfig()
 logging.getLogger().setLevel(logging.DEBUG)
@@ -14,9 +12,6 @@ logging.getLogger().setLevel(logging.DEBUG)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # set pytorch device for computation
 
 if __name__ == '__main__':
-    # TODO create a main that can be parametrized on the dataset that one wants to learn and fix all the parameters
-    # TODO based on that (see paper parameters)
-    # TODO see why in test we have very poor metrics compared to validation - try different seeds
 
     save_path = "saved-models/best_movielens_100k.json"
 
@@ -27,10 +22,6 @@ if __name__ == '__main__':
 
     dataset.process_data(threshold=4, order=True, leave_n=1, keep_n=5, max_history_length=5)
 
-    train_loader = DataSampler(dataset.train_set, dataset.user_item_matrix, n_neg_samples=1, batch_size=128,
-                               shuffle=True, seed=2022, device=device)
-    val_loader = DataSampler(dataset.validation_set, dataset.user_item_matrix, n_neg_samples=100, batch_size=200,
-                             shuffle=False, seed=2022, device=device)
     test_loader = DataSampler(dataset.test_set, dataset.user_item_matrix, n_neg_samples=100, batch_size=200,
                              shuffle=False, seed=2022, device=device)
 
@@ -38,9 +29,6 @@ if __name__ == '__main__':
 
     model = NCRTrainer(ncr_net, learning_rate=0.001, l2_weight=0.0001, logic_reg_weight=0.1)
 
-    model.train(train_loader, valid_data=val_loader, valid_metric='ndcg@5', valid_func=ValidFunc(logic_evaluate),
-                num_epochs=100, early_stop=8, save_path=save_path, verbose=1)
-
     model.load_model(save_path)
 
-    model.test(test_loader, metric_list=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'], n_times=10)
+    model.test(test_loader, test_metrics=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'], valid_func=ValidFunc(logic_evaluate), n_times=10)
