@@ -147,7 +147,6 @@ class NCRTrainer(object):
     def train(self,
               train_data,
               valid_data=None,
-              test_data=None,
               valid_metric=None,
               valid_func=ValidFunc(logic_evaluate),
               num_epochs=100,
@@ -183,10 +182,6 @@ class NCRTrainer(object):
                     logger.info('| epoch %d | %s %.3f (%.4f) |',
                                 epoch, valid_metric, mu_val, std_err_val)
                     if mu_val > best_val:
-                        logger.info('Performance on test set:')
-                        self.test(test_data, test_metrics=['ndcg@5'])
-                        logger.info('Performance on validation:')
-                        self.test(valid_data, test_metrics=['ndcg@5'])
                         best_val = mu_val
                         self.save_model(save_path, epoch)  # save model if an improved validation score has been
                         # obtained
