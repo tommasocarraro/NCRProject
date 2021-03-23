@@ -1,9 +1,9 @@
 For training and then testing:
-python main.py --dataset movielens_100k --save_load_path saved_models/best_movielens_100k.json --seed 2022 -l2 0.0001 --early_stop 5
-python main.py --dataset amazon_movies_tv --save_load_path saved_models/best_movies_tv.json --seed 2022 -l2 0.00001 --early_stop 5
-python main.py --dataset amazon_electronics --save_load_path saved_models/best_electronics.json --seed 2022 -l2 0.00001 --early_stop 5
+python main.py --dataset movielens_100k --save_load_path saved-models/best_movielens_100k.json --seed 2022 -l2 0.0001 --early_stop 5
+python main.py --dataset amazon_movies_tv --save_load_path saved-models/best_movies_tv.json --seed 2022 -l2 0.00001 --early_stop 5
+python main.py --dataset amazon_electronics --save_load_path saved-models/best_electronics.json --seed 2022 -l2 0.00001 --early_stop 5
 
 For testing only:
-python main.py --dataset movielens_100k --save_load_path saved_models/best_movielens_100k.json --seed 2022 --test_only True
-python main.py --dataset amazon_movies_tv --save_load_path saved_models/best_movies_tv.json --seed 2022 --test_only True
-python main.py --dataset amazon_electronics --save_load_path saved_models/best_electronics.json --seed 2022 --test_only True
+python main.py --dataset movielens_100k --save_load_path saved-models/best_movielens_100k.json --seed 2022 --test_only True
+python main.py --dataset amazon_movies_tv --save_load_path saved-models/best_movies_tv.json --seed 2022 --test_only True
+python main.py --dataset amazon_electronics --save_load_path saved-models/best_electronics.json --seed 2022 --test_only True

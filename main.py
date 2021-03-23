@@ -78,9 +78,9 @@ def main():
     if init_args.dataset == "movielens_100k":
         raw_dataset = pd.read_csv("datasets/movielens-100k/movielens_100k.csv")
     if init_args.dataset == "amazon_movies_tv":
-        raw_dataset = pd.read_csv("datasets/amazon_movies_tv/movies_tv.csv")
+        raw_dataset = pd.read_csv("datasets/amazon-movies-tv/movies_tv.csv")
     if init_args.dataset == "amazon_electronics":
-        raw_dataset = pd.read_csv("datasets/amazon_electronics/electronics.csv")
+        raw_dataset = pd.read_csv("datasets/amazon-electronics/electronics.csv")
 
     # create train, validation, and test sets
     dataset = Dataset(raw_dataset)
