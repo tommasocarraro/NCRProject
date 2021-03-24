@@ -28,7 +28,7 @@ The repository is organized with the following folders:
 2. datasets: it contains three CSV files, one for each dataset (MovieLens 100k, Amazon Movies and TV, Amazon Electronics). Each row of these files is composed of the following fields: userID, itemID, rating (from 1 to 5), timestamp (review timestamp);
 3. ncr: it contains the NCR framework (explained below);
 4. results: it contains the results obtained for the NCR model with the execution of the commands reported in "commands". These results are composed of the metrics ndcg@5, ndcg@10, hr@5, hr@10 computed on the test set of the three datasets reported in the paper (MovieLens 100k, Amazon Movies and TV, Amazon Electronics);
-5. saved-models: it contains the pytorch checkpoints of the best models (best ndcg@5 on validation) obtained during training. For the MovieLens 100k dataset it has been possible to directly upload the model on GitHub. Since for the other two datasets the file is too big, it will be provided a Google Drive link to the best models.
+5. saved-models: it contains the pytorch checkpoints of the best models (best ndcg@5 on validation) obtained during training. These are the so-called pre-trained models. For the MovieLens 100k dataset it has been possible to directly upload the model on GitHub. Since for the other two datasets the file is too big, it hes been provided a Google Drive link to the best models.
 
 ## NCR framework
 The NCR framework is composed of the modules explained below. This is the structure used in [rectorch](https://github.com/makgyver/rectorch), a state-of-the-art recommender systems framework. You will find this model in the rectorch framework very soon.
