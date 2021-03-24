@@ -296,7 +296,7 @@ class NCRTrainer(object):
         """
         assert os.path.isfile(filepath), "The checkpoint file %s does not exist." %filepath
         logger.info("Loading model checkpoint from %s...", filepath)
-        checkpoint = torch.load(filepath)
+        checkpoint = torch.load(filepath, map_location=torch.device('cpu'))
         self.network.load_state_dict(checkpoint['state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer'])
         logger.info("Model checkpoint loaded!")

@@ -1,0 +1,17 @@
+MovieLens 100k:
+INFO:ncr.models:ndcg@5: 0.374 (0.0130)
+INFO:ncr.models:ndcg@10: 0.426 (0.0119)
+INFO:ncr.models:hit@5: 0.526 (0.0163)
+INFO:ncr.models:hit@10: 0.689 (0.0152)
+
+Amazon Movies and TV:
+INFO:ncr.models:ndcg@5: 0.415 (0.0017)
+INFO:ncr.models:ndcg@10: 0.457 (0.0015)
+INFO:ncr.models:hit@5: 0.550 (0.0020)
+INFO:ncr.models:hit@10: 0.680 (0.0019)
+
+Amazon Electronics:
+INFO:ncr.models:ndcg@5: 0.336 (0.0014)
+INFO:ncr.models:ndcg@10: 0.375 (0.0013)
+INFO:ncr.models:hit@5: 0.452 (0.0017)
+INFO:ncr.models:hit@10: 0.574 (0.0017)

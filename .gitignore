@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/saved-models/best_electronics.json
+/saved-models/best_movies_tv.json
