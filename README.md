@@ -62,8 +62,8 @@ These commands contains only few parameters since the others have a default valu
 17. --test_metrics: Metrics computed for the test of the model. Default=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'];
 18. --n_epochs: Number of epochs for the training of the model. Default=100;
 19. --early_stop: Number of epochs for early stopping. It should be > 1. Default=5;
-20. --at_least': Minimum number of epochs before starting with early stopping. Default=20;
-21. --save_load_path': Path where the model has to be saved during training. The model is saved every time the validation metric increases. This path is also used for loading the best model before the test evaluation. Default="saved-models/best_model.json";
+20. --at_least: Minimum number of epochs before starting with early stopping. Default=20;
+21. --save_load_path: Path where the model has to be saved during training. The model is saved every time the validation metric increases. This path is also used for loading the best model before the test evaluation. Default="saved-models/best_model.json";
 22. --n_times: Number of times the test evaluation is performed (metrics are averaged across these n_times evaluations). This is required since the negative items are randomly sampled. Default=10;
 23. --dataset: Dataset on which the experiment has to be performed ('movielens_100k', 'amazon_movies_tv', 'amazon_electronics'). Default="movielens_100k";
 24. --test_only: Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path. Default=False.
