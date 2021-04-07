@@ -4,6 +4,13 @@ INFO:ncr.models:ndcg@10: 0.426 (0.0119)
 INFO:ncr.models:hit@5: 0.526 (0.0163)
 INFO:ncr.models:hit@10: 0.689 (0.0152)
 
+MovieLens 100k where logical expressions with only one premise have been removed:
+INFO:ncr.models:ndcg@5: 0.369 (0.0129)
+INFO:ncr.models:ndcg@10: 0.427 (0.0117)
+INFO:ncr.models:hit@5: 0.525 (0.0163)
+INFO:ncr.models:hit@10: 0.704 (0.0149)
+It performs slightly better when k=10 and worse when k=5.
+
 Amazon Movies and TV:
 INFO:ncr.models:ndcg@5: 0.415 (0.0017)
 INFO:ncr.models:ndcg@10: 0.457 (0.0015)

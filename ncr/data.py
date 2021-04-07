@@ -155,7 +155,8 @@ class Dataset(object):
         implication), ==0 value means keeps all.
         :param premise_threshold: it specifies a threshold for filtering logical expressions based on
         the number of premises. Specifically, all the logical expressions with a number of premises equal to or lower
-        than premise_threshold will be removed from the dataset. The value should be between 0 and max_hist_length - 1.
+        than premise_threshold will be removed from the dataset. The value should be between 0 (no filter) and
+        max_hist_length - 1 (maximum applicable filter).
         For example, if we have logical expressions: a -> b, a ∧ b -> c and a ∧ b ∧ c -> d, and the parameter
         premise_threshold is set to 2, the first two expressions will be removed from the dataset.
         """
@@ -191,6 +192,8 @@ class Dataset(object):
             df['history_length'] = hist_len
 
         # filtering logical expressions based on number of premises
+        # we remove from the dataset all the logical expressions with a number of premises equal to or lower than
+        # premise_threshold
         self.train_set = self.train_set[self.train_set.history_length > premise_threshold]
         self.validation_set = self.validation_set[self.validation_set.history_length > premise_threshold]
         self.test_set = self.test_set[self.test_set.history_length > premise_threshold]
