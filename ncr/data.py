@@ -194,9 +194,10 @@ class Dataset(object):
         # filtering logical expressions based on number of premises
         # we remove from the dataset all the logical expressions with a number of premises equal to or lower than
         # premise_threshold
-        self.train_set = self.train_set[self.train_set.history_length > premise_threshold]
-        self.validation_set = self.validation_set[self.validation_set.history_length > premise_threshold]
-        self.test_set = self.test_set[self.test_set.history_length > premise_threshold]
+        if premise_threshold != 0:
+            self.train_set = self.train_set[self.train_set.history_length > premise_threshold]
+            self.validation_set = self.validation_set[self.validation_set.history_length > premise_threshold]
+            self.test_set = self.test_set[self.test_set.history_length > premise_threshold]
 
         self.clean_data()
 
