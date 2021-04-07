@@ -32,7 +32,7 @@ def main():
                              help='Number of positive interactions that are hold out from each user for validation and test sets.')
     init_parser.add_argument('--keep_n', type=int, default=5,
                              help='Minimum number of positive interactions that are kept in training set for each user.')
-    init_parser.add_argument('--max-history-length', type=int, default=5,
+    init_parser.add_argument('--max_history_length', type=int, default=5,
                              help='Maximum length of history for each interaction (i.e. maximum number of items at the left of the implication in the logical expressions)')
     init_parser.add_argument('--n_neg_train', type=int, default=1,
                              help='Number of negative items randomly sampled for each training interaction. The items are sampled from the set of items that the user has never seen.')
