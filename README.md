@@ -28,7 +28,7 @@ The repository is organized with the following folders:
 2. datasets: it contains three CSV files, one for each dataset (MovieLens 100k, Amazon Movies and TV, Amazon Electronics). Each row of these files is composed of the following fields: userID, itemID, rating (from 1 to 5), timestamp (review timestamp);
 3. ncr: it contains the NCR framework (explained below);
 4. results: it contains the results obtained for the NCR model with the execution of the commands reported in "commands". These results are composed of the metrics ndcg@5, ndcg@10, hr@5, hr@10 computed on the test set of the three datasets reported in the paper (MovieLens 100k, Amazon Movies and TV, Amazon Electronics);
-5. saved-models: it contains the pytorch checkpoints of the best models (best ndcg@5 on validation) obtained during training. For the MovieLens 100k dataset it has been possible to directly upload the model on GitHub. Since for the other two datasets the file is too big, it will be provided a Google Drive link to the best models.
+5. saved-models: it contains the pytorch checkpoints of the best models (best ndcg@5 on validation) obtained during training. These are the so-called pre-trained models. For the MovieLens 100k dataset it has been possible to directly upload the model on GitHub. Since for the other two datasets the file is too big, it hes been provided a Google Drive link to the best models.
 
 ## NCR framework
 The NCR framework is composed of the modules explained below. This is the structure used in [rectorch](https://github.com/makgyver/rectorch), a state-of-the-art recommender systems framework. You will find this model in the rectorch framework very soon.
@@ -62,8 +62,8 @@ These commands contains only few parameters since the others have a default valu
 17. --test_metrics: Metrics computed for the test of the model. Default=['ndcg@5', 'ndcg@10', 'hit@5', 'hit@10'];
 18. --n_epochs: Number of epochs for the training of the model. Default=100;
 19. --early_stop: Number of epochs for early stopping. It should be > 1. Default=5;
-20. --at_least': Minimum number of epochs before starting with early stopping. Default=20;
-21. --save_load_path': Path where the model has to be saved during training. The model is saved every time the validation metric increases. This path is also used for loading the best model before the test evaluation. Default="saved-models/best_model.json";
+20. --at_least: Minimum number of epochs before starting with early stopping. Default=20;
+21. --save_load_path: Path where the model has to be saved during training. The model is saved every time the validation metric increases. This path is also used for loading the best model before the test evaluation. Default="saved-models/best_model.json";
 22. --n_times: Number of times the test evaluation is performed (metrics are averaged across these n_times evaluations). This is required since the negative items are randomly sampled. Default=10;
 23. --dataset: Dataset on which the experiment has to be performed ('movielens_100k', 'amazon_movies_tv', 'amazon_electronics'). Default="movielens_100k";
 24. --test_only: Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path. Default=False.
