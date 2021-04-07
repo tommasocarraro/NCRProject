@@ -42,6 +42,8 @@ class DataSampler(Sampler):
     shuffle : whether the data set must by randomly shuffled before creating the batches, by default ``True``
     seed: the random seed for the shuffle
     device: the device where the torch tensors have to be put
+    remove_one_premise: flag indicating whether the logical expressions with only one premise have to be considered
+    during training or not
     """
     def __init__(self,
                  data,
@@ -50,7 +52,8 @@ class DataSampler(Sampler):
                  batch_size=128,
                  shuffle=True,
                  seed=2022,
-                 device='cuda:0'):
+                 device='cuda:0',
+                 remove_one_premise=False):
         super(DataSampler, self).__init__()
         self.data = data
         self.user_item_matrix = user_item_matrix
@@ -61,6 +64,7 @@ class DataSampler(Sampler):
         self.device = device
         np.random.seed(self.seed)
         random.seed(self.seed)
+        self.remove_one_premise = remove_one_premise
 
     def __len__(self):
         # here, it is not sufficient to return int(np.ceil(self.data.shape[0] / self.batch_size)) since we have
@@ -69,6 +73,9 @@ class DataSampler(Sampler):
         length = self.data.groupby("history_length")  # histories could be of different lengths, so we need to group
         # histories of the same length in the same batch
         for i, (_, l) in enumerate(length):
+            if self.remove_one_premise and i == 0:  # on the first index there are the logical expressions with only one
+                # premise, that are the logical expressions that we do not have to consider
+                continue
             dataset_size += int(np.ceil(l.shape[0] / self.batch_size))
         return dataset_size
 
@@ -76,10 +83,12 @@ class DataSampler(Sampler):
         # for each epoch, each positive interaction has a random sampled negative interaction for the pair-wise learning
         # instead, in validation, each positive interaction has 100 random sampled negative interactions for the
         # computation of the metrics
-        length = self.data.groupby("history_length") # histories could be of different lengths, so we need to group
+        length = self.data.groupby("history_length")  # histories could be of different lengths, so we need to group
         # histories of the same length in the same batch
 
         for i, (_, l) in enumerate(length):
+            if self.remove_one_premise and i == 0:
+                continue
             # get numpy arrays of the dataframe fields that we need to train the model
             group_users = np.array(list(l['userID']))
             group_items = np.array(list(l['itemID']))

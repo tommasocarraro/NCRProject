@@ -1,18 +1,22 @@
 from ncr.data import Dataset
 from ncr.samplers import DataSampler
 from ncr.nets import NCR
+import pandas as pd
 import torch
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")  # set pytorch device for computation
 
 if __name__ == '__main__':
-    dataset = Dataset("datasets/movielens-100k/u.data")
+    raw_dataset = pd.read_csv("datasets/movielens-100k/movielens_100k.csv")
 
-    dataset.process_data(threshold=4, order=True)
+    dataset = Dataset(raw_dataset)
 
-    train_loader = DataSampler(dataset.train_set, dataset.user_item_matrix, batch_size=128, device=device)
+    dataset.process_data()
 
-    ncr = NCR(dataset.n_users, dataset.n_items)
+    train_loader = DataSampler(dataset.train_set, dataset.user_item_matrix, n_neg_samples=1, batch_size=128,
+                               shuffle=True, seed=2022, device=device, remove_one_premise=True)
+
+    ncr = NCR(dataset.n_users, dataset.n_items, emb_size=64, dropout=0.0, seed=2022).to(device)
 
     for batch_idx, batch_data in enumerate(train_loader):
         pos, neg, const = ncr(batch_data)
