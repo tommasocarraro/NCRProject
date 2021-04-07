@@ -11,13 +11,12 @@ if __name__ == '__main__':
 
     dataset = Dataset(raw_dataset)
 
-    dataset.process_data()
+    dataset.process_data(premise_threshold=0, max_history_length=5)
 
     train_loader = DataSampler(dataset.train_set, dataset.user_item_matrix, n_neg_samples=1, batch_size=128,
-                               shuffle=True, seed=2022, device=device, remove_one_premise=True)
+                               shuffle=True, seed=2022, device=device)
 
     ncr = NCR(dataset.n_users, dataset.n_items, emb_size=64, dropout=0.0, seed=2022).to(device)
 
     for batch_idx, batch_data in enumerate(train_loader):
         pos, neg, const = ncr(batch_data)
-        print()
