@@ -115,6 +115,4 @@ def main():
     ncr_model.test(test_loader, test_metrics=init_args.test_metrics, n_times=init_args.n_times)
 
 if __name__ == '__main__':
-    # TODO see why in test we have very poor metrics compared to validation - try different seeds
-    # TODO try to change constraints and regularizers
     main()
