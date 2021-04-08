@@ -73,7 +73,7 @@ def main():
     init_parser.add_argument('--test_only', type=bool, default=False,
                              help='Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path.')
     init_parser.add_argument('--premise_threshold', type=int, default=0,
-                             help='Threshold for filtering logical expressions based on the number of premises. All the logical expressions with a number of premises equal to or lower than premise_threshold are removed from the dataset.')
+                             help='Threshold for filtering logical expressions based on the number of premises. All the logical expressions with a number of premises equal to or lower than premise_threshold are removed from the dataset before the training of the model.')
     init_args, init_extras = init_parser.parse_known_args()
 
     # take the correct dataset
@@ -89,6 +89,7 @@ def main():
     dataset.process_data(threshold=init_args.threshold, order=init_args.order, leave_n=init_args.leave_n,
                          keep_n=init_args.keep_n, max_history_length=init_args.max_history_length,
                          premise_threshold=init_args.premise_threshold)
+
     if not init_args.test_only:
         train_loader = DataSampler(dataset.train_set, dataset.user_item_matrix, n_neg_samples=init_args.n_neg_train,
                                    batch_size=init_args.training_batch_size, shuffle=True, seed=init_args.seed,

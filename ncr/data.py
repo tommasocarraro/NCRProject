@@ -65,7 +65,7 @@ class Dataset(object):
         :param leave_n: see leave_out_out_by_time()
         :param keep_n: see leave_out_out_by_time()
         :param max_history_length: see generate_histories()
-        :param premise_threshold: see generate_histories(
+        :param premise_threshold: see generate_histories()
         """
         # filter ratings by threshold
         self.proc_dataset = self.dataset.copy()
@@ -156,10 +156,12 @@ class Dataset(object):
         :param premise_threshold: it specifies a threshold for filtering logical expressions based on
         the number of premises. Specifically, all the logical expressions with a number of premises equal to or lower
         than premise_threshold will be removed from the dataset. The value should be between 0 (no filter) and
-        max_hist_length - 1 (maximum applicable filter).
+        max_hist_length - 1 (maximum applicable filter). In fact, if premise_threshold is higher than
+        max_hist_length - 1, than all the logical expressions will be removed from the dataset.
         For example, if we have logical expressions: a -> b, a ∧ b -> c and a ∧ b ∧ c -> d, and the parameter
         premise_threshold is set to 2, the first two expressions will be removed from the dataset.
         """
+        # TODO insert an assert to check the value of the parameter premise_threshold (read doc)
         history_dict = {} # it contains for each user the list of all the items he has seen
         feedback_dict = {} # it contains for each user the list of feedbacks he gave to the items he has seen
         for df in [self.train_set, self.validation_set, self.test_set]:
