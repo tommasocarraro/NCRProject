@@ -73,7 +73,7 @@ def main():
     init_parser.add_argument('--test_only', type=bool, default=False,
                              help='Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path.')
     init_parser.add_argument('--premise_threshold', type=int, default=0,
-                             help='Threshold for filtering logical expressions based on the number of premises. All the logical expressions with a number of premises equal to or lower than premise_threshold are removed from the dataset before the training of the model.')
+                             help='Threshold for filtering logical expressions based on the number of premises (number of propositional variables at the left side of the implication). All the logical expressions with a number of premises equal to or lower than premise_threshold are removed from the dataset before the training of the model.')
     init_args, init_extras = init_parser.parse_known_args()
 
     # take the correct dataset
