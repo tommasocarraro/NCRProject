@@ -16,8 +16,15 @@ class NCR(torch.nn.Module):
     training.
     :param seed: this is the seed for the setting of the pytorch seed. This is needed in order to have reproducible
     results.
+    :param remove_double_not: this is a flag indicating whether the double negations have to be removed from the
+    logical expressions or not. For example, let us assume we have the following logical expression:
+    ¬a ∨ b ∨ ¬c ∨ ¬¬d ∨ ¬¬e ∨ f. If remove_double_not is set to False, then this logical expression remains unchanged,
+    while if the parameter is set to True, then the logical expression becomes ¬a ∨ b ∨ ¬c ∨ d ∨ e ∨ f. In other words,
+    if the parameter is set to True, ¬¬x is transformed into x. Specifically, transforming ¬¬x in x allows to avoid
+    passing x through the NOT neural module two times. In fact, since ¬¬x is logically equivalent to x, it is not
+    necessary to compute the double negation.
     """
-    def __init__(self, n_users, n_items, emb_size=64, dropout=0.0, seed=2022):
+    def __init__(self, n_users, n_items, emb_size=64, dropout=0.0, seed=2022, remove_double_not=False):
         super(NCR, self).__init__()
         self.n_users = n_users
         self.n_items = n_items
@@ -56,6 +63,7 @@ class NCR(torch.nn.Module):
         self.dropout_layer = torch.nn.Dropout(self.dropout)
         # initialize the weights of the network
         self.init_weights()
+        self.remove_double_not = remove_double_not
 
     def init_weights(self):
         """
@@ -230,7 +238,14 @@ class NCR(torch.nn.Module):
         # that we can perform element-wise multiplication to get the right left side event vectors
         feedback_tensor = history_feedbacks.view(history_feedbacks.size(0), history_feedbacks.size(1), 1)
         feedback_tensor = feedback_tensor.expand(history_feedbacks.size(0), history_feedbacks.size(1), self.emb_size)
-        left_side_events = feedback_tensor * left_side_events + (1 - feedback_tensor) * left_side_neg_events
+
+        # if we do not want the double negations, we flip the feedback vector and we do not compute the NOTs in the
+        # intermediate stages of the network. By doing so, we obtain a logically equivalent expression avoiding
+        # the computation of double negations.
+        if self.remove_double_not:
+            left_side_events = (1 - feedback_tensor) * left_side_events + feedback_tensor * left_side_neg_events
+        else:
+            left_side_events = feedback_tensor * left_side_events + (1 - feedback_tensor) * left_side_neg_events
 
         #constraints = list([left_side_events])
 
@@ -239,8 +254,9 @@ class NCR(torch.nn.Module):
         # between them
         # then, we need to do (OR between negated events of the history) OR (event at the right side of implication)
 
-        # here, we negate the events in the history
-        left_side_events = self.logic_not(left_side_events)
+        # here, we negate the events in the history only if we want to compute double negations
+        if not self.remove_double_not:
+            left_side_events = self.logic_not(left_side_events)
         #constraints.append(left_side_events)
 
         # now, we perform the logical OR between these negated left side events to build the event that is the logical

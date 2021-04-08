@@ -74,6 +74,8 @@ def main():
                              help='Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path.')
     init_parser.add_argument('--premise_threshold', type=int, default=0,
                              help='Threshold for filtering logical expressions based on the number of premises (number of propositional variables at the left side of the implication). All the logical expressions with a number of premises equal to or lower than premise_threshold are removed from the dataset before the training of the model.')
+    init_parser.add_argument('--remove_double_not', type=bool, default=False,
+                             help='Flag indicating whether the double negations have to be removed from the logical expressions or not. Removing double negations allows the network to not pass through the NOT module two times.')
     init_args, init_extras = init_parser.parse_known_args()
 
     # take the correct dataset
@@ -103,7 +105,7 @@ def main():
                               device=device)
 
     ncr_net = NCR(dataset.n_users, dataset.n_items, emb_size=init_args.emb_size, dropout=init_args.dropout,
-                  seed=init_args.seed).to(device)
+                  seed=init_args.seed, remove_double_not=init_args.remove_double_not).to(device)
 
     ncr_model = NCRTrainer(ncr_net, learning_rate=init_args.lr, l2_weight=init_args.l2,
                            logic_reg_weight=init_args.r_weight)
