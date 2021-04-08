@@ -48,7 +48,7 @@ These commands contains only few parameters since the others have a default valu
 2. --order: Flag indicating whether the ratings have to be ordered by timestamp on not. Default=True;
 3. --leave_n: Number of positive interactions that are hold out from each user for validation and test sets. Default=1;
 4. --keep_n: Minimum number of positive interactions that are kept in training set for each user. Default=5;
-5. --max-history-length: Maximum length of history for each interaction (i.e. maximum number of items at the left of the implication in the logical expressions. Default=5;
+5. --max_history_length: Maximum length of history for each interaction (i.e. maximum number of items at the left of the implication in the logical expressions. Default=5;
 6. --n_neg_train: Number of negative items randomly sampled for each training interaction. The items are sampled from the set of items that the user has never seen. Default=1;
 7. --n_neg_val_test: Number of negative items randomly sampled for each validation/test interaction. The items are sampled from the set of items that the user has never seen. Default=100;
 8. --training_batch_size: Size of training set batches. Default=128;
@@ -67,4 +67,5 @@ These commands contains only few parameters since the others have a default valu
 21. --save_load_path: Path where the model has to be saved during training. The model is saved every time the validation metric increases. This path is also used for loading the best model before the test evaluation. Default="saved-models/best_model.json";
 22. --n_times: Number of times the test evaluation is performed (metrics are averaged across these n_times evaluations). This is required since the negative items are randomly sampled. Default=10;
 23. --dataset: Dataset on which the experiment has to be performed ('movielens_100k', 'amazon_movies_tv', 'amazon_electronics'). Default="movielens_100k";
-24. --test_only: Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path. Default=False.
+24. --test_only: Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path. Default=False;
+25. --premise_threshold: Threshold for filtering logical expressions based on the number of premises (number of propositional variables at the left side of the implication). All the logical expressions with a number of premises equal to or lower than premise_threshold are removed from the dataset before the training of the model.
