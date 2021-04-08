@@ -1,0 +1,1271 @@
+INFO:numexpr.utils:NumExpr defaulting to 2 threads.
+INFO:ncr.models:| epoch 1 | 41/417 batches | ms/batch 36.34 | loss 66.03 |
+INFO:ncr.models:| epoch 1 | 82/417 batches | ms/batch 26.17 | loss 44.85 |
+INFO:ncr.models:| epoch 1 | 123/417 batches | ms/batch 23.81 | loss 42.77 |
+INFO:ncr.models:| epoch 1 | 164/417 batches | ms/batch 24.98 | loss 39.44 |
+INFO:ncr.models:| epoch 1 | 205/417 batches | ms/batch 24.67 | loss 38.05 |
+INFO:ncr.models:| epoch 1 | 246/417 batches | ms/batch 22.70 | loss 35.81 |
+INFO:ncr.models:| epoch 1 | 287/417 batches | ms/batch 27.85 | loss 38.13 |
+INFO:ncr.models:| epoch 1 | 328/417 batches | ms/batch 22.48 | loss 36.19 |
+INFO:ncr.models:| epoch 1 | 369/417 batches | ms/batch 23.40 | loss 36.17 |
+INFO:ncr.models:| epoch 1 | 410/417 batches | ms/batch 22.60 | loss 36.27 |
+INFO:ncr.models:| epoch 1 | loss 41.2398 | total time: 10.76s |
+INFO:ncr.models:| epoch 1 | ndcg@5 0.181 (0.0104) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 2 | 41/417 batches | ms/batch 28.17 | loss 31.37 |
+INFO:ncr.models:| epoch 2 | 82/417 batches | ms/batch 22.53 | loss 35.82 |
+INFO:ncr.models:| epoch 2 | 123/417 batches | ms/batch 26.95 | loss 35.22 |
+INFO:ncr.models:| epoch 2 | 164/417 batches | ms/batch 23.36 | loss 36.29 |
+INFO:ncr.models:| epoch 2 | 205/417 batches | ms/batch 22.68 | loss 35.31 |
+INFO:ncr.models:| epoch 2 | 246/417 batches | ms/batch 26.11 | loss 33.79 |
+INFO:ncr.models:| epoch 2 | 287/417 batches | ms/batch 29.94 | loss 34.52 |
+INFO:ncr.models:| epoch 2 | 328/417 batches | ms/batch 29.02 | loss 35.48 |
+INFO:ncr.models:| epoch 2 | 369/417 batches | ms/batch 23.54 | loss 34.40 |
+INFO:ncr.models:| epoch 2 | 410/417 batches | ms/batch 23.27 | loss 33.96 |
+INFO:ncr.models:| epoch 2 | loss 34.6238 | total time: 10.76s |
+INFO:ncr.models:| epoch 2 | ndcg@5 0.194 (0.0106) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 3 | 41/417 batches | ms/batch 25.34 | loss 28.41 |
+INFO:ncr.models:| epoch 3 | 82/417 batches | ms/batch 23.31 | loss 35.37 |
+INFO:ncr.models:| epoch 3 | 123/417 batches | ms/batch 24.08 | loss 33.40 |
+INFO:ncr.models:| epoch 3 | 164/417 batches | ms/batch 23.67 | loss 34.04 |
+INFO:ncr.models:| epoch 3 | 205/417 batches | ms/batch 22.98 | loss 34.39 |
+INFO:ncr.models:| epoch 3 | 246/417 batches | ms/batch 22.72 | loss 34.45 |
+INFO:ncr.models:| epoch 3 | 287/417 batches | ms/batch 23.87 | loss 33.56 |
+INFO:ncr.models:| epoch 3 | 328/417 batches | ms/batch 23.68 | loss 32.47 |
+INFO:ncr.models:| epoch 3 | 369/417 batches | ms/batch 22.15 | loss 33.85 |
+INFO:ncr.models:| epoch 3 | 410/417 batches | ms/batch 23.72 | loss 32.82 |
+INFO:ncr.models:| epoch 3 | loss 33.2926 | total time: 9.89s |
+INFO:ncr.models:| epoch 3 | ndcg@5 0.187 (0.0107) |
+INFO:ncr.models:| epoch 4 | 41/417 batches | ms/batch 25.41 | loss 28.47 |
+INFO:ncr.models:| epoch 4 | 82/417 batches | ms/batch 24.99 | loss 34.56 |
+INFO:ncr.models:| epoch 4 | 123/417 batches | ms/batch 24.25 | loss 32.64 |
+INFO:ncr.models:| epoch 4 | 164/417 batches | ms/batch 25.79 | loss 33.78 |
+INFO:ncr.models:| epoch 4 | 205/417 batches | ms/batch 22.74 | loss 33.47 |
+INFO:ncr.models:| epoch 4 | 246/417 batches | ms/batch 23.71 | loss 32.56 |
+INFO:ncr.models:| epoch 4 | 287/417 batches | ms/batch 27.14 | loss 31.52 |
+INFO:ncr.models:| epoch 4 | 328/417 batches | ms/batch 27.96 | loss 33.98 |
+INFO:ncr.models:| epoch 4 | 369/417 batches | ms/batch 23.46 | loss 32.70 |
+INFO:ncr.models:| epoch 4 | 410/417 batches | ms/batch 23.58 | loss 32.50 |
+INFO:ncr.models:| epoch 4 | loss 32.5426 | total time: 10.46s |
+INFO:ncr.models:| epoch 4 | ndcg@5 0.206 (0.0110) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 5 | 41/417 batches | ms/batch 30.28 | loss 26.15 |
+INFO:ncr.models:| epoch 5 | 82/417 batches | ms/batch 25.73 | loss 31.57 |
+INFO:ncr.models:| epoch 5 | 123/417 batches | ms/batch 29.65 | loss 30.37 |
+INFO:ncr.models:| epoch 5 | 164/417 batches | ms/batch 27.71 | loss 30.10 |
+INFO:ncr.models:| epoch 5 | 205/417 batches | ms/batch 24.34 | loss 29.63 |
+INFO:ncr.models:| epoch 5 | 246/417 batches | ms/batch 29.30 | loss 31.01 |
+INFO:ncr.models:| epoch 5 | 287/417 batches | ms/batch 22.74 | loss 30.68 |
+INFO:ncr.models:| epoch 5 | 328/417 batches | ms/batch 22.50 | loss 29.91 |
+INFO:ncr.models:| epoch 5 | 369/417 batches | ms/batch 22.87 | loss 30.95 |
+INFO:ncr.models:| epoch 5 | 410/417 batches | ms/batch 23.23 | loss 29.61 |
+INFO:ncr.models:| epoch 5 | loss 29.9119 | total time: 10.84s |
+INFO:ncr.models:| epoch 5 | ndcg@5 0.246 (0.0116) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 6 | 41/417 batches | ms/batch 26.93 | loss 24.14 |
+INFO:ncr.models:| epoch 6 | 82/417 batches | ms/batch 28.81 | loss 28.06 |
+INFO:ncr.models:| epoch 6 | 123/417 batches | ms/batch 26.43 | loss 28.19 |
+INFO:ncr.models:| epoch 6 | 164/417 batches | ms/batch 26.26 | loss 28.37 |
+INFO:ncr.models:| epoch 6 | 205/417 batches | ms/batch 28.99 | loss 29.79 |
+INFO:ncr.models:| epoch 6 | 246/417 batches | ms/batch 23.93 | loss 27.57 |
+INFO:ncr.models:| epoch 6 | 287/417 batches | ms/batch 22.85 | loss 27.29 |
+INFO:ncr.models:| epoch 6 | 328/417 batches | ms/batch 24.30 | loss 29.34 |
+INFO:ncr.models:| epoch 6 | 369/417 batches | ms/batch 23.39 | loss 27.24 |
+INFO:ncr.models:| epoch 6 | 410/417 batches | ms/batch 23.29 | loss 28.57 |
+INFO:ncr.models:| epoch 6 | loss 27.8126 | total time: 10.70s |
+INFO:ncr.models:| epoch 6 | ndcg@5 0.247 (0.0117) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 7 | 41/417 batches | ms/batch 26.20 | loss 23.01 |
+INFO:ncr.models:| epoch 7 | 82/417 batches | ms/batch 24.56 | loss 27.03 |
+INFO:ncr.models:| epoch 7 | 123/417 batches | ms/batch 23.52 | loss 26.19 |
+INFO:ncr.models:| epoch 7 | 164/417 batches | ms/batch 23.26 | loss 25.82 |
+INFO:ncr.models:| epoch 7 | 205/417 batches | ms/batch 24.20 | loss 27.15 |
+INFO:ncr.models:| epoch 7 | 246/417 batches | ms/batch 23.03 | loss 25.95 |
+INFO:ncr.models:| epoch 7 | 287/417 batches | ms/batch 22.10 | loss 26.91 |
+INFO:ncr.models:| epoch 7 | 328/417 batches | ms/batch 24.79 | loss 26.58 |
+INFO:ncr.models:| epoch 7 | 369/417 batches | ms/batch 22.46 | loss 26.53 |
+INFO:ncr.models:| epoch 7 | 410/417 batches | ms/batch 24.95 | loss 25.67 |
+INFO:ncr.models:| epoch 7 | loss 26.0089 | total time: 10.07s |
+INFO:ncr.models:| epoch 7 | ndcg@5 0.262 (0.0119) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 8 | 41/417 batches | ms/batch 30.28 | loss 22.36 |
+INFO:ncr.models:| epoch 8 | 82/417 batches | ms/batch 22.83 | loss 25.01 |
+INFO:ncr.models:| epoch 8 | 123/417 batches | ms/batch 25.19 | loss 25.66 |
+INFO:ncr.models:| epoch 8 | 164/417 batches | ms/batch 28.24 | loss 25.32 |
+INFO:ncr.models:| epoch 8 | 205/417 batches | ms/batch 22.97 | loss 25.59 |
+INFO:ncr.models:| epoch 8 | 246/417 batches | ms/batch 23.64 | loss 25.61 |
+INFO:ncr.models:| epoch 8 | 287/417 batches | ms/batch 26.26 | loss 25.04 |
+INFO:ncr.models:| epoch 8 | 328/417 batches | ms/batch 23.12 | loss 26.93 |
+INFO:ncr.models:| epoch 8 | 369/417 batches | ms/batch 26.68 | loss 24.91 |
+INFO:ncr.models:| epoch 8 | 410/417 batches | ms/batch 27.08 | loss 23.83 |
+INFO:ncr.models:| epoch 8 | loss 24.8980 | total time: 10.81s |
+INFO:ncr.models:| epoch 8 | ndcg@5 0.299 (0.0120) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 9 | 41/417 batches | ms/batch 27.36 | loss 21.41 |
+INFO:ncr.models:| epoch 9 | 82/417 batches | ms/batch 26.17 | loss 24.68 |
+INFO:ncr.models:| epoch 9 | 123/417 batches | ms/batch 25.28 | loss 24.61 |
+INFO:ncr.models:| epoch 9 | 164/417 batches | ms/batch 26.41 | loss 23.72 |
+INFO:ncr.models:| epoch 9 | 205/417 batches | ms/batch 26.00 | loss 23.22 |
+INFO:ncr.models:| epoch 9 | 246/417 batches | ms/batch 23.43 | loss 23.16 |
+INFO:ncr.models:| epoch 9 | 287/417 batches | ms/batch 27.46 | loss 22.93 |
+INFO:ncr.models:| epoch 9 | 328/417 batches | ms/batch 23.48 | loss 23.31 |
+INFO:ncr.models:| epoch 9 | 369/417 batches | ms/batch 23.34 | loss 23.78 |
+INFO:ncr.models:| epoch 9 | 410/417 batches | ms/batch 26.16 | loss 22.38 |
+INFO:ncr.models:| epoch 9 | loss 23.2813 | total time: 10.77s |
+INFO:ncr.models:| epoch 9 | ndcg@5 0.291 (0.0123) |
+INFO:ncr.models:| epoch 10 | 41/417 batches | ms/batch 31.34 | loss 19.45 |
+INFO:ncr.models:| epoch 10 | 82/417 batches | ms/batch 26.01 | loss 22.89 |
+INFO:ncr.models:| epoch 10 | 123/417 batches | ms/batch 23.89 | loss 21.10 |
+INFO:ncr.models:| epoch 10 | 164/417 batches | ms/batch 26.35 | loss 21.68 |
+INFO:ncr.models:| epoch 10 | 205/417 batches | ms/batch 23.02 | loss 22.08 |
+INFO:ncr.models:| epoch 10 | 246/417 batches | ms/batch 23.50 | loss 21.84 |
+INFO:ncr.models:| epoch 10 | 287/417 batches | ms/batch 25.29 | loss 22.35 |
+INFO:ncr.models:| epoch 10 | 328/417 batches | ms/batch 25.39 | loss 21.75 |
+INFO:ncr.models:| epoch 10 | 369/417 batches | ms/batch 23.24 | loss 22.64 |
+INFO:ncr.models:| epoch 10 | 410/417 batches | ms/batch 24.18 | loss 21.89 |
+INFO:ncr.models:| epoch 10 | loss 21.7013 | total time: 10.57s |
+INFO:ncr.models:| epoch 10 | ndcg@5 0.306 (0.0121) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 11 | 41/417 batches | ms/batch 25.84 | loss 17.54 |
+INFO:ncr.models:| epoch 11 | 82/417 batches | ms/batch 24.42 | loss 21.73 |
+INFO:ncr.models:| epoch 11 | 123/417 batches | ms/batch 22.60 | loss 20.33 |
+INFO:ncr.models:| epoch 11 | 164/417 batches | ms/batch 24.49 | loss 19.98 |
+INFO:ncr.models:| epoch 11 | 205/417 batches | ms/batch 22.69 | loss 22.00 |
+INFO:ncr.models:| epoch 11 | 246/417 batches | ms/batch 22.77 | loss 20.67 |
+INFO:ncr.models:| epoch 11 | 287/417 batches | ms/batch 23.03 | loss 20.05 |
+INFO:ncr.models:| epoch 11 | 328/417 batches | ms/batch 22.61 | loss 20.83 |
+INFO:ncr.models:| epoch 11 | 369/417 batches | ms/batch 22.51 | loss 20.94 |
+INFO:ncr.models:| epoch 11 | 410/417 batches | ms/batch 24.72 | loss 20.93 |
+INFO:ncr.models:| epoch 11 | loss 20.4594 | total time: 9.90s |
+INFO:ncr.models:| epoch 11 | ndcg@5 0.317 (0.0122) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 12 | 41/417 batches | ms/batch 27.65 | loss 17.23 |
+INFO:ncr.models:| epoch 12 | 82/417 batches | ms/batch 22.72 | loss 20.00 |
+INFO:ncr.models:| epoch 12 | 123/417 batches | ms/batch 24.71 | loss 21.01 |
+INFO:ncr.models:| epoch 12 | 164/417 batches | ms/batch 25.72 | loss 20.00 |
+INFO:ncr.models:| epoch 12 | 205/417 batches | ms/batch 22.47 | loss 20.14 |
+INFO:ncr.models:| epoch 12 | 246/417 batches | ms/batch 23.33 | loss 21.84 |
+INFO:ncr.models:| epoch 12 | 287/417 batches | ms/batch 23.54 | loss 21.10 |
+INFO:ncr.models:| epoch 12 | 328/417 batches | ms/batch 22.64 | loss 20.16 |
+INFO:ncr.models:| epoch 12 | 369/417 batches | ms/batch 23.88 | loss 19.58 |
+INFO:ncr.models:| epoch 12 | 410/417 batches | ms/batch 22.65 | loss 20.69 |
+INFO:ncr.models:| epoch 12 | loss 20.0960 | total time: 10.05s |
+INFO:ncr.models:| epoch 12 | ndcg@5 0.307 (0.0125) |
+INFO:ncr.models:| epoch 13 | 41/417 batches | ms/batch 28.82 | loss 16.24 |
+INFO:ncr.models:| epoch 13 | 82/417 batches | ms/batch 22.64 | loss 18.48 |
+INFO:ncr.models:| epoch 13 | 123/417 batches | ms/batch 22.61 | loss 19.69 |
+INFO:ncr.models:| epoch 13 | 164/417 batches | ms/batch 22.64 | loss 19.33 |
+INFO:ncr.models:| epoch 13 | 205/417 batches | ms/batch 28.29 | loss 20.11 |
+INFO:ncr.models:| epoch 13 | 246/417 batches | ms/batch 22.77 | loss 18.61 |
+INFO:ncr.models:| epoch 13 | 287/417 batches | ms/batch 28.49 | loss 19.86 |
+INFO:ncr.models:| epoch 13 | 328/417 batches | ms/batch 27.32 | loss 19.32 |
+INFO:ncr.models:| epoch 13 | 369/417 batches | ms/batch 25.31 | loss 18.07 |
+INFO:ncr.models:| epoch 13 | 410/417 batches | ms/batch 28.86 | loss 19.17 |
+INFO:ncr.models:| epoch 13 | loss 18.8347 | total time: 10.87s |
+INFO:ncr.models:| epoch 13 | ndcg@5 0.308 (0.0122) |
+INFO:ncr.models:| epoch 14 | 41/417 batches | ms/batch 27.45 | loss 16.75 |
+INFO:ncr.models:| epoch 14 | 82/417 batches | ms/batch 22.85 | loss 18.35 |
+INFO:ncr.models:| epoch 14 | 123/417 batches | ms/batch 26.52 | loss 17.98 |
+INFO:ncr.models:| epoch 14 | 164/417 batches | ms/batch 22.76 | loss 17.20 |
+INFO:ncr.models:| epoch 14 | 205/417 batches | ms/batch 23.02 | loss 16.61 |
+INFO:ncr.models:| epoch 14 | 246/417 batches | ms/batch 27.11 | loss 18.15 |
+INFO:ncr.models:| epoch 14 | 287/417 batches | ms/batch 23.50 | loss 17.86 |
+INFO:ncr.models:| epoch 14 | 328/417 batches | ms/batch 22.36 | loss 19.65 |
+INFO:ncr.models:| epoch 14 | 369/417 batches | ms/batch 23.03 | loss 19.71 |
+INFO:ncr.models:| epoch 14 | 410/417 batches | ms/batch 22.40 | loss 18.07 |
+INFO:ncr.models:| epoch 14 | loss 17.9965 | total time: 10.12s |
+INFO:ncr.models:| epoch 14 | ndcg@5 0.334 (0.0127) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 15 | 41/417 batches | ms/batch 25.83 | loss 14.45 |
+INFO:ncr.models:| epoch 15 | 82/417 batches | ms/batch 22.50 | loss 17.52 |
+INFO:ncr.models:| epoch 15 | 123/417 batches | ms/batch 23.75 | loss 17.94 |
+INFO:ncr.models:| epoch 15 | 164/417 batches | ms/batch 22.27 | loss 18.43 |
+INFO:ncr.models:| epoch 15 | 205/417 batches | ms/batch 23.49 | loss 18.22 |
+INFO:ncr.models:| epoch 15 | 246/417 batches | ms/batch 22.94 | loss 17.83 |
+INFO:ncr.models:| epoch 15 | 287/417 batches | ms/batch 24.13 | loss 18.01 |
+INFO:ncr.models:| epoch 15 | 328/417 batches | ms/batch 23.06 | loss 17.95 |
+INFO:ncr.models:| epoch 15 | 369/417 batches | ms/batch 22.89 | loss 17.46 |
+INFO:ncr.models:| epoch 15 | 410/417 batches | ms/batch 23.08 | loss 17.13 |
+INFO:ncr.models:| epoch 15 | loss 17.4781 | total time: 9.83s |
+INFO:ncr.models:| epoch 15 | ndcg@5 0.331 (0.0125) |
+INFO:ncr.models:| epoch 16 | 41/417 batches | ms/batch 25.78 | loss 14.82 |
+INFO:ncr.models:| epoch 16 | 82/417 batches | ms/batch 24.96 | loss 18.41 |
+INFO:ncr.models:| epoch 16 | 123/417 batches | ms/batch 24.14 | loss 16.27 |
+INFO:ncr.models:| epoch 16 | 164/417 batches | ms/batch 24.87 | loss 17.12 |
+INFO:ncr.models:| epoch 16 | 205/417 batches | ms/batch 23.43 | loss 17.67 |
+INFO:ncr.models:| epoch 16 | 246/417 batches | ms/batch 24.27 | loss 16.53 |
+INFO:ncr.models:| epoch 16 | 287/417 batches | ms/batch 23.69 | loss 16.53 |
+INFO:ncr.models:| epoch 16 | 328/417 batches | ms/batch 24.83 | loss 17.67 |
+INFO:ncr.models:| epoch 16 | 369/417 batches | ms/batch 24.49 | loss 16.85 |
+INFO:ncr.models:| epoch 16 | 410/417 batches | ms/batch 26.59 | loss 16.51 |
+INFO:ncr.models:| epoch 16 | loss 16.7950 | total time: 10.42s |
+INFO:ncr.models:| epoch 16 | ndcg@5 0.339 (0.0129) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 17 | 41/417 batches | ms/batch 25.85 | loss 13.46 |
+INFO:ncr.models:| epoch 17 | 82/417 batches | ms/batch 23.10 | loss 14.61 |
+INFO:ncr.models:| epoch 17 | 123/417 batches | ms/batch 22.56 | loss 15.48 |
+INFO:ncr.models:| epoch 17 | 164/417 batches | ms/batch 22.46 | loss 17.01 |
+INFO:ncr.models:| epoch 17 | 205/417 batches | ms/batch 27.42 | loss 16.28 |
+INFO:ncr.models:| epoch 17 | 246/417 batches | ms/batch 28.10 | loss 17.34 |
+INFO:ncr.models:| epoch 17 | 287/417 batches | ms/batch 29.15 | loss 16.92 |
+INFO:ncr.models:| epoch 17 | 328/417 batches | ms/batch 26.76 | loss 17.20 |
+INFO:ncr.models:| epoch 17 | 369/417 batches | ms/batch 22.60 | loss 17.39 |
+INFO:ncr.models:| epoch 17 | 410/417 batches | ms/batch 22.48 | loss 15.84 |
+INFO:ncr.models:| epoch 17 | loss 16.0957 | total time: 10.52s |
+INFO:ncr.models:| epoch 17 | ndcg@5 0.341 (0.0128) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 18 | 41/417 batches | ms/batch 25.85 | loss 12.77 |
+INFO:ncr.models:| epoch 18 | 82/417 batches | ms/batch 25.43 | loss 15.01 |
+INFO:ncr.models:| epoch 18 | 123/417 batches | ms/batch 25.83 | loss 15.31 |
+INFO:ncr.models:| epoch 18 | 164/417 batches | ms/batch 26.89 | loss 15.02 |
+INFO:ncr.models:| epoch 18 | 205/417 batches | ms/batch 24.80 | loss 16.63 |
+INFO:ncr.models:| epoch 18 | 246/417 batches | ms/batch 27.94 | loss 16.10 |
+INFO:ncr.models:| epoch 18 | 287/417 batches | ms/batch 22.08 | loss 15.08 |
+INFO:ncr.models:| epoch 18 | 328/417 batches | ms/batch 29.28 | loss 15.41 |
+INFO:ncr.models:| epoch 18 | 369/417 batches | ms/batch 23.03 | loss 16.14 |
+INFO:ncr.models:| epoch 18 | 410/417 batches | ms/batch 26.80 | loss 16.41 |
+INFO:ncr.models:| epoch 18 | loss 15.3897 | total time: 10.82s |
+INFO:ncr.models:| epoch 18 | ndcg@5 0.359 (0.0126) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 19 | 41/417 batches | ms/batch 25.91 | loss 11.15 |
+INFO:ncr.models:| epoch 19 | 82/417 batches | ms/batch 24.26 | loss 13.76 |
+INFO:ncr.models:| epoch 19 | 123/417 batches | ms/batch 23.56 | loss 14.68 |
+INFO:ncr.models:| epoch 19 | 164/417 batches | ms/batch 22.59 | loss 16.75 |
+INFO:ncr.models:| epoch 19 | 205/417 batches | ms/batch 25.83 | loss 15.22 |
+INFO:ncr.models:| epoch 19 | 246/417 batches | ms/batch 22.73 | loss 15.00 |
+INFO:ncr.models:| epoch 19 | 287/417 batches | ms/batch 23.23 | loss 14.92 |
+INFO:ncr.models:| epoch 19 | 328/417 batches | ms/batch 25.91 | loss 16.26 |
+INFO:ncr.models:| epoch 19 | 369/417 batches | ms/batch 25.81 | loss 14.57 |
+INFO:ncr.models:| epoch 19 | 410/417 batches | ms/batch 23.52 | loss 16.04 |
+INFO:ncr.models:| epoch 19 | loss 14.8311 | total time: 10.21s |
+INFO:ncr.models:| epoch 19 | ndcg@5 0.363 (0.0127) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 20 | 41/417 batches | ms/batch 27.06 | loss 11.46 |
+INFO:ncr.models:| epoch 20 | 82/417 batches | ms/batch 23.16 | loss 14.28 |
+INFO:ncr.models:| epoch 20 | 123/417 batches | ms/batch 24.95 | loss 15.02 |
+INFO:ncr.models:| epoch 20 | 164/417 batches | ms/batch 28.30 | loss 14.24 |
+INFO:ncr.models:| epoch 20 | 205/417 batches | ms/batch 23.74 | loss 15.05 |
+INFO:ncr.models:| epoch 20 | 246/417 batches | ms/batch 24.55 | loss 15.70 |
+INFO:ncr.models:| epoch 20 | 287/417 batches | ms/batch 25.82 | loss 15.04 |
+INFO:ncr.models:| epoch 20 | 328/417 batches | ms/batch 23.59 | loss 14.00 |
+INFO:ncr.models:| epoch 20 | 369/417 batches | ms/batch 22.30 | loss 16.00 |
+INFO:ncr.models:| epoch 20 | 410/417 batches | ms/batch 24.80 | loss 13.86 |
+INFO:ncr.models:| epoch 20 | loss 14.4159 | total time: 10.42s |
+INFO:ncr.models:| epoch 20 | ndcg@5 0.369 (0.0129) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 21 | 41/417 batches | ms/batch 28.18 | loss 10.60 |
+INFO:ncr.models:| epoch 21 | 82/417 batches | ms/batch 24.16 | loss 14.16 |
+INFO:ncr.models:| epoch 21 | 123/417 batches | ms/batch 22.97 | loss 13.68 |
+INFO:ncr.models:| epoch 21 | 164/417 batches | ms/batch 26.05 | loss 13.00 |
+INFO:ncr.models:| epoch 21 | 205/417 batches | ms/batch 23.77 | loss 14.42 |
+INFO:ncr.models:| epoch 21 | 246/417 batches | ms/batch 23.50 | loss 15.05 |
+INFO:ncr.models:| epoch 21 | 287/417 batches | ms/batch 24.98 | loss 14.91 |
+INFO:ncr.models:| epoch 21 | 328/417 batches | ms/batch 24.60 | loss 15.23 |
+INFO:ncr.models:| epoch 21 | 369/417 batches | ms/batch 23.05 | loss 14.28 |
+INFO:ncr.models:| epoch 21 | 410/417 batches | ms/batch 22.98 | loss 14.35 |
+INFO:ncr.models:| epoch 21 | loss 13.9798 | total time: 10.26s |
+INFO:ncr.models:| epoch 21 | ndcg@5 0.365 (0.0128) |
+INFO:ncr.models:| epoch 22 | 41/417 batches | ms/batch 30.61 | loss 10.50 |
+INFO:ncr.models:| epoch 22 | 82/417 batches | ms/batch 27.36 | loss 14.76 |
+INFO:ncr.models:| epoch 22 | 123/417 batches | ms/batch 22.35 | loss 13.77 |
+INFO:ncr.models:| epoch 22 | 164/417 batches | ms/batch 22.44 | loss 14.65 |
+INFO:ncr.models:| epoch 22 | 205/417 batches | ms/batch 22.45 | loss 13.83 |
+INFO:ncr.models:| epoch 22 | 246/417 batches | ms/batch 27.90 | loss 12.99 |
+INFO:ncr.models:| epoch 22 | 287/417 batches | ms/batch 27.87 | loss 13.93 |
+INFO:ncr.models:| epoch 22 | 328/417 batches | ms/batch 24.99 | loss 14.94 |
+INFO:ncr.models:| epoch 22 | 369/417 batches | ms/batch 27.02 | loss 13.95 |
+INFO:ncr.models:| epoch 22 | 410/417 batches | ms/batch 23.58 | loss 14.14 |
+INFO:ncr.models:| epoch 22 | loss 13.7401 | total time: 10.75s |
+INFO:ncr.models:| epoch 22 | ndcg@5 0.365 (0.0127) |
+INFO:ncr.models:| epoch 23 | 41/417 batches | ms/batch 26.74 | loss 10.11 |
+INFO:ncr.models:| epoch 23 | 82/417 batches | ms/batch 24.19 | loss 13.28 |
+INFO:ncr.models:| epoch 23 | 123/417 batches | ms/batch 23.28 | loss 13.41 |
+INFO:ncr.models:| epoch 23 | 164/417 batches | ms/batch 23.43 | loss 14.49 |
+INFO:ncr.models:| epoch 23 | 205/417 batches | ms/batch 23.49 | loss 13.93 |
+INFO:ncr.models:| epoch 23 | 246/417 batches | ms/batch 23.98 | loss 14.00 |
+INFO:ncr.models:| epoch 23 | 287/417 batches | ms/batch 23.33 | loss 13.28 |
+INFO:ncr.models:| epoch 23 | 328/417 batches | ms/batch 22.64 | loss 13.73 |
+INFO:ncr.models:| epoch 23 | 369/417 batches | ms/batch 24.72 | loss 13.76 |
+INFO:ncr.models:| epoch 23 | 410/417 batches | ms/batch 23.76 | loss 11.59 |
+INFO:ncr.models:| epoch 23 | loss 13.1555 | total time: 10.06s |
+INFO:ncr.models:| epoch 23 | ndcg@5 0.386 (0.0131) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 24 | 41/417 batches | ms/batch 26.00 | loss 9.55 |
+INFO:ncr.models:| epoch 24 | 82/417 batches | ms/batch 25.33 | loss 12.87 |
+INFO:ncr.models:| epoch 24 | 123/417 batches | ms/batch 23.38 | loss 13.07 |
+INFO:ncr.models:| epoch 24 | 164/417 batches | ms/batch 22.51 | loss 12.53 |
+INFO:ncr.models:| epoch 24 | 205/417 batches | ms/batch 23.48 | loss 13.91 |
+INFO:ncr.models:| epoch 24 | 246/417 batches | ms/batch 23.04 | loss 13.85 |
+INFO:ncr.models:| epoch 24 | 287/417 batches | ms/batch 26.34 | loss 14.76 |
+INFO:ncr.models:| epoch 24 | 328/417 batches | ms/batch 26.65 | loss 12.62 |
+INFO:ncr.models:| epoch 24 | 369/417 batches | ms/batch 22.78 | loss 13.86 |
+INFO:ncr.models:| epoch 24 | 410/417 batches | ms/batch 23.10 | loss 13.77 |
+INFO:ncr.models:| epoch 24 | loss 13.0480 | total time: 10.22s |
+INFO:ncr.models:| epoch 24 | ndcg@5 0.381 (0.0128) |
+INFO:ncr.models:| epoch 25 | 41/417 batches | ms/batch 26.04 | loss 10.56 |
+INFO:ncr.models:| epoch 25 | 82/417 batches | ms/batch 22.97 | loss 13.84 |
+INFO:ncr.models:| epoch 25 | 123/417 batches | ms/batch 23.69 | loss 11.58 |
+INFO:ncr.models:| epoch 25 | 164/417 batches | ms/batch 25.66 | loss 13.37 |
+INFO:ncr.models:| epoch 25 | 205/417 batches | ms/batch 23.11 | loss 14.03 |
+INFO:ncr.models:| epoch 25 | 246/417 batches | ms/batch 28.22 | loss 13.53 |
+INFO:ncr.models:| epoch 25 | 287/417 batches | ms/batch 26.13 | loss 14.38 |
+INFO:ncr.models:| epoch 25 | 328/417 batches | ms/batch 22.77 | loss 14.25 |
+INFO:ncr.models:| epoch 25 | 369/417 batches | ms/batch 24.87 | loss 13.79 |
+INFO:ncr.models:| epoch 25 | 410/417 batches | ms/batch 29.14 | loss 12.48 |
+INFO:ncr.models:| epoch 25 | loss 13.1741 | total time: 10.66s |
+INFO:ncr.models:| epoch 25 | ndcg@5 0.391 (0.0134) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 26 | 41/417 batches | ms/batch 30.36 | loss 9.10 |
+INFO:ncr.models:| epoch 26 | 82/417 batches | ms/batch 22.87 | loss 13.12 |
+INFO:ncr.models:| epoch 26 | 123/417 batches | ms/batch 23.91 | loss 12.26 |
+INFO:ncr.models:| epoch 26 | 164/417 batches | ms/batch 22.98 | loss 13.11 |
+INFO:ncr.models:| epoch 26 | 205/417 batches | ms/batch 29.39 | loss 13.43 |
+INFO:ncr.models:| epoch 26 | 246/417 batches | ms/batch 25.50 | loss 12.65 |
+INFO:ncr.models:| epoch 26 | 287/417 batches | ms/batch 26.43 | loss 13.41 |
+INFO:ncr.models:| epoch 26 | 328/417 batches | ms/batch 25.38 | loss 13.61 |
+INFO:ncr.models:| epoch 26 | 369/417 batches | ms/batch 26.96 | loss 12.95 |
+INFO:ncr.models:| epoch 26 | 410/417 batches | ms/batch 28.23 | loss 12.79 |
+INFO:ncr.models:| epoch 26 | loss 12.6183 | total time: 11.00s |
+INFO:ncr.models:| epoch 26 | ndcg@5 0.385 (0.0129) |
+INFO:ncr.models:| epoch 27 | 41/417 batches | ms/batch 26.35 | loss 9.55 |
+INFO:ncr.models:| epoch 27 | 82/417 batches | ms/batch 22.90 | loss 10.26 |
+INFO:ncr.models:| epoch 27 | 123/417 batches | ms/batch 24.59 | loss 12.98 |
+INFO:ncr.models:| epoch 27 | 164/417 batches | ms/batch 27.70 | loss 11.91 |
+INFO:ncr.models:| epoch 27 | 205/417 batches | ms/batch 22.81 | loss 13.08 |
+INFO:ncr.models:| epoch 27 | 246/417 batches | ms/batch 24.14 | loss 12.92 |
+INFO:ncr.models:| epoch 27 | 287/417 batches | ms/batch 27.65 | loss 12.78 |
+INFO:ncr.models:| epoch 27 | 328/417 batches | ms/batch 22.36 | loss 12.53 |
+INFO:ncr.models:| epoch 27 | 369/417 batches | ms/batch 24.47 | loss 13.19 |
+INFO:ncr.models:| epoch 27 | 410/417 batches | ms/batch 22.44 | loss 11.81 |
+INFO:ncr.models:| epoch 27 | loss 12.0327 | total time: 10.30s |
+INFO:ncr.models:| epoch 27 | ndcg@5 0.403 (0.0130) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 28 | 41/417 batches | ms/batch 25.63 | loss 10.31 |
+INFO:ncr.models:| epoch 28 | 82/417 batches | ms/batch 23.74 | loss 11.94 |
+INFO:ncr.models:| epoch 28 | 123/417 batches | ms/batch 23.11 | loss 11.36 |
+INFO:ncr.models:| epoch 28 | 164/417 batches | ms/batch 26.16 | loss 12.42 |
+INFO:ncr.models:| epoch 28 | 205/417 batches | ms/batch 23.05 | loss 13.24 |
+INFO:ncr.models:| epoch 28 | 246/417 batches | ms/batch 26.36 | loss 12.38 |
+INFO:ncr.models:| epoch 28 | 287/417 batches | ms/batch 23.93 | loss 12.06 |
+INFO:ncr.models:| epoch 28 | 328/417 batches | ms/batch 25.07 | loss 12.15 |
+INFO:ncr.models:| epoch 28 | 369/417 batches | ms/batch 27.11 | loss 12.03 |
+INFO:ncr.models:| epoch 28 | 410/417 batches | ms/batch 23.51 | loss 12.86 |
+INFO:ncr.models:| epoch 28 | loss 12.0128 | total time: 10.41s |
+INFO:ncr.models:| epoch 28 | ndcg@5 0.388 (0.0129) |
+INFO:ncr.models:| epoch 29 | 41/417 batches | ms/batch 26.89 | loss 8.81 |
+INFO:ncr.models:| epoch 29 | 82/417 batches | ms/batch 27.60 | loss 12.58 |
+INFO:ncr.models:| epoch 29 | 123/417 batches | ms/batch 27.02 | loss 11.41 |
+INFO:ncr.models:| epoch 29 | 164/417 batches | ms/batch 28.76 | loss 11.39 |
+INFO:ncr.models:| epoch 29 | 205/417 batches | ms/batch 23.07 | loss 11.66 |
+INFO:ncr.models:| epoch 29 | 246/417 batches | ms/batch 26.70 | loss 11.45 |
+INFO:ncr.models:| epoch 29 | 287/417 batches | ms/batch 27.29 | loss 11.36 |
+INFO:ncr.models:| epoch 29 | 328/417 batches | ms/batch 22.86 | loss 12.12 |
+INFO:ncr.models:| epoch 29 | 369/417 batches | ms/batch 23.56 | loss 12.36 |
+INFO:ncr.models:| epoch 29 | 410/417 batches | ms/batch 28.07 | loss 11.85 |
+INFO:ncr.models:| epoch 29 | loss 11.4397 | total time: 10.98s |
+INFO:ncr.models:| epoch 29 | ndcg@5 0.396 (0.0130) |
+INFO:ncr.models:| epoch 30 | 41/417 batches | ms/batch 26.20 | loss 9.15 |
+INFO:ncr.models:| epoch 30 | 82/417 batches | ms/batch 23.18 | loss 12.17 |
+INFO:ncr.models:| epoch 30 | 123/417 batches | ms/batch 22.98 | loss 12.08 |
+INFO:ncr.models:| epoch 30 | 164/417 batches | ms/batch 24.70 | loss 11.89 |
+INFO:ncr.models:| epoch 30 | 205/417 batches | ms/batch 28.68 | loss 11.28 |
+INFO:ncr.models:| epoch 30 | 246/417 batches | ms/batch 26.54 | loss 11.78 |
+INFO:ncr.models:| epoch 30 | 287/417 batches | ms/batch 26.49 | loss 11.82 |
+INFO:ncr.models:| epoch 30 | 328/417 batches | ms/batch 25.07 | loss 10.55 |
+INFO:ncr.models:| epoch 30 | 369/417 batches | ms/batch 22.46 | loss 11.90 |
+INFO:ncr.models:| epoch 30 | 410/417 batches | ms/batch 23.78 | loss 12.74 |
+INFO:ncr.models:| epoch 30 | loss 11.5627 | total time: 10.49s |
+INFO:ncr.models:| epoch 30 | ndcg@5 0.406 (0.0131) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 31 | 41/417 batches | ms/batch 32.04 | loss 8.61 |
+INFO:ncr.models:| epoch 31 | 82/417 batches | ms/batch 23.66 | loss 12.04 |
+INFO:ncr.models:| epoch 31 | 123/417 batches | ms/batch 23.03 | loss 11.11 |
+INFO:ncr.models:| epoch 31 | 164/417 batches | ms/batch 23.66 | loss 10.58 |
+INFO:ncr.models:| epoch 31 | 205/417 batches | ms/batch 23.13 | loss 11.62 |
+INFO:ncr.models:| epoch 31 | 246/417 batches | ms/batch 25.04 | loss 11.12 |
+INFO:ncr.models:| epoch 31 | 287/417 batches | ms/batch 23.73 | loss 11.22 |
+INFO:ncr.models:| epoch 31 | 328/417 batches | ms/batch 24.09 | loss 11.88 |
+INFO:ncr.models:| epoch 31 | 369/417 batches | ms/batch 23.31 | loss 12.67 |
+INFO:ncr.models:| epoch 31 | 410/417 batches | ms/batch 23.42 | loss 12.13 |
+INFO:ncr.models:| epoch 31 | loss 11.3198 | total time: 10.31s |
+INFO:ncr.models:| epoch 31 | ndcg@5 0.405 (0.0131) |
+INFO:ncr.models:| epoch 32 | 41/417 batches | ms/batch 27.54 | loss 9.79 |
+INFO:ncr.models:| epoch 32 | 82/417 batches | ms/batch 23.22 | loss 11.41 |
+INFO:ncr.models:| epoch 32 | 123/417 batches | ms/batch 23.77 | loss 11.96 |
+INFO:ncr.models:| epoch 32 | 164/417 batches | ms/batch 22.67 | loss 11.16 |
+INFO:ncr.models:| epoch 32 | 205/417 batches | ms/batch 23.83 | loss 10.99 |
+INFO:ncr.models:| epoch 32 | 246/417 batches | ms/batch 25.21 | loss 11.46 |
+INFO:ncr.models:| epoch 32 | 287/417 batches | ms/batch 24.87 | loss 11.39 |
+INFO:ncr.models:| epoch 32 | 328/417 batches | ms/batch 23.64 | loss 11.07 |
+INFO:ncr.models:| epoch 32 | 369/417 batches | ms/batch 24.10 | loss 12.71 |
+INFO:ncr.models:| epoch 32 | 410/417 batches | ms/batch 23.28 | loss 12.57 |
+INFO:ncr.models:| epoch 32 | loss 11.4264 | total time: 10.16s |
+INFO:ncr.models:| epoch 32 | ndcg@5 0.402 (0.0130) |
+INFO:ncr.models:| epoch 33 | 41/417 batches | ms/batch 26.32 | loss 8.28 |
+INFO:ncr.models:| epoch 33 | 82/417 batches | ms/batch 22.98 | loss 10.59 |
+INFO:ncr.models:| epoch 33 | 123/417 batches | ms/batch 23.21 | loss 11.19 |
+INFO:ncr.models:| epoch 33 | 164/417 batches | ms/batch 22.56 | loss 11.57 |
+INFO:ncr.models:| epoch 33 | 205/417 batches | ms/batch 22.26 | loss 12.14 |
+INFO:ncr.models:| epoch 33 | 246/417 batches | ms/batch 22.96 | loss 11.97 |
+INFO:ncr.models:| epoch 33 | 287/417 batches | ms/batch 22.42 | loss 12.28 |
+INFO:ncr.models:| epoch 33 | 328/417 batches | ms/batch 22.48 | loss 11.33 |
+INFO:ncr.models:| epoch 33 | 369/417 batches | ms/batch 24.19 | loss 11.02 |
+INFO:ncr.models:| epoch 33 | 410/417 batches | ms/batch 24.64 | loss 10.85 |
+INFO:ncr.models:| epoch 33 | loss 11.0990 | total time: 9.84s |
+INFO:ncr.models:| epoch 33 | ndcg@5 0.396 (0.0132) |
+INFO:ncr.models:| epoch 34 | 41/417 batches | ms/batch 30.11 | loss 8.34 |
+INFO:ncr.models:| epoch 34 | 82/417 batches | ms/batch 28.98 | loss 11.91 |
+INFO:ncr.models:| epoch 34 | 123/417 batches | ms/batch 22.47 | loss 10.78 |
+INFO:ncr.models:| epoch 34 | 164/417 batches | ms/batch 28.70 | loss 11.63 |
+INFO:ncr.models:| epoch 34 | 205/417 batches | ms/batch 24.10 | loss 10.49 |
+INFO:ncr.models:| epoch 34 | 246/417 batches | ms/batch 24.32 | loss 11.87 |
+INFO:ncr.models:| epoch 34 | 287/417 batches | ms/batch 27.93 | loss 11.93 |
+INFO:ncr.models:| epoch 34 | 328/417 batches | ms/batch 24.07 | loss 11.92 |
+INFO:ncr.models:| epoch 34 | 369/417 batches | ms/batch 30.06 | loss 10.99 |
+INFO:ncr.models:| epoch 34 | 410/417 batches | ms/batch 29.61 | loss 11.65 |
+INFO:ncr.models:| epoch 34 | loss 11.1339 | total time: 11.38s |
+INFO:ncr.models:| epoch 34 | ndcg@5 0.397 (0.0132) |
+INFO:ncr.models:| epoch 35 | 41/417 batches | ms/batch 30.67 | loss 8.70 |
+INFO:ncr.models:| epoch 35 | 82/417 batches | ms/batch 23.36 | loss 9.57 |
+INFO:ncr.models:| epoch 35 | 123/417 batches | ms/batch 21.95 | loss 11.64 |
+INFO:ncr.models:| epoch 35 | 164/417 batches | ms/batch 22.33 | loss 10.86 |
+INFO:ncr.models:| epoch 35 | 205/417 batches | ms/batch 23.68 | loss 10.56 |
+INFO:ncr.models:| epoch 35 | 246/417 batches | ms/batch 23.12 | loss 10.84 |
+INFO:ncr.models:| epoch 35 | 287/417 batches | ms/batch 22.89 | loss 10.87 |
+INFO:ncr.models:| epoch 35 | 328/417 batches | ms/batch 23.11 | loss 11.34 |
+INFO:ncr.models:| epoch 35 | 369/417 batches | ms/batch 22.03 | loss 10.65 |
+INFO:ncr.models:| epoch 35 | 410/417 batches | ms/batch 24.48 | loss 11.36 |
+INFO:ncr.models:| epoch 35 | loss 10.6063 | total time: 9.98s |
+INFO:ncr.models:| epoch 35 | ndcg@5 0.397 (0.0131) |
+INFO:ncr.models:| epoch 36 | 41/417 batches | ms/batch 27.16 | loss 8.68 |
+INFO:ncr.models:| epoch 36 | 82/417 batches | ms/batch 25.23 | loss 10.31 |
+INFO:ncr.models:| epoch 36 | 123/417 batches | ms/batch 23.98 | loss 11.03 |
+INFO:ncr.models:| epoch 36 | 164/417 batches | ms/batch 22.59 | loss 10.62 |
+INFO:ncr.models:| epoch 36 | 205/417 batches | ms/batch 24.36 | loss 11.89 |
+INFO:ncr.models:| epoch 36 | 246/417 batches | ms/batch 25.46 | loss 11.31 |
+INFO:ncr.models:| epoch 36 | 287/417 batches | ms/batch 24.37 | loss 10.73 |
+INFO:ncr.models:| epoch 36 | 328/417 batches | ms/batch 25.67 | loss 11.26 |
+INFO:ncr.models:| epoch 36 | 369/417 batches | ms/batch 26.53 | loss 10.97 |
+INFO:ncr.models:| epoch 36 | 410/417 batches | ms/batch 26.66 | loss 10.79 |
+INFO:ncr.models:| epoch 36 | loss 10.7600 | total time: 10.63s |
+INFO:ncr.models:| epoch 36 | ndcg@5 0.408 (0.0134) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 37 | 41/417 batches | ms/batch 29.83 | loss 7.43 |
+INFO:ncr.models:| epoch 37 | 82/417 batches | ms/batch 22.67 | loss 10.47 |
+INFO:ncr.models:| epoch 37 | 123/417 batches | ms/batch 24.38 | loss 9.73 |
+INFO:ncr.models:| epoch 37 | 164/417 batches | ms/batch 27.05 | loss 10.19 |
+INFO:ncr.models:| epoch 37 | 205/417 batches | ms/batch 22.37 | loss 11.24 |
+INFO:ncr.models:| epoch 37 | 246/417 batches | ms/batch 23.10 | loss 11.09 |
+INFO:ncr.models:| epoch 37 | 287/417 batches | ms/batch 22.48 | loss 10.41 |
+INFO:ncr.models:| epoch 37 | 328/417 batches | ms/batch 23.08 | loss 10.04 |
+INFO:ncr.models:| epoch 37 | 369/417 batches | ms/batch 28.19 | loss 10.53 |
+INFO:ncr.models:| epoch 37 | 410/417 batches | ms/batch 27.12 | loss 10.47 |
+INFO:ncr.models:| epoch 37 | loss 10.1507 | total time: 10.50s |
+INFO:ncr.models:| epoch 37 | ndcg@5 0.406 (0.0131) |
+INFO:ncr.models:| epoch 38 | 41/417 batches | ms/batch 25.31 | loss 7.64 |
+INFO:ncr.models:| epoch 38 | 82/417 batches | ms/batch 23.14 | loss 10.18 |
+INFO:ncr.models:| epoch 38 | 123/417 batches | ms/batch 22.85 | loss 11.31 |
+INFO:ncr.models:| epoch 38 | 164/417 batches | ms/batch 22.47 | loss 10.33 |
+INFO:ncr.models:| epoch 38 | 205/417 batches | ms/batch 23.80 | loss 11.08 |
+INFO:ncr.models:| epoch 38 | 246/417 batches | ms/batch 22.55 | loss 10.98 |
+INFO:ncr.models:| epoch 38 | 287/417 batches | ms/batch 23.23 | loss 10.34 |
+INFO:ncr.models:| epoch 38 | 328/417 batches | ms/batch 24.40 | loss 10.66 |
+INFO:ncr.models:| epoch 38 | 369/417 batches | ms/batch 25.93 | loss 9.08 |
+INFO:ncr.models:| epoch 38 | 410/417 batches | ms/batch 30.38 | loss 12.49 |
+INFO:ncr.models:| epoch 38 | loss 10.4324 | total time: 10.30s |
+INFO:ncr.models:| epoch 38 | ndcg@5 0.414 (0.0132) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 39 | 41/417 batches | ms/batch 26.23 | loss 7.43 |
+INFO:ncr.models:| epoch 39 | 82/417 batches | ms/batch 22.66 | loss 9.38 |
+INFO:ncr.models:| epoch 39 | 123/417 batches | ms/batch 23.97 | loss 9.76 |
+INFO:ncr.models:| epoch 39 | 164/417 batches | ms/batch 24.02 | loss 10.47 |
+INFO:ncr.models:| epoch 39 | 205/417 batches | ms/batch 27.65 | loss 10.54 |
+INFO:ncr.models:| epoch 39 | 246/417 batches | ms/batch 27.00 | loss 10.34 |
+INFO:ncr.models:| epoch 39 | 287/417 batches | ms/batch 24.48 | loss 11.26 |
+INFO:ncr.models:| epoch 39 | 328/417 batches | ms/batch 22.95 | loss 10.22 |
+INFO:ncr.models:| epoch 39 | 369/417 batches | ms/batch 25.69 | loss 10.74 |
+INFO:ncr.models:| epoch 39 | 410/417 batches | ms/batch 24.47 | loss 11.11 |
+INFO:ncr.models:| epoch 39 | loss 10.1134 | total time: 10.45s |
+INFO:ncr.models:| epoch 39 | ndcg@5 0.409 (0.0134) |
+INFO:ncr.models:| epoch 40 | 41/417 batches | ms/batch 26.58 | loss 8.23 |
+INFO:ncr.models:| epoch 40 | 82/417 batches | ms/batch 22.98 | loss 10.37 |
+INFO:ncr.models:| epoch 40 | 123/417 batches | ms/batch 22.71 | loss 9.64 |
+INFO:ncr.models:| epoch 40 | 164/417 batches | ms/batch 23.09 | loss 10.28 |
+INFO:ncr.models:| epoch 40 | 205/417 batches | ms/batch 22.68 | loss 10.38 |
+INFO:ncr.models:| epoch 40 | 246/417 batches | ms/batch 22.67 | loss 10.11 |
+INFO:ncr.models:| epoch 40 | 287/417 batches | ms/batch 25.43 | loss 9.78 |
+INFO:ncr.models:| epoch 40 | 328/417 batches | ms/batch 22.61 | loss 11.02 |
+INFO:ncr.models:| epoch 40 | 369/417 batches | ms/batch 26.13 | loss 10.94 |
+INFO:ncr.models:| epoch 40 | 410/417 batches | ms/batch 26.23 | loss 10.57 |
+INFO:ncr.models:| epoch 40 | loss 10.1142 | total time: 10.12s |
+INFO:ncr.models:| epoch 40 | ndcg@5 0.397 (0.0130) |
+INFO:ncr.models:| epoch 41 | 41/417 batches | ms/batch 25.91 | loss 8.08 |
+INFO:ncr.models:| epoch 41 | 82/417 batches | ms/batch 27.17 | loss 10.23 |
+INFO:ncr.models:| epoch 41 | 123/417 batches | ms/batch 25.85 | loss 10.02 |
+INFO:ncr.models:| epoch 41 | 164/417 batches | ms/batch 23.74 | loss 8.50 |
+INFO:ncr.models:| epoch 41 | 205/417 batches | ms/batch 24.16 | loss 10.34 |
+INFO:ncr.models:| epoch 41 | 246/417 batches | ms/batch 26.32 | loss 11.03 |
+INFO:ncr.models:| epoch 41 | 287/417 batches | ms/batch 23.09 | loss 10.26 |
+INFO:ncr.models:| epoch 41 | 328/417 batches | ms/batch 22.81 | loss 9.72 |
+INFO:ncr.models:| epoch 41 | 369/417 batches | ms/batch 23.69 | loss 10.53 |
+INFO:ncr.models:| epoch 41 | 410/417 batches | ms/batch 27.79 | loss 9.80 |
+INFO:ncr.models:| epoch 41 | loss 9.8481 | total time: 10.51s |
+INFO:ncr.models:| epoch 41 | ndcg@5 0.407 (0.0130) |
+INFO:ncr.models:| epoch 42 | 41/417 batches | ms/batch 25.71 | loss 7.71 |
+INFO:ncr.models:| epoch 42 | 82/417 batches | ms/batch 28.73 | loss 9.04 |
+INFO:ncr.models:| epoch 42 | 123/417 batches | ms/batch 22.91 | loss 9.72 |
+INFO:ncr.models:| epoch 42 | 164/417 batches | ms/batch 22.93 | loss 11.14 |
+INFO:ncr.models:| epoch 42 | 205/417 batches | ms/batch 23.63 | loss 10.67 |
+INFO:ncr.models:| epoch 42 | 246/417 batches | ms/batch 22.57 | loss 10.31 |
+INFO:ncr.models:| epoch 42 | 287/417 batches | ms/batch 22.37 | loss 9.76 |
+INFO:ncr.models:| epoch 42 | 328/417 batches | ms/batch 27.51 | loss 9.83 |
+INFO:ncr.models:| epoch 42 | 369/417 batches | ms/batch 23.22 | loss 10.17 |
+INFO:ncr.models:| epoch 42 | 410/417 batches | ms/batch 22.92 | loss 9.47 |
+INFO:ncr.models:| epoch 42 | loss 9.7783 | total time: 10.18s |
+INFO:ncr.models:| epoch 42 | ndcg@5 0.405 (0.0132) |
+INFO:ncr.models:| epoch 43 | 41/417 batches | ms/batch 27.09 | loss 6.67 |
+INFO:ncr.models:| epoch 43 | 82/417 batches | ms/batch 28.47 | loss 10.04 |
+INFO:ncr.models:| epoch 43 | 123/417 batches | ms/batch 24.29 | loss 9.95 |
+INFO:ncr.models:| epoch 43 | 164/417 batches | ms/batch 22.78 | loss 9.45 |
+INFO:ncr.models:| epoch 43 | 205/417 batches | ms/batch 22.57 | loss 9.74 |
+INFO:ncr.models:| epoch 43 | 246/417 batches | ms/batch 23.17 | loss 8.90 |
+INFO:ncr.models:| epoch 43 | 287/417 batches | ms/batch 23.67 | loss 9.99 |
+INFO:ncr.models:| epoch 43 | 328/417 batches | ms/batch 23.57 | loss 9.47 |
+INFO:ncr.models:| epoch 43 | 369/417 batches | ms/batch 28.66 | loss 11.25 |
+INFO:ncr.models:| epoch 43 | 410/417 batches | ms/batch 28.56 | loss 11.00 |
+INFO:ncr.models:| epoch 43 | loss 9.6145 | total time: 10.61s |
+INFO:ncr.models:| epoch 43 | ndcg@5 0.401 (0.0131) |
+INFO:ncr.models:| epoch 44 | 41/417 batches | ms/batch 26.23 | loss 7.11 |
+INFO:ncr.models:| epoch 44 | 82/417 batches | ms/batch 23.83 | loss 9.53 |
+INFO:ncr.models:| epoch 44 | 123/417 batches | ms/batch 24.91 | loss 9.80 |
+INFO:ncr.models:| epoch 44 | 164/417 batches | ms/batch 23.57 | loss 9.55 |
+INFO:ncr.models:| epoch 44 | 205/417 batches | ms/batch 22.75 | loss 8.89 |
+INFO:ncr.models:| epoch 44 | 246/417 batches | ms/batch 23.24 | loss 9.02 |
+INFO:ncr.models:| epoch 44 | 287/417 batches | ms/batch 23.27 | loss 10.23 |
+INFO:ncr.models:| epoch 44 | 328/417 batches | ms/batch 26.31 | loss 9.89 |
+INFO:ncr.models:| epoch 44 | 369/417 batches | ms/batch 22.92 | loss 9.87 |
+INFO:ncr.models:| epoch 44 | 410/417 batches | ms/batch 23.82 | loss 9.88 |
+INFO:ncr.models:| epoch 44 | loss 9.3460 | total time: 10.11s |
+INFO:ncr.models:| epoch 44 | ndcg@5 0.402 (0.0131) |
+INFO:ncr.models:| epoch 45 | 41/417 batches | ms/batch 29.33 | loss 7.96 |
+INFO:ncr.models:| epoch 45 | 82/417 batches | ms/batch 26.24 | loss 9.22 |
+INFO:ncr.models:| epoch 45 | 123/417 batches | ms/batch 22.59 | loss 9.60 |
+INFO:ncr.models:| epoch 45 | 164/417 batches | ms/batch 22.41 | loss 8.71 |
+INFO:ncr.models:| epoch 45 | 205/417 batches | ms/batch 22.41 | loss 10.91 |
+INFO:ncr.models:| epoch 45 | 246/417 batches | ms/batch 21.97 | loss 9.69 |
+INFO:ncr.models:| epoch 45 | 287/417 batches | ms/batch 22.59 | loss 9.45 |
+INFO:ncr.models:| epoch 45 | 328/417 batches | ms/batch 27.55 | loss 9.42 |
+INFO:ncr.models:| epoch 45 | 369/417 batches | ms/batch 22.51 | loss 10.15 |
+INFO:ncr.models:| epoch 45 | 410/417 batches | ms/batch 22.81 | loss 8.74 |
+INFO:ncr.models:| epoch 45 | loss 9.3812 | total time: 10.12s |
+INFO:ncr.models:| epoch 45 | ndcg@5 0.413 (0.0130) |
+INFO:ncr.models:| epoch 46 | 41/417 batches | ms/batch 27.04 | loss 8.62 |
+INFO:ncr.models:| epoch 46 | 82/417 batches | ms/batch 26.23 | loss 10.10 |
+INFO:ncr.models:| epoch 46 | 123/417 batches | ms/batch 25.26 | loss 9.37 |
+INFO:ncr.models:| epoch 46 | 164/417 batches | ms/batch 25.66 | loss 9.60 |
+INFO:ncr.models:| epoch 46 | 205/417 batches | ms/batch 25.42 | loss 9.75 |
+INFO:ncr.models:| epoch 46 | 246/417 batches | ms/batch 24.85 | loss 9.10 |
+INFO:ncr.models:| epoch 46 | 287/417 batches | ms/batch 23.28 | loss 9.31 |
+INFO:ncr.models:| epoch 46 | 328/417 batches | ms/batch 22.61 | loss 9.26 |
+INFO:ncr.models:| epoch 46 | 369/417 batches | ms/batch 28.74 | loss 8.93 |
+INFO:ncr.models:| epoch 46 | 410/417 batches | ms/batch 24.76 | loss 10.59 |
+INFO:ncr.models:| epoch 46 | loss 9.4493 | total time: 10.65s |
+INFO:ncr.models:| epoch 46 | ndcg@5 0.417 (0.0133) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 47 | 41/417 batches | ms/batch 30.50 | loss 7.60 |
+INFO:ncr.models:| epoch 47 | 82/417 batches | ms/batch 26.37 | loss 9.55 |
+INFO:ncr.models:| epoch 47 | 123/417 batches | ms/batch 22.62 | loss 9.63 |
+INFO:ncr.models:| epoch 47 | 164/417 batches | ms/batch 22.97 | loss 9.46 |
+INFO:ncr.models:| epoch 47 | 205/417 batches | ms/batch 22.73 | loss 9.48 |
+INFO:ncr.models:| epoch 47 | 246/417 batches | ms/batch 23.10 | loss 9.73 |
+INFO:ncr.models:| epoch 47 | 287/417 batches | ms/batch 23.61 | loss 10.62 |
+INFO:ncr.models:| epoch 47 | 328/417 batches | ms/batch 23.56 | loss 8.85 |
+INFO:ncr.models:| epoch 47 | 369/417 batches | ms/batch 24.25 | loss 7.69 |
+INFO:ncr.models:| epoch 47 | 410/417 batches | ms/batch 23.68 | loss 9.85 |
+INFO:ncr.models:| epoch 47 | loss 9.1996 | total time: 10.22s |
+INFO:ncr.models:| epoch 47 | ndcg@5 0.409 (0.0132) |
+INFO:ncr.models:| epoch 48 | 41/417 batches | ms/batch 28.61 | loss 7.37 |
+INFO:ncr.models:| epoch 48 | 82/417 batches | ms/batch 24.25 | loss 8.98 |
+INFO:ncr.models:| epoch 48 | 123/417 batches | ms/batch 24.65 | loss 9.73 |
+INFO:ncr.models:| epoch 48 | 164/417 batches | ms/batch 22.61 | loss 9.10 |
+INFO:ncr.models:| epoch 48 | 205/417 batches | ms/batch 25.83 | loss 9.52 |
+INFO:ncr.models:| epoch 48 | 246/417 batches | ms/batch 22.66 | loss 10.48 |
+INFO:ncr.models:| epoch 48 | 287/417 batches | ms/batch 24.79 | loss 9.35 |
+INFO:ncr.models:| epoch 48 | 328/417 batches | ms/batch 27.89 | loss 9.46 |
+INFO:ncr.models:| epoch 48 | 369/417 batches | ms/batch 23.17 | loss 9.22 |
+INFO:ncr.models:| epoch 48 | 410/417 batches | ms/batch 22.73 | loss 9.17 |
+INFO:ncr.models:| epoch 48 | loss 9.2278 | total time: 10.37s |
+INFO:ncr.models:| epoch 48 | ndcg@5 0.408 (0.0132) |
+INFO:ncr.models:| epoch 49 | 41/417 batches | ms/batch 25.42 | loss 6.95 |
+INFO:ncr.models:| epoch 49 | 82/417 batches | ms/batch 25.99 | loss 9.07 |
+INFO:ncr.models:| epoch 49 | 123/417 batches | ms/batch 28.69 | loss 9.03 |
+INFO:ncr.models:| epoch 49 | 164/417 batches | ms/batch 22.36 | loss 8.62 |
+INFO:ncr.models:| epoch 49 | 205/417 batches | ms/batch 26.84 | loss 9.59 |
+INFO:ncr.models:| epoch 49 | 246/417 batches | ms/batch 22.71 | loss 9.01 |
+INFO:ncr.models:| epoch 49 | 287/417 batches | ms/batch 23.06 | loss 8.69 |
+INFO:ncr.models:| epoch 49 | 328/417 batches | ms/batch 22.64 | loss 9.21 |
+INFO:ncr.models:| epoch 49 | 369/417 batches | ms/batch 22.38 | loss 10.19 |
+INFO:ncr.models:| epoch 49 | 410/417 batches | ms/batch 22.39 | loss 9.13 |
+INFO:ncr.models:| epoch 49 | loss 8.9453 | total time: 10.20s |
+INFO:ncr.models:| epoch 49 | ndcg@5 0.422 (0.0131) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 50 | 41/417 batches | ms/batch 28.21 | loss 7.04 |
+INFO:ncr.models:| epoch 50 | 82/417 batches | ms/batch 28.94 | loss 8.43 |
+INFO:ncr.models:| epoch 50 | 123/417 batches | ms/batch 24.58 | loss 10.03 |
+INFO:ncr.models:| epoch 50 | 164/417 batches | ms/batch 23.56 | loss 8.70 |
+INFO:ncr.models:| epoch 50 | 205/417 batches | ms/batch 22.59 | loss 9.30 |
+INFO:ncr.models:| epoch 50 | 246/417 batches | ms/batch 22.49 | loss 10.64 |
+INFO:ncr.models:| epoch 50 | 287/417 batches | ms/batch 22.87 | loss 9.30 |
+INFO:ncr.models:| epoch 50 | 328/417 batches | ms/batch 23.05 | loss 9.03 |
+INFO:ncr.models:| epoch 50 | 369/417 batches | ms/batch 22.37 | loss 7.81 |
+INFO:ncr.models:| epoch 50 | 410/417 batches | ms/batch 23.74 | loss 10.35 |
+INFO:ncr.models:| epoch 50 | loss 9.0513 | total time: 10.24s |
+INFO:ncr.models:| epoch 50 | ndcg@5 0.419 (0.0133) |
+INFO:ncr.models:| epoch 51 | 41/417 batches | ms/batch 25.66 | loss 7.63 |
+INFO:ncr.models:| epoch 51 | 82/417 batches | ms/batch 23.09 | loss 8.89 |
+INFO:ncr.models:| epoch 51 | 123/417 batches | ms/batch 26.70 | loss 9.36 |
+INFO:ncr.models:| epoch 51 | 164/417 batches | ms/batch 25.48 | loss 8.43 |
+INFO:ncr.models:| epoch 51 | 205/417 batches | ms/batch 23.45 | loss 9.20 |
+INFO:ncr.models:| epoch 51 | 246/417 batches | ms/batch 23.62 | loss 9.62 |
+INFO:ncr.models:| epoch 51 | 287/417 batches | ms/batch 22.59 | loss 9.90 |
+INFO:ncr.models:| epoch 51 | 328/417 batches | ms/batch 23.66 | loss 9.63 |
+INFO:ncr.models:| epoch 51 | 369/417 batches | ms/batch 23.94 | loss 9.73 |
+INFO:ncr.models:| epoch 51 | 410/417 batches | ms/batch 22.26 | loss 10.43 |
+INFO:ncr.models:| epoch 51 | loss 9.2702 | total time: 10.09s |
+INFO:ncr.models:| epoch 51 | ndcg@5 0.421 (0.0131) |
+INFO:ncr.models:| epoch 52 | 41/417 batches | ms/batch 27.67 | loss 6.85 |
+INFO:ncr.models:| epoch 52 | 82/417 batches | ms/batch 25.15 | loss 8.72 |
+INFO:ncr.models:| epoch 52 | 123/417 batches | ms/batch 22.52 | loss 9.26 |
+INFO:ncr.models:| epoch 52 | 164/417 batches | ms/batch 25.26 | loss 9.13 |
+INFO:ncr.models:| epoch 52 | 205/417 batches | ms/batch 24.62 | loss 8.92 |
+INFO:ncr.models:| epoch 52 | 246/417 batches | ms/batch 24.89 | loss 8.42 |
+INFO:ncr.models:| epoch 52 | 287/417 batches | ms/batch 22.40 | loss 10.36 |
+INFO:ncr.models:| epoch 52 | 328/417 batches | ms/batch 23.06 | loss 8.78 |
+INFO:ncr.models:| epoch 52 | 369/417 batches | ms/batch 25.84 | loss 9.73 |
+INFO:ncr.models:| epoch 52 | 410/417 batches | ms/batch 23.11 | loss 8.57 |
+INFO:ncr.models:| epoch 52 | loss 8.8295 | total time: 10.31s |
+INFO:ncr.models:| epoch 52 | ndcg@5 0.423 (0.0130) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 53 | 41/417 batches | ms/batch 29.30 | loss 6.61 |
+INFO:ncr.models:| epoch 53 | 82/417 batches | ms/batch 23.53 | loss 9.44 |
+INFO:ncr.models:| epoch 53 | 123/417 batches | ms/batch 23.16 | loss 8.67 |
+INFO:ncr.models:| epoch 53 | 164/417 batches | ms/batch 23.83 | loss 9.53 |
+INFO:ncr.models:| epoch 53 | 205/417 batches | ms/batch 24.39 | loss 8.15 |
+INFO:ncr.models:| epoch 53 | 246/417 batches | ms/batch 25.20 | loss 9.00 |
+INFO:ncr.models:| epoch 53 | 287/417 batches | ms/batch 24.47 | loss 7.62 |
+INFO:ncr.models:| epoch 53 | 328/417 batches | ms/batch 25.94 | loss 9.61 |
+INFO:ncr.models:| epoch 53 | 369/417 batches | ms/batch 25.68 | loss 8.56 |
+INFO:ncr.models:| epoch 53 | 410/417 batches | ms/batch 25.06 | loss 8.52 |
+INFO:ncr.models:| epoch 53 | loss 8.5908 | total time: 10.51s |
+INFO:ncr.models:| epoch 53 | ndcg@5 0.422 (0.0131) |
+INFO:ncr.models:| epoch 54 | 41/417 batches | ms/batch 26.03 | loss 6.75 |
+INFO:ncr.models:| epoch 54 | 82/417 batches | ms/batch 27.19 | loss 9.27 |
+INFO:ncr.models:| epoch 54 | 123/417 batches | ms/batch 28.21 | loss 9.42 |
+INFO:ncr.models:| epoch 54 | 164/417 batches | ms/batch 24.89 | loss 9.47 |
+INFO:ncr.models:| epoch 54 | 205/417 batches | ms/batch 26.70 | loss 9.17 |
+INFO:ncr.models:| epoch 54 | 246/417 batches | ms/batch 25.93 | loss 8.77 |
+INFO:ncr.models:| epoch 54 | 287/417 batches | ms/batch 25.35 | loss 8.95 |
+INFO:ncr.models:| epoch 54 | 328/417 batches | ms/batch 23.81 | loss 7.92 |
+INFO:ncr.models:| epoch 54 | 369/417 batches | ms/batch 26.20 | loss 9.73 |
+INFO:ncr.models:| epoch 54 | 410/417 batches | ms/batch 25.72 | loss 9.93 |
+INFO:ncr.models:| epoch 54 | loss 8.9084 | total time: 10.91s |
+INFO:ncr.models:| epoch 54 | ndcg@5 0.427 (0.0133) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 55 | 41/417 batches | ms/batch 30.24 | loss 6.19 |
+INFO:ncr.models:| epoch 55 | 82/417 batches | ms/batch 23.49 | loss 9.20 |
+INFO:ncr.models:| epoch 55 | 123/417 batches | ms/batch 24.63 | loss 9.43 |
+INFO:ncr.models:| epoch 55 | 164/417 batches | ms/batch 26.88 | loss 9.47 |
+INFO:ncr.models:| epoch 55 | 205/417 batches | ms/batch 24.65 | loss 8.60 |
+INFO:ncr.models:| epoch 55 | 246/417 batches | ms/batch 22.88 | loss 8.73 |
+INFO:ncr.models:| epoch 55 | 287/417 batches | ms/batch 23.39 | loss 8.88 |
+INFO:ncr.models:| epoch 55 | 328/417 batches | ms/batch 24.83 | loss 9.37 |
+INFO:ncr.models:| epoch 55 | 369/417 batches | ms/batch 23.31 | loss 8.45 |
+INFO:ncr.models:| epoch 55 | 410/417 batches | ms/batch 22.80 | loss 8.54 |
+INFO:ncr.models:| epoch 55 | loss 8.6648 | total time: 10.39s |
+INFO:ncr.models:| epoch 55 | ndcg@5 0.422 (0.0133) |
+INFO:ncr.models:| epoch 56 | 41/417 batches | ms/batch 26.95 | loss 6.64 |
+INFO:ncr.models:| epoch 56 | 82/417 batches | ms/batch 24.22 | loss 7.33 |
+INFO:ncr.models:| epoch 56 | 123/417 batches | ms/batch 22.62 | loss 9.95 |
+INFO:ncr.models:| epoch 56 | 164/417 batches | ms/batch 23.54 | loss 9.53 |
+INFO:ncr.models:| epoch 56 | 205/417 batches | ms/batch 25.13 | loss 8.77 |
+INFO:ncr.models:| epoch 56 | 246/417 batches | ms/batch 26.09 | loss 8.53 |
+INFO:ncr.models:| epoch 56 | 287/417 batches | ms/batch 23.86 | loss 8.80 |
+INFO:ncr.models:| epoch 56 | 328/417 batches | ms/batch 23.32 | loss 8.28 |
+INFO:ncr.models:| epoch 56 | 369/417 batches | ms/batch 23.20 | loss 9.33 |
+INFO:ncr.models:| epoch 56 | 410/417 batches | ms/batch 26.32 | loss 8.64 |
+INFO:ncr.models:| epoch 56 | loss 8.5609 | total time: 10.29s |
+INFO:ncr.models:| epoch 56 | ndcg@5 0.400 (0.0132) |
+INFO:ncr.models:| epoch 57 | 41/417 batches | ms/batch 26.23 | loss 6.04 |
+INFO:ncr.models:| epoch 57 | 82/417 batches | ms/batch 25.92 | loss 8.80 |
+INFO:ncr.models:| epoch 57 | 123/417 batches | ms/batch 22.84 | loss 8.39 |
+INFO:ncr.models:| epoch 57 | 164/417 batches | ms/batch 22.28 | loss 7.88 |
+INFO:ncr.models:| epoch 57 | 205/417 batches | ms/batch 23.08 | loss 8.39 |
+INFO:ncr.models:| epoch 57 | 246/417 batches | ms/batch 26.42 | loss 9.81 |
+INFO:ncr.models:| epoch 57 | 287/417 batches | ms/batch 29.17 | loss 8.40 |
+INFO:ncr.models:| epoch 57 | 328/417 batches | ms/batch 25.51 | loss 9.16 |
+INFO:ncr.models:| epoch 57 | 369/417 batches | ms/batch 22.35 | loss 9.14 |
+INFO:ncr.models:| epoch 57 | 410/417 batches | ms/batch 23.89 | loss 9.66 |
+INFO:ncr.models:| epoch 57 | loss 8.5576 | total time: 10.40s |
+INFO:ncr.models:| epoch 57 | ndcg@5 0.428 (0.0131) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 58 | 41/417 batches | ms/batch 25.68 | loss 6.67 |
+INFO:ncr.models:| epoch 58 | 82/417 batches | ms/batch 22.29 | loss 7.71 |
+INFO:ncr.models:| epoch 58 | 123/417 batches | ms/batch 25.36 | loss 7.55 |
+INFO:ncr.models:| epoch 58 | 164/417 batches | ms/batch 24.36 | loss 8.26 |
+INFO:ncr.models:| epoch 58 | 205/417 batches | ms/batch 23.13 | loss 9.24 |
+INFO:ncr.models:| epoch 58 | 246/417 batches | ms/batch 22.52 | loss 8.11 |
+INFO:ncr.models:| epoch 58 | 287/417 batches | ms/batch 22.22 | loss 8.34 |
+INFO:ncr.models:| epoch 58 | 328/417 batches | ms/batch 22.75 | loss 9.05 |
+INFO:ncr.models:| epoch 58 | 369/417 batches | ms/batch 22.43 | loss 9.04 |
+INFO:ncr.models:| epoch 58 | 410/417 batches | ms/batch 23.53 | loss 9.32 |
+INFO:ncr.models:| epoch 58 | loss 8.3149 | total time: 9.86s |
+INFO:ncr.models:| epoch 58 | ndcg@5 0.427 (0.0133) |
+INFO:ncr.models:| epoch 59 | 41/417 batches | ms/batch 26.41 | loss 6.34 |
+INFO:ncr.models:| epoch 59 | 82/417 batches | ms/batch 22.09 | loss 8.30 |
+INFO:ncr.models:| epoch 59 | 123/417 batches | ms/batch 23.09 | loss 8.75 |
+INFO:ncr.models:| epoch 59 | 164/417 batches | ms/batch 21.83 | loss 8.63 |
+INFO:ncr.models:| epoch 59 | 205/417 batches | ms/batch 22.91 | loss 7.51 |
+INFO:ncr.models:| epoch 59 | 246/417 batches | ms/batch 23.08 | loss 7.89 |
+INFO:ncr.models:| epoch 59 | 287/417 batches | ms/batch 22.47 | loss 8.57 |
+INFO:ncr.models:| epoch 59 | 328/417 batches | ms/batch 23.02 | loss 9.02 |
+INFO:ncr.models:| epoch 59 | 369/417 batches | ms/batch 23.75 | loss 8.40 |
+INFO:ncr.models:| epoch 59 | 410/417 batches | ms/batch 22.27 | loss 9.19 |
+INFO:ncr.models:| epoch 59 | loss 8.2308 | total time: 9.73s |
+INFO:ncr.models:| epoch 59 | ndcg@5 0.424 (0.0131) |
+INFO:ncr.models:| epoch 60 | 41/417 batches | ms/batch 28.65 | loss 6.66 |
+INFO:ncr.models:| epoch 60 | 82/417 batches | ms/batch 24.26 | loss 8.21 |
+INFO:ncr.models:| epoch 60 | 123/417 batches | ms/batch 24.64 | loss 8.58 |
+INFO:ncr.models:| epoch 60 | 164/417 batches | ms/batch 24.79 | loss 8.30 |
+INFO:ncr.models:| epoch 60 | 205/417 batches | ms/batch 23.61 | loss 9.50 |
+INFO:ncr.models:| epoch 60 | 246/417 batches | ms/batch 24.67 | loss 8.61 |
+INFO:ncr.models:| epoch 60 | 287/417 batches | ms/batch 24.52 | loss 9.26 |
+INFO:ncr.models:| epoch 60 | 328/417 batches | ms/batch 23.56 | loss 8.55 |
+INFO:ncr.models:| epoch 60 | 369/417 batches | ms/batch 25.72 | loss 8.12 |
+INFO:ncr.models:| epoch 60 | 410/417 batches | ms/batch 23.66 | loss 7.79 |
+INFO:ncr.models:| epoch 60 | loss 8.3661 | total time: 10.42s |
+INFO:ncr.models:| epoch 60 | ndcg@5 0.434 (0.0133) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 61 | 41/417 batches | ms/batch 26.97 | loss 6.06 |
+INFO:ncr.models:| epoch 61 | 82/417 batches | ms/batch 24.95 | loss 8.68 |
+INFO:ncr.models:| epoch 61 | 123/417 batches | ms/batch 27.35 | loss 7.87 |
+INFO:ncr.models:| epoch 61 | 164/417 batches | ms/batch 22.35 | loss 7.18 |
+INFO:ncr.models:| epoch 61 | 205/417 batches | ms/batch 23.21 | loss 8.87 |
+INFO:ncr.models:| epoch 61 | 246/417 batches | ms/batch 22.23 | loss 8.59 |
+INFO:ncr.models:| epoch 61 | 287/417 batches | ms/batch 23.46 | loss 8.45 |
+INFO:ncr.models:| epoch 61 | 328/417 batches | ms/batch 26.50 | loss 8.40 |
+INFO:ncr.models:| epoch 61 | 369/417 batches | ms/batch 22.49 | loss 9.04 |
+INFO:ncr.models:| epoch 61 | 410/417 batches | ms/batch 22.48 | loss 8.59 |
+INFO:ncr.models:| epoch 61 | loss 8.1633 | total time: 10.17s |
+INFO:ncr.models:| epoch 61 | ndcg@5 0.430 (0.0133) |
+INFO:ncr.models:| epoch 62 | 41/417 batches | ms/batch 27.77 | loss 6.21 |
+INFO:ncr.models:| epoch 62 | 82/417 batches | ms/batch 26.37 | loss 7.82 |
+INFO:ncr.models:| epoch 62 | 123/417 batches | ms/batch 23.33 | loss 8.14 |
+INFO:ncr.models:| epoch 62 | 164/417 batches | ms/batch 25.01 | loss 8.08 |
+INFO:ncr.models:| epoch 62 | 205/417 batches | ms/batch 28.67 | loss 8.20 |
+INFO:ncr.models:| epoch 62 | 246/417 batches | ms/batch 24.15 | loss 8.68 |
+INFO:ncr.models:| epoch 62 | 287/417 batches | ms/batch 22.37 | loss 9.45 |
+INFO:ncr.models:| epoch 62 | 328/417 batches | ms/batch 22.51 | loss 7.87 |
+INFO:ncr.models:| epoch 62 | 369/417 batches | ms/batch 24.31 | loss 8.20 |
+INFO:ncr.models:| epoch 62 | 410/417 batches | ms/batch 25.38 | loss 8.69 |
+INFO:ncr.models:| epoch 62 | loss 8.1252 | total time: 10.54s |
+INFO:ncr.models:| epoch 62 | ndcg@5 0.418 (0.0131) |
+INFO:ncr.models:| epoch 63 | 41/417 batches | ms/batch 27.25 | loss 6.11 |
+INFO:ncr.models:| epoch 63 | 82/417 batches | ms/batch 26.67 | loss 8.21 |
+INFO:ncr.models:| epoch 63 | 123/417 batches | ms/batch 22.39 | loss 8.26 |
+INFO:ncr.models:| epoch 63 | 164/417 batches | ms/batch 23.35 | loss 8.21 |
+INFO:ncr.models:| epoch 63 | 205/417 batches | ms/batch 22.51 | loss 9.44 |
+INFO:ncr.models:| epoch 63 | 246/417 batches | ms/batch 29.02 | loss 7.78 |
+INFO:ncr.models:| epoch 63 | 287/417 batches | ms/batch 22.86 | loss 8.59 |
+INFO:ncr.models:| epoch 63 | 328/417 batches | ms/batch 24.55 | loss 9.28 |
+INFO:ncr.models:| epoch 63 | 369/417 batches | ms/batch 27.74 | loss 8.15 |
+INFO:ncr.models:| epoch 63 | 410/417 batches | ms/batch 23.14 | loss 7.05 |
+INFO:ncr.models:| epoch 63 | loss 8.0975 | total time: 10.48s |
+INFO:ncr.models:| epoch 63 | ndcg@5 0.421 (0.0131) |
+INFO:ncr.models:| epoch 64 | 41/417 batches | ms/batch 28.10 | loss 6.51 |
+INFO:ncr.models:| epoch 64 | 82/417 batches | ms/batch 22.52 | loss 8.37 |
+INFO:ncr.models:| epoch 64 | 123/417 batches | ms/batch 22.38 | loss 8.02 |
+INFO:ncr.models:| epoch 64 | 164/417 batches | ms/batch 23.48 | loss 8.14 |
+INFO:ncr.models:| epoch 64 | 205/417 batches | ms/batch 23.82 | loss 8.79 |
+INFO:ncr.models:| epoch 64 | 246/417 batches | ms/batch 25.28 | loss 8.82 |
+INFO:ncr.models:| epoch 64 | 287/417 batches | ms/batch 25.85 | loss 7.75 |
+INFO:ncr.models:| epoch 64 | 328/417 batches | ms/batch 23.21 | loss 8.27 |
+INFO:ncr.models:| epoch 64 | 369/417 batches | ms/batch 22.70 | loss 8.47 |
+INFO:ncr.models:| epoch 64 | 410/417 batches | ms/batch 23.06 | loss 8.89 |
+INFO:ncr.models:| epoch 64 | loss 8.2120 | total time: 10.09s |
+INFO:ncr.models:| epoch 64 | ndcg@5 0.432 (0.0133) |
+INFO:ncr.models:| epoch 65 | 41/417 batches | ms/batch 27.93 | loss 6.79 |
+INFO:ncr.models:| epoch 65 | 82/417 batches | ms/batch 22.11 | loss 8.68 |
+INFO:ncr.models:| epoch 65 | 123/417 batches | ms/batch 28.76 | loss 8.66 |
+INFO:ncr.models:| epoch 65 | 164/417 batches | ms/batch 25.13 | loss 8.00 |
+INFO:ncr.models:| epoch 65 | 205/417 batches | ms/batch 22.27 | loss 7.48 |
+INFO:ncr.models:| epoch 65 | 246/417 batches | ms/batch 26.57 | loss 8.60 |
+INFO:ncr.models:| epoch 65 | 287/417 batches | ms/batch 23.15 | loss 8.00 |
+INFO:ncr.models:| epoch 65 | 328/417 batches | ms/batch 22.94 | loss 7.39 |
+INFO:ncr.models:| epoch 65 | 369/417 batches | ms/batch 22.97 | loss 7.92 |
+INFO:ncr.models:| epoch 65 | 410/417 batches | ms/batch 26.74 | loss 8.01 |
+INFO:ncr.models:| epoch 65 | loss 7.9234 | total time: 10.43s |
+INFO:ncr.models:| epoch 65 | ndcg@5 0.420 (0.0132) |
+INFO:ncr.models:| epoch 66 | 41/417 batches | ms/batch 25.95 | loss 6.05 |
+INFO:ncr.models:| epoch 66 | 82/417 batches | ms/batch 22.98 | loss 6.91 |
+INFO:ncr.models:| epoch 66 | 123/417 batches | ms/batch 25.36 | loss 8.01 |
+INFO:ncr.models:| epoch 66 | 164/417 batches | ms/batch 22.33 | loss 7.32 |
+INFO:ncr.models:| epoch 66 | 205/417 batches | ms/batch 22.88 | loss 8.67 |
+INFO:ncr.models:| epoch 66 | 246/417 batches | ms/batch 23.95 | loss 8.01 |
+INFO:ncr.models:| epoch 66 | 287/417 batches | ms/batch 27.55 | loss 8.54 |
+INFO:ncr.models:| epoch 66 | 328/417 batches | ms/batch 23.63 | loss 8.09 |
+INFO:ncr.models:| epoch 66 | 369/417 batches | ms/batch 25.52 | loss 7.55 |
+INFO:ncr.models:| epoch 66 | 410/417 batches | ms/batch 26.54 | loss 9.09 |
+INFO:ncr.models:| epoch 66 | loss 7.8040 | total time: 10.36s |
+INFO:ncr.models:| epoch 66 | ndcg@5 0.421 (0.0132) |
+INFO:ncr.models:| epoch 67 | 41/417 batches | ms/batch 26.90 | loss 6.01 |
+INFO:ncr.models:| epoch 67 | 82/417 batches | ms/batch 28.74 | loss 7.67 |
+INFO:ncr.models:| epoch 67 | 123/417 batches | ms/batch 22.90 | loss 8.65 |
+INFO:ncr.models:| epoch 67 | 164/417 batches | ms/batch 22.68 | loss 7.47 |
+INFO:ncr.models:| epoch 67 | 205/417 batches | ms/batch 29.15 | loss 7.99 |
+INFO:ncr.models:| epoch 67 | 246/417 batches | ms/batch 27.22 | loss 7.82 |
+INFO:ncr.models:| epoch 67 | 287/417 batches | ms/batch 22.96 | loss 8.00 |
+INFO:ncr.models:| epoch 67 | 328/417 batches | ms/batch 23.33 | loss 8.87 |
+INFO:ncr.models:| epoch 67 | 369/417 batches | ms/batch 23.27 | loss 7.94 |
+INFO:ncr.models:| epoch 67 | 410/417 batches | ms/batch 22.51 | loss 8.09 |
+INFO:ncr.models:| epoch 67 | loss 7.8190 | total time: 10.48s |
+INFO:ncr.models:| epoch 67 | ndcg@5 0.426 (0.0132) |
+INFO:ncr.models:| epoch 68 | 41/417 batches | ms/batch 25.39 | loss 6.21 |
+INFO:ncr.models:| epoch 68 | 82/417 batches | ms/batch 22.23 | loss 8.51 |
+INFO:ncr.models:| epoch 68 | 123/417 batches | ms/batch 22.15 | loss 7.87 |
+INFO:ncr.models:| epoch 68 | 164/417 batches | ms/batch 24.23 | loss 7.25 |
+INFO:ncr.models:| epoch 68 | 205/417 batches | ms/batch 24.81 | loss 8.71 |
+INFO:ncr.models:| epoch 68 | 246/417 batches | ms/batch 23.34 | loss 8.04 |
+INFO:ncr.models:| epoch 68 | 287/417 batches | ms/batch 23.12 | loss 8.03 |
+INFO:ncr.models:| epoch 68 | 328/417 batches | ms/batch 23.40 | loss 8.75 |
+INFO:ncr.models:| epoch 68 | 369/417 batches | ms/batch 24.98 | loss 8.65 |
+INFO:ncr.models:| epoch 68 | 410/417 batches | ms/batch 23.77 | loss 8.17 |
+INFO:ncr.models:| epoch 68 | loss 7.9959 | total time: 9.98s |
+INFO:ncr.models:| epoch 68 | ndcg@5 0.425 (0.0132) |
+INFO:ncr.models:| epoch 69 | 41/417 batches | ms/batch 27.98 | loss 6.38 |
+INFO:ncr.models:| epoch 69 | 82/417 batches | ms/batch 25.72 | loss 7.78 |
+INFO:ncr.models:| epoch 69 | 123/417 batches | ms/batch 22.21 | loss 8.00 |
+INFO:ncr.models:| epoch 69 | 164/417 batches | ms/batch 23.39 | loss 7.91 |
+INFO:ncr.models:| epoch 69 | 205/417 batches | ms/batch 22.59 | loss 8.14 |
+INFO:ncr.models:| epoch 69 | 246/417 batches | ms/batch 26.80 | loss 8.10 |
+INFO:ncr.models:| epoch 69 | 287/417 batches | ms/batch 26.53 | loss 8.37 |
+INFO:ncr.models:| epoch 69 | 328/417 batches | ms/batch 22.91 | loss 8.76 |
+INFO:ncr.models:| epoch 69 | 369/417 batches | ms/batch 26.25 | loss 7.39 |
+INFO:ncr.models:| epoch 69 | 410/417 batches | ms/batch 23.42 | loss 7.76 |
+INFO:ncr.models:| epoch 69 | loss 7.8254 | total time: 10.42s |
+INFO:ncr.models:| epoch 69 | ndcg@5 0.420 (0.0132) |
+INFO:ncr.models:| epoch 70 | 41/417 batches | ms/batch 25.52 | loss 5.96 |
+INFO:ncr.models:| epoch 70 | 82/417 batches | ms/batch 23.84 | loss 8.13 |
+INFO:ncr.models:| epoch 70 | 123/417 batches | ms/batch 27.34 | loss 7.69 |
+INFO:ncr.models:| epoch 70 | 164/417 batches | ms/batch 24.76 | loss 8.03 |
+INFO:ncr.models:| epoch 70 | 205/417 batches | ms/batch 28.87 | loss 8.43 |
+INFO:ncr.models:| epoch 70 | 246/417 batches | ms/batch 26.47 | loss 7.75 |
+INFO:ncr.models:| epoch 70 | 287/417 batches | ms/batch 23.70 | loss 8.36 |
+INFO:ncr.models:| epoch 70 | 328/417 batches | ms/batch 23.50 | loss 8.90 |
+INFO:ncr.models:| epoch 70 | 369/417 batches | ms/batch 23.46 | loss 7.65 |
+INFO:ncr.models:| epoch 70 | 410/417 batches | ms/batch 22.75 | loss 8.82 |
+INFO:ncr.models:| epoch 70 | loss 7.9780 | total time: 10.50s |
+INFO:ncr.models:| epoch 70 | ndcg@5 0.430 (0.0130) |
+INFO:ncr.models:| epoch 71 | 41/417 batches | ms/batch 30.84 | loss 5.51 |
+INFO:ncr.models:| epoch 71 | 82/417 batches | ms/batch 28.95 | loss 7.18 |
+INFO:ncr.models:| epoch 71 | 123/417 batches | ms/batch 22.85 | loss 7.79 |
+INFO:ncr.models:| epoch 71 | 164/417 batches | ms/batch 28.90 | loss 8.40 |
+INFO:ncr.models:| epoch 71 | 205/417 batches | ms/batch 26.16 | loss 8.11 |
+INFO:ncr.models:| epoch 71 | 246/417 batches | ms/batch 23.06 | loss 7.88 |
+INFO:ncr.models:| epoch 71 | 287/417 batches | ms/batch 22.57 | loss 8.77 |
+INFO:ncr.models:| epoch 71 | 328/417 batches | ms/batch 22.76 | loss 8.79 |
+INFO:ncr.models:| epoch 71 | 369/417 batches | ms/batch 22.96 | loss 7.73 |
+INFO:ncr.models:| epoch 71 | 410/417 batches | ms/batch 23.88 | loss 8.95 |
+INFO:ncr.models:| epoch 71 | loss 7.8893 | total time: 10.62s |
+INFO:ncr.models:| epoch 71 | ndcg@5 0.415 (0.0130) |
+INFO:ncr.models:| epoch 72 | 41/417 batches | ms/batch 26.47 | loss 5.44 |
+INFO:ncr.models:| epoch 72 | 82/417 batches | ms/batch 25.79 | loss 7.15 |
+INFO:ncr.models:| epoch 72 | 123/417 batches | ms/batch 24.69 | loss 7.77 |
+INFO:ncr.models:| epoch 72 | 164/417 batches | ms/batch 23.74 | loss 7.25 |
+INFO:ncr.models:| epoch 72 | 205/417 batches | ms/batch 26.87 | loss 7.64 |
+INFO:ncr.models:| epoch 72 | 246/417 batches | ms/batch 25.61 | loss 7.43 |
+INFO:ncr.models:| epoch 72 | 287/417 batches | ms/batch 24.02 | loss 8.31 |
+INFO:ncr.models:| epoch 72 | 328/417 batches | ms/batch 29.03 | loss 8.20 |
+INFO:ncr.models:| epoch 72 | 369/417 batches | ms/batch 27.84 | loss 8.74 |
+INFO:ncr.models:| epoch 72 | 410/417 batches | ms/batch 23.20 | loss 8.33 |
+INFO:ncr.models:| epoch 72 | loss 7.5946 | total time: 10.79s |
+INFO:ncr.models:| epoch 72 | ndcg@5 0.422 (0.0132) |
+INFO:ncr.models:| epoch 73 | 41/417 batches | ms/batch 28.53 | loss 5.57 |
+INFO:ncr.models:| epoch 73 | 82/417 batches | ms/batch 23.16 | loss 6.65 |
+INFO:ncr.models:| epoch 73 | 123/417 batches | ms/batch 26.42 | loss 8.32 |
+INFO:ncr.models:| epoch 73 | 164/417 batches | ms/batch 26.13 | loss 8.10 |
+INFO:ncr.models:| epoch 73 | 205/417 batches | ms/batch 27.00 | loss 7.59 |
+INFO:ncr.models:| epoch 73 | 246/417 batches | ms/batch 23.50 | loss 8.24 |
+INFO:ncr.models:| epoch 73 | 287/417 batches | ms/batch 23.24 | loss 8.02 |
+INFO:ncr.models:| epoch 73 | 328/417 batches | ms/batch 26.36 | loss 8.44 |
+INFO:ncr.models:| epoch 73 | 369/417 batches | ms/batch 22.84 | loss 7.92 |
+INFO:ncr.models:| epoch 73 | 410/417 batches | ms/batch 22.40 | loss 8.28 |
+INFO:ncr.models:| epoch 73 | loss 7.6867 | total time: 10.47s |
+INFO:ncr.models:| epoch 73 | ndcg@5 0.422 (0.0129) |
+INFO:ncr.models:| epoch 74 | 41/417 batches | ms/batch 25.11 | loss 5.49 |
+INFO:ncr.models:| epoch 74 | 82/417 batches | ms/batch 23.74 | loss 8.25 |
+INFO:ncr.models:| epoch 74 | 123/417 batches | ms/batch 27.03 | loss 6.93 |
+INFO:ncr.models:| epoch 74 | 164/417 batches | ms/batch 25.26 | loss 7.30 |
+INFO:ncr.models:| epoch 74 | 205/417 batches | ms/batch 22.16 | loss 7.53 |
+INFO:ncr.models:| epoch 74 | 246/417 batches | ms/batch 22.92 | loss 7.42 |
+INFO:ncr.models:| epoch 74 | 287/417 batches | ms/batch 23.16 | loss 7.42 |
+INFO:ncr.models:| epoch 74 | 328/417 batches | ms/batch 27.84 | loss 7.78 |
+INFO:ncr.models:| epoch 74 | 369/417 batches | ms/batch 22.62 | loss 8.13 |
+INFO:ncr.models:| epoch 74 | 410/417 batches | ms/batch 28.91 | loss 7.48 |
+INFO:ncr.models:| epoch 74 | loss 7.3572 | total time: 10.50s |
+INFO:ncr.models:| epoch 74 | ndcg@5 0.417 (0.0134) |
+INFO:ncr.models:| epoch 75 | 41/417 batches | ms/batch 30.80 | loss 5.35 |
+INFO:ncr.models:| epoch 75 | 82/417 batches | ms/batch 23.21 | loss 7.71 |
+INFO:ncr.models:| epoch 75 | 123/417 batches | ms/batch 23.12 | loss 6.92 |
+INFO:ncr.models:| epoch 75 | 164/417 batches | ms/batch 22.72 | loss 8.22 |
+INFO:ncr.models:| epoch 75 | 205/417 batches | ms/batch 23.33 | loss 7.67 |
+INFO:ncr.models:| epoch 75 | 246/417 batches | ms/batch 22.94 | loss 7.53 |
+INFO:ncr.models:| epoch 75 | 287/417 batches | ms/batch 22.18 | loss 7.65 |
+INFO:ncr.models:| epoch 75 | 328/417 batches | ms/batch 23.26 | loss 7.26 |
+INFO:ncr.models:| epoch 75 | 369/417 batches | ms/batch 22.42 | loss 7.46 |
+INFO:ncr.models:| epoch 75 | 410/417 batches | ms/batch 23.83 | loss 7.13 |
+INFO:ncr.models:| epoch 75 | loss 7.2832 | total time: 9.99s |
+INFO:ncr.models:| epoch 75 | ndcg@5 0.426 (0.0131) |
+INFO:ncr.models:| epoch 76 | 41/417 batches | ms/batch 25.22 | loss 5.03 |
+INFO:ncr.models:| epoch 76 | 82/417 batches | ms/batch 23.64 | loss 7.44 |
+INFO:ncr.models:| epoch 76 | 123/417 batches | ms/batch 22.73 | loss 7.29 |
+INFO:ncr.models:| epoch 76 | 164/417 batches | ms/batch 25.66 | loss 7.44 |
+INFO:ncr.models:| epoch 76 | 205/417 batches | ms/batch 25.20 | loss 6.95 |
+INFO:ncr.models:| epoch 76 | 246/417 batches | ms/batch 24.59 | loss 6.20 |
+INFO:ncr.models:| epoch 76 | 287/417 batches | ms/batch 23.80 | loss 7.44 |
+INFO:ncr.models:| epoch 76 | 328/417 batches | ms/batch 25.44 | loss 7.70 |
+INFO:ncr.models:| epoch 76 | 369/417 batches | ms/batch 22.31 | loss 8.04 |
+INFO:ncr.models:| epoch 76 | 410/417 batches | ms/batch 23.52 | loss 7.96 |
+INFO:ncr.models:| epoch 76 | loss 7.1445 | total time: 10.20s |
+INFO:ncr.models:| epoch 76 | ndcg@5 0.436 (0.0134) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 77 | 41/417 batches | ms/batch 26.34 | loss 5.59 |
+INFO:ncr.models:| epoch 77 | 82/417 batches | ms/batch 24.90 | loss 7.81 |
+INFO:ncr.models:| epoch 77 | 123/417 batches | ms/batch 23.97 | loss 7.59 |
+INFO:ncr.models:| epoch 77 | 164/417 batches | ms/batch 24.55 | loss 6.61 |
+INFO:ncr.models:| epoch 77 | 205/417 batches | ms/batch 23.97 | loss 8.40 |
+INFO:ncr.models:| epoch 77 | 246/417 batches | ms/batch 27.51 | loss 7.65 |
+INFO:ncr.models:| epoch 77 | 287/417 batches | ms/batch 22.65 | loss 7.81 |
+INFO:ncr.models:| epoch 77 | 328/417 batches | ms/batch 23.85 | loss 7.07 |
+INFO:ncr.models:| epoch 77 | 369/417 batches | ms/batch 28.19 | loss 6.53 |
+INFO:ncr.models:| epoch 77 | 410/417 batches | ms/batch 24.25 | loss 7.60 |
+INFO:ncr.models:| epoch 77 | loss 7.2557 | total time: 10.50s |
+INFO:ncr.models:| epoch 77 | ndcg@5 0.436 (0.0131) |
+INFO:ncr.models:| epoch 78 | 41/417 batches | ms/batch 26.12 | loss 5.63 |
+INFO:ncr.models:| epoch 78 | 82/417 batches | ms/batch 24.42 | loss 7.90 |
+INFO:ncr.models:| epoch 78 | 123/417 batches | ms/batch 27.49 | loss 7.82 |
+INFO:ncr.models:| epoch 78 | 164/417 batches | ms/batch 22.90 | loss 7.33 |
+INFO:ncr.models:| epoch 78 | 205/417 batches | ms/batch 23.38 | loss 7.32 |
+INFO:ncr.models:| epoch 78 | 246/417 batches | ms/batch 23.41 | loss 7.62 |
+INFO:ncr.models:| epoch 78 | 287/417 batches | ms/batch 23.99 | loss 7.88 |
+INFO:ncr.models:| epoch 78 | 328/417 batches | ms/batch 27.71 | loss 7.54 |
+INFO:ncr.models:| epoch 78 | 369/417 batches | ms/batch 28.07 | loss 8.06 |
+INFO:ncr.models:| epoch 78 | 410/417 batches | ms/batch 22.46 | loss 7.55 |
+INFO:ncr.models:| epoch 78 | loss 7.4579 | total time: 10.52s |
+INFO:ncr.models:| epoch 78 | ndcg@5 0.415 (0.0130) |
+INFO:ncr.models:| epoch 79 | 41/417 batches | ms/batch 32.57 | loss 5.43 |
+INFO:ncr.models:| epoch 79 | 82/417 batches | ms/batch 23.53 | loss 8.23 |
+INFO:ncr.models:| epoch 79 | 123/417 batches | ms/batch 23.88 | loss 7.04 |
+INFO:ncr.models:| epoch 79 | 164/417 batches | ms/batch 22.79 | loss 7.51 |
+INFO:ncr.models:| epoch 79 | 205/417 batches | ms/batch 22.63 | loss 6.83 |
+INFO:ncr.models:| epoch 79 | 246/417 batches | ms/batch 22.86 | loss 7.97 |
+INFO:ncr.models:| epoch 79 | 287/417 batches | ms/batch 23.19 | loss 7.85 |
+INFO:ncr.models:| epoch 79 | 328/417 batches | ms/batch 23.50 | loss 8.04 |
+INFO:ncr.models:| epoch 79 | 369/417 batches | ms/batch 22.99 | loss 7.80 |
+INFO:ncr.models:| epoch 79 | 410/417 batches | ms/batch 22.44 | loss 7.61 |
+INFO:ncr.models:| epoch 79 | loss 7.4030 | total time: 10.09s |
+INFO:ncr.models:| epoch 79 | ndcg@5 0.417 (0.0134) |
+INFO:ncr.models:| epoch 80 | 41/417 batches | ms/batch 25.41 | loss 5.32 |
+INFO:ncr.models:| epoch 80 | 82/417 batches | ms/batch 22.22 | loss 6.66 |
+INFO:ncr.models:| epoch 80 | 123/417 batches | ms/batch 22.27 | loss 7.56 |
+INFO:ncr.models:| epoch 80 | 164/417 batches | ms/batch 22.36 | loss 7.40 |
+INFO:ncr.models:| epoch 80 | 205/417 batches | ms/batch 22.76 | loss 6.90 |
+INFO:ncr.models:| epoch 80 | 246/417 batches | ms/batch 23.03 | loss 6.95 |
+INFO:ncr.models:| epoch 80 | 287/417 batches | ms/batch 22.20 | loss 7.36 |
+INFO:ncr.models:| epoch 80 | 328/417 batches | ms/batch 24.16 | loss 7.89 |
+INFO:ncr.models:| epoch 80 | 369/417 batches | ms/batch 25.96 | loss 7.04 |
+INFO:ncr.models:| epoch 80 | 410/417 batches | ms/batch 24.03 | loss 7.55 |
+INFO:ncr.models:| epoch 80 | loss 7.0622 | total time: 9.88s |
+INFO:ncr.models:| epoch 80 | ndcg@5 0.420 (0.0130) |
+INFO:ncr.models:| epoch 81 | 41/417 batches | ms/batch 28.31 | loss 5.96 |
+INFO:ncr.models:| epoch 81 | 82/417 batches | ms/batch 22.79 | loss 7.10 |
+INFO:ncr.models:| epoch 81 | 123/417 batches | ms/batch 26.12 | loss 6.80 |
+INFO:ncr.models:| epoch 81 | 164/417 batches | ms/batch 23.32 | loss 6.90 |
+INFO:ncr.models:| epoch 81 | 205/417 batches | ms/batch 25.92 | loss 6.79 |
+INFO:ncr.models:| epoch 81 | 246/417 batches | ms/batch 23.29 | loss 7.25 |
+INFO:ncr.models:| epoch 81 | 287/417 batches | ms/batch 22.45 | loss 7.18 |
+INFO:ncr.models:| epoch 81 | 328/417 batches | ms/batch 25.98 | loss 7.41 |
+INFO:ncr.models:| epoch 81 | 369/417 batches | ms/batch 26.14 | loss 8.11 |
+INFO:ncr.models:| epoch 81 | 410/417 batches | ms/batch 26.64 | loss 7.28 |
+INFO:ncr.models:| epoch 81 | loss 7.0714 | total time: 10.56s |
+INFO:ncr.models:| epoch 81 | ndcg@5 0.428 (0.0131) |
+INFO:ncr.models:| epoch 82 | 41/417 batches | ms/batch 29.13 | loss 6.42 |
+INFO:ncr.models:| epoch 82 | 82/417 batches | ms/batch 22.57 | loss 7.46 |
+INFO:ncr.models:| epoch 82 | 123/417 batches | ms/batch 22.76 | loss 7.33 |
+INFO:ncr.models:| epoch 82 | 164/417 batches | ms/batch 25.26 | loss 7.34 |
+INFO:ncr.models:| epoch 82 | 205/417 batches | ms/batch 25.42 | loss 7.90 |
+INFO:ncr.models:| epoch 82 | 246/417 batches | ms/batch 22.39 | loss 7.27 |
+INFO:ncr.models:| epoch 82 | 287/417 batches | ms/batch 22.46 | loss 6.58 |
+INFO:ncr.models:| epoch 82 | 328/417 batches | ms/batch 24.32 | loss 7.39 |
+INFO:ncr.models:| epoch 82 | 369/417 batches | ms/batch 26.70 | loss 6.87 |
+INFO:ncr.models:| epoch 82 | 410/417 batches | ms/batch 22.98 | loss 7.47 |
+INFO:ncr.models:| epoch 82 | loss 7.1911 | total time: 10.24s |
+INFO:ncr.models:| epoch 82 | ndcg@5 0.436 (0.0134) |
+INFO:ncr.models:| epoch 83 | 41/417 batches | ms/batch 26.87 | loss 6.02 |
+INFO:ncr.models:| epoch 83 | 82/417 batches | ms/batch 29.22 | loss 7.87 |
+INFO:ncr.models:| epoch 83 | 123/417 batches | ms/batch 22.26 | loss 7.06 |
+INFO:ncr.models:| epoch 83 | 164/417 batches | ms/batch 22.36 | loss 7.70 |
+INFO:ncr.models:| epoch 83 | 205/417 batches | ms/batch 27.84 | loss 7.11 |
+INFO:ncr.models:| epoch 83 | 246/417 batches | ms/batch 27.89 | loss 5.78 |
+INFO:ncr.models:| epoch 83 | 287/417 batches | ms/batch 23.24 | loss 7.73 |
+INFO:ncr.models:| epoch 83 | 328/417 batches | ms/batch 27.95 | loss 7.81 |
+INFO:ncr.models:| epoch 83 | 369/417 batches | ms/batch 24.06 | loss 7.81 |
+INFO:ncr.models:| epoch 83 | 410/417 batches | ms/batch 27.38 | loss 7.74 |
+INFO:ncr.models:| epoch 83 | loss 7.2520 | total time: 10.86s |
+INFO:ncr.models:| epoch 83 | ndcg@5 0.421 (0.0130) |
+INFO:ncr.models:| epoch 84 | 41/417 batches | ms/batch 26.44 | loss 5.15 |
+INFO:ncr.models:| epoch 84 | 82/417 batches | ms/batch 24.32 | loss 7.33 |
+INFO:ncr.models:| epoch 84 | 123/417 batches | ms/batch 22.60 | loss 7.00 |
+INFO:ncr.models:| epoch 84 | 164/417 batches | ms/batch 22.89 | loss 8.16 |
+INFO:ncr.models:| epoch 84 | 205/417 batches | ms/batch 23.61 | loss 7.80 |
+INFO:ncr.models:| epoch 84 | 246/417 batches | ms/batch 23.54 | loss 6.50 |
+INFO:ncr.models:| epoch 84 | 287/417 batches | ms/batch 23.38 | loss 7.24 |
+INFO:ncr.models:| epoch 84 | 328/417 batches | ms/batch 22.33 | loss 7.28 |
+INFO:ncr.models:| epoch 84 | 369/417 batches | ms/batch 23.38 | loss 7.33 |
+INFO:ncr.models:| epoch 84 | 410/417 batches | ms/batch 23.05 | loss 7.24 |
+INFO:ncr.models:| epoch 84 | loss 7.1026 | total time: 9.91s |
+INFO:ncr.models:| epoch 84 | ndcg@5 0.429 (0.0131) |
+INFO:ncr.models:| epoch 85 | 41/417 batches | ms/batch 25.71 | loss 5.61 |
+INFO:ncr.models:| epoch 85 | 82/417 batches | ms/batch 25.24 | loss 7.70 |
+INFO:ncr.models:| epoch 85 | 123/417 batches | ms/batch 23.87 | loss 7.11 |
+INFO:ncr.models:| epoch 85 | 164/417 batches | ms/batch 25.65 | loss 6.98 |
+INFO:ncr.models:| epoch 85 | 205/417 batches | ms/batch 26.74 | loss 6.70 |
+INFO:ncr.models:| epoch 85 | 246/417 batches | ms/batch 25.96 | loss 8.04 |
+INFO:ncr.models:| epoch 85 | 287/417 batches | ms/batch 22.53 | loss 7.15 |
+INFO:ncr.models:| epoch 85 | 328/417 batches | ms/batch 26.08 | loss 7.51 |
+INFO:ncr.models:| epoch 85 | 369/417 batches | ms/batch 23.34 | loss 7.22 |
+INFO:ncr.models:| epoch 85 | 410/417 batches | ms/batch 22.64 | loss 6.79 |
+INFO:ncr.models:| epoch 85 | loss 7.0881 | total time: 10.42s |
+INFO:ncr.models:| epoch 85 | ndcg@5 0.433 (0.0133) |
+INFO:ncr.models:| epoch 86 | 41/417 batches | ms/batch 26.71 | loss 5.92 |
+INFO:ncr.models:| epoch 86 | 82/417 batches | ms/batch 23.72 | loss 6.02 |
+INFO:ncr.models:| epoch 86 | 123/417 batches | ms/batch 23.28 | loss 6.64 |
+INFO:ncr.models:| epoch 86 | 164/417 batches | ms/batch 29.16 | loss 7.72 |
+INFO:ncr.models:| epoch 86 | 205/417 batches | ms/batch 29.37 | loss 7.08 |
+INFO:ncr.models:| epoch 86 | 246/417 batches | ms/batch 22.50 | loss 6.95 |
+INFO:ncr.models:| epoch 86 | 287/417 batches | ms/batch 22.62 | loss 7.51 |
+INFO:ncr.models:| epoch 86 | 328/417 batches | ms/batch 22.60 | loss 7.27 |
+INFO:ncr.models:| epoch 86 | 369/417 batches | ms/batch 22.43 | loss 7.17 |
+INFO:ncr.models:| epoch 86 | 410/417 batches | ms/batch 24.71 | loss 7.47 |
+INFO:ncr.models:| epoch 86 | loss 6.9488 | total time: 10.43s |
+INFO:ncr.models:| epoch 86 | ndcg@5 0.430 (0.0134) |
+INFO:ncr.models:| epoch 87 | 41/417 batches | ms/batch 25.75 | loss 4.81 |
+INFO:ncr.models:| epoch 87 | 82/417 batches | ms/batch 22.98 | loss 7.22 |
+INFO:ncr.models:| epoch 87 | 123/417 batches | ms/batch 22.66 | loss 6.81 |
+INFO:ncr.models:| epoch 87 | 164/417 batches | ms/batch 28.13 | loss 7.06 |
+INFO:ncr.models:| epoch 87 | 205/417 batches | ms/batch 28.93 | loss 7.02 |
+INFO:ncr.models:| epoch 87 | 246/417 batches | ms/batch 23.16 | loss 7.39 |
+INFO:ncr.models:| epoch 87 | 287/417 batches | ms/batch 28.02 | loss 7.31 |
+INFO:ncr.models:| epoch 87 | 328/417 batches | ms/batch 23.08 | loss 7.18 |
+INFO:ncr.models:| epoch 87 | 369/417 batches | ms/batch 23.02 | loss 7.53 |
+INFO:ncr.models:| epoch 87 | 410/417 batches | ms/batch 26.98 | loss 6.84 |
+INFO:ncr.models:| epoch 87 | loss 6.8876 | total time: 10.60s |
+INFO:ncr.models:| epoch 87 | ndcg@5 0.437 (0.0130) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 88 | 41/417 batches | ms/batch 26.05 | loss 5.54 |
+INFO:ncr.models:| epoch 88 | 82/417 batches | ms/batch 26.79 | loss 7.49 |
+INFO:ncr.models:| epoch 88 | 123/417 batches | ms/batch 24.17 | loss 6.59 |
+INFO:ncr.models:| epoch 88 | 164/417 batches | ms/batch 23.68 | loss 6.86 |
+INFO:ncr.models:| epoch 88 | 205/417 batches | ms/batch 29.09 | loss 6.50 |
+INFO:ncr.models:| epoch 88 | 246/417 batches | ms/batch 24.09 | loss 6.17 |
+INFO:ncr.models:| epoch 88 | 287/417 batches | ms/batch 24.21 | loss 6.49 |
+INFO:ncr.models:| epoch 88 | 328/417 batches | ms/batch 23.29 | loss 6.98 |
+INFO:ncr.models:| epoch 88 | 369/417 batches | ms/batch 21.88 | loss 7.06 |
+INFO:ncr.models:| epoch 88 | 410/417 batches | ms/batch 22.69 | loss 6.67 |
+INFO:ncr.models:| epoch 88 | loss 6.6016 | total time: 10.35s |
+INFO:ncr.models:| epoch 88 | ndcg@5 0.431 (0.0130) |
+INFO:ncr.models:| epoch 89 | 41/417 batches | ms/batch 28.21 | loss 6.05 |
+INFO:ncr.models:| epoch 89 | 82/417 batches | ms/batch 24.10 | loss 6.26 |
+INFO:ncr.models:| epoch 89 | 123/417 batches | ms/batch 23.22 | loss 7.16 |
+INFO:ncr.models:| epoch 89 | 164/417 batches | ms/batch 24.17 | loss 6.86 |
+INFO:ncr.models:| epoch 89 | 205/417 batches | ms/batch 23.74 | loss 7.38 |
+INFO:ncr.models:| epoch 89 | 246/417 batches | ms/batch 23.32 | loss 7.59 |
+INFO:ncr.models:| epoch 89 | 287/417 batches | ms/batch 22.63 | loss 7.62 |
+INFO:ncr.models:| epoch 89 | 328/417 batches | ms/batch 25.54 | loss 7.30 |
+INFO:ncr.models:| epoch 89 | 369/417 batches | ms/batch 23.13 | loss 7.10 |
+INFO:ncr.models:| epoch 89 | 410/417 batches | ms/batch 26.88 | loss 7.19 |
+INFO:ncr.models:| epoch 89 | loss 7.0255 | total time: 10.28s |
+INFO:ncr.models:| epoch 89 | ndcg@5 0.427 (0.0133) |
+INFO:ncr.models:| epoch 90 | 41/417 batches | ms/batch 25.40 | loss 5.14 |
+INFO:ncr.models:| epoch 90 | 82/417 batches | ms/batch 22.75 | loss 7.43 |
+INFO:ncr.models:| epoch 90 | 123/417 batches | ms/batch 22.75 | loss 6.62 |
+INFO:ncr.models:| epoch 90 | 164/417 batches | ms/batch 22.34 | loss 7.43 |
+INFO:ncr.models:| epoch 90 | 205/417 batches | ms/batch 23.78 | loss 7.57 |
+INFO:ncr.models:| epoch 90 | 246/417 batches | ms/batch 25.07 | loss 7.66 |
+INFO:ncr.models:| epoch 90 | 287/417 batches | ms/batch 22.81 | loss 6.27 |
+INFO:ncr.models:| epoch 90 | 328/417 batches | ms/batch 24.38 | loss 6.59 |
+INFO:ncr.models:| epoch 90 | 369/417 batches | ms/batch 28.33 | loss 7.25 |
+INFO:ncr.models:| epoch 90 | 410/417 batches | ms/batch 29.27 | loss 6.00 |
+INFO:ncr.models:| epoch 90 | loss 6.7725 | total time: 10.41s |
+INFO:ncr.models:| epoch 90 | ndcg@5 0.419 (0.0130) |
+INFO:ncr.models:| epoch 91 | 41/417 batches | ms/batch 31.54 | loss 6.09 |
+INFO:ncr.models:| epoch 91 | 82/417 batches | ms/batch 29.18 | loss 6.56 |
+INFO:ncr.models:| epoch 91 | 123/417 batches | ms/batch 24.42 | loss 6.80 |
+INFO:ncr.models:| epoch 91 | 164/417 batches | ms/batch 23.34 | loss 7.62 |
+INFO:ncr.models:| epoch 91 | 205/417 batches | ms/batch 22.70 | loss 6.84 |
+INFO:ncr.models:| epoch 91 | 246/417 batches | ms/batch 25.37 | loss 6.96 |
+INFO:ncr.models:| epoch 91 | 287/417 batches | ms/batch 23.47 | loss 6.68 |
+INFO:ncr.models:| epoch 91 | 328/417 batches | ms/batch 21.81 | loss 8.14 |
+INFO:ncr.models:| epoch 91 | 369/417 batches | ms/batch 24.30 | loss 7.43 |
+INFO:ncr.models:| epoch 91 | 410/417 batches | ms/batch 23.21 | loss 7.08 |
+INFO:ncr.models:| epoch 91 | loss 7.0494 | total time: 10.46s |
+INFO:ncr.models:| epoch 91 | ndcg@5 0.439 (0.0131) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 92 | 41/417 batches | ms/batch 26.77 | loss 5.67 |
+INFO:ncr.models:| epoch 92 | 82/417 batches | ms/batch 22.52 | loss 6.55 |
+INFO:ncr.models:| epoch 92 | 123/417 batches | ms/batch 22.86 | loss 5.85 |
+INFO:ncr.models:| epoch 92 | 164/417 batches | ms/batch 24.77 | loss 6.54 |
+INFO:ncr.models:| epoch 92 | 205/417 batches | ms/batch 26.74 | loss 6.25 |
+INFO:ncr.models:| epoch 92 | 246/417 batches | ms/batch 25.79 | loss 6.87 |
+INFO:ncr.models:| epoch 92 | 287/417 batches | ms/batch 24.33 | loss 5.88 |
+INFO:ncr.models:| epoch 92 | 328/417 batches | ms/batch 23.35 | loss 7.56 |
+INFO:ncr.models:| epoch 92 | 369/417 batches | ms/batch 24.49 | loss 7.32 |
+INFO:ncr.models:| epoch 92 | 410/417 batches | ms/batch 22.64 | loss 6.75 |
+INFO:ncr.models:| epoch 92 | loss 6.4810 | total time: 10.29s |
+INFO:ncr.models:| epoch 92 | ndcg@5 0.432 (0.0133) |
+INFO:ncr.models:| epoch 93 | 41/417 batches | ms/batch 26.67 | loss 5.42 |
+INFO:ncr.models:| epoch 93 | 82/417 batches | ms/batch 25.84 | loss 6.31 |
+INFO:ncr.models:| epoch 93 | 123/417 batches | ms/batch 26.90 | loss 6.61 |
+INFO:ncr.models:| epoch 93 | 164/417 batches | ms/batch 24.67 | loss 7.35 |
+INFO:ncr.models:| epoch 93 | 205/417 batches | ms/batch 26.17 | loss 7.16 |
+INFO:ncr.models:| epoch 93 | 246/417 batches | ms/batch 25.98 | loss 6.38 |
+INFO:ncr.models:| epoch 93 | 287/417 batches | ms/batch 23.17 | loss 7.44 |
+INFO:ncr.models:| epoch 93 | 328/417 batches | ms/batch 25.58 | loss 6.66 |
+INFO:ncr.models:| epoch 93 | 369/417 batches | ms/batch 23.05 | loss 7.69 |
+INFO:ncr.models:| epoch 93 | 410/417 batches | ms/batch 25.52 | loss 7.45 |
+INFO:ncr.models:| epoch 93 | loss 6.8272 | total time: 10.66s |
+INFO:ncr.models:| epoch 93 | ndcg@5 0.438 (0.0132) |
+INFO:ncr.models:| epoch 94 | 41/417 batches | ms/batch 25.54 | loss 4.55 |
+INFO:ncr.models:| epoch 94 | 82/417 batches | ms/batch 22.38 | loss 6.61 |
+INFO:ncr.models:| epoch 94 | 123/417 batches | ms/batch 23.15 | loss 7.26 |
+INFO:ncr.models:| epoch 94 | 164/417 batches | ms/batch 21.90 | loss 6.81 |
+INFO:ncr.models:| epoch 94 | 205/417 batches | ms/batch 22.48 | loss 6.58 |
+INFO:ncr.models:| epoch 94 | 246/417 batches | ms/batch 27.66 | loss 7.90 |
+INFO:ncr.models:| epoch 94 | 287/417 batches | ms/batch 22.91 | loss 6.90 |
+INFO:ncr.models:| epoch 94 | 328/417 batches | ms/batch 23.37 | loss 6.52 |
+INFO:ncr.models:| epoch 94 | 369/417 batches | ms/batch 22.88 | loss 6.78 |
+INFO:ncr.models:| epoch 94 | 410/417 batches | ms/batch 22.56 | loss 7.31 |
+INFO:ncr.models:| epoch 94 | loss 6.7129 | total time: 9.87s |
+INFO:ncr.models:| epoch 94 | ndcg@5 0.434 (0.0133) |
+INFO:ncr.models:| epoch 95 | 41/417 batches | ms/batch 29.65 | loss 5.34 |
+INFO:ncr.models:| epoch 95 | 82/417 batches | ms/batch 22.20 | loss 6.63 |
+INFO:ncr.models:| epoch 95 | 123/417 batches | ms/batch 23.16 | loss 7.44 |
+INFO:ncr.models:| epoch 95 | 164/417 batches | ms/batch 22.24 | loss 6.30 |
+INFO:ncr.models:| epoch 95 | 205/417 batches | ms/batch 29.28 | loss 6.96 |
+INFO:ncr.models:| epoch 95 | 246/417 batches | ms/batch 29.73 | loss 7.83 |
+INFO:ncr.models:| epoch 95 | 287/417 batches | ms/batch 29.16 | loss 6.13 |
+INFO:ncr.models:| epoch 95 | 328/417 batches | ms/batch 29.56 | loss 7.33 |
+INFO:ncr.models:| epoch 95 | 369/417 batches | ms/batch 23.97 | loss 6.28 |
+INFO:ncr.models:| epoch 95 | 410/417 batches | ms/batch 24.27 | loss 7.26 |
+INFO:ncr.models:| epoch 95 | loss 6.7644 | total time: 11.06s |
+INFO:ncr.models:| epoch 95 | ndcg@5 0.442 (0.0133) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 96 | 41/417 batches | ms/batch 30.02 | loss 4.98 |
+INFO:ncr.models:| epoch 96 | 82/417 batches | ms/batch 23.05 | loss 7.15 |
+INFO:ncr.models:| epoch 96 | 123/417 batches | ms/batch 23.16 | loss 6.30 |
+INFO:ncr.models:| epoch 96 | 164/417 batches | ms/batch 23.05 | loss 6.49 |
+INFO:ncr.models:| epoch 96 | 205/417 batches | ms/batch 22.96 | loss 6.11 |
+INFO:ncr.models:| epoch 96 | 246/417 batches | ms/batch 27.37 | loss 6.02 |
+INFO:ncr.models:| epoch 96 | 287/417 batches | ms/batch 24.01 | loss 7.07 |
+INFO:ncr.models:| epoch 96 | 328/417 batches | ms/batch 24.88 | loss 6.83 |
+INFO:ncr.models:| epoch 96 | 369/417 batches | ms/batch 23.37 | loss 6.92 |
+INFO:ncr.models:| epoch 96 | 410/417 batches | ms/batch 24.21 | loss 6.87 |
+INFO:ncr.models:| epoch 96 | loss 6.4818 | total time: 10.36s |
+INFO:ncr.models:| epoch 96 | ndcg@5 0.452 (0.0133) |
+INFO:ncr.models:Saving model checkpoint to saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint saved!
+INFO:ncr.models:| epoch 97 | 41/417 batches | ms/batch 25.27 | loss 4.90 |
+INFO:ncr.models:| epoch 97 | 82/417 batches | ms/batch 25.02 | loss 6.74 |
+INFO:ncr.models:| epoch 97 | 123/417 batches | ms/batch 22.65 | loss 5.99 |
+INFO:ncr.models:| epoch 97 | 164/417 batches | ms/batch 25.35 | loss 5.97 |
+INFO:ncr.models:| epoch 97 | 205/417 batches | ms/batch 25.32 | loss 6.72 |
+INFO:ncr.models:| epoch 97 | 246/417 batches | ms/batch 23.47 | loss 6.97 |
+INFO:ncr.models:| epoch 97 | 287/417 batches | ms/batch 26.78 | loss 6.69 |
+INFO:ncr.models:| epoch 97 | 328/417 batches | ms/batch 27.38 | loss 6.23 |
+INFO:ncr.models:| epoch 97 | 369/417 batches | ms/batch 26.14 | loss 7.02 |
+INFO:ncr.models:| epoch 97 | 410/417 batches | ms/batch 21.89 | loss 6.96 |
+INFO:ncr.models:| epoch 97 | loss 6.3852 | total time: 10.47s |
+INFO:ncr.models:| epoch 97 | ndcg@5 0.441 (0.0133) |
+INFO:ncr.models:| epoch 98 | 41/417 batches | ms/batch 30.87 | loss 5.59 |
+INFO:ncr.models:| epoch 98 | 82/417 batches | ms/batch 23.36 | loss 6.24 |
+INFO:ncr.models:| epoch 98 | 123/417 batches | ms/batch 25.46 | loss 6.99 |
+INFO:ncr.models:| epoch 98 | 164/417 batches | ms/batch 28.04 | loss 6.44 |
+INFO:ncr.models:| epoch 98 | 205/417 batches | ms/batch 22.61 | loss 7.69 |
+INFO:ncr.models:| epoch 98 | 246/417 batches | ms/batch 23.53 | loss 6.51 |
+INFO:ncr.models:| epoch 98 | 287/417 batches | ms/batch 27.17 | loss 6.16 |
+INFO:ncr.models:| epoch 98 | 328/417 batches | ms/batch 23.43 | loss 5.65 |
+INFO:ncr.models:| epoch 98 | 369/417 batches | ms/batch 22.69 | loss 7.23 |
+INFO:ncr.models:| epoch 98 | 410/417 batches | ms/batch 22.59 | loss 6.62 |
+INFO:ncr.models:| epoch 98 | loss 6.4666 | total time: 10.47s |
+INFO:ncr.models:| epoch 98 | ndcg@5 0.442 (0.0133) |
+INFO:ncr.models:| epoch 99 | 41/417 batches | ms/batch 29.86 | loss 5.02 |
+INFO:ncr.models:| epoch 99 | 82/417 batches | ms/batch 27.13 | loss 6.63 |
+INFO:ncr.models:| epoch 99 | 123/417 batches | ms/batch 23.47 | loss 6.65 |
+INFO:ncr.models:| epoch 99 | 164/417 batches | ms/batch 27.02 | loss 7.38 |
+INFO:ncr.models:| epoch 99 | 205/417 batches | ms/batch 22.48 | loss 7.09 |
+INFO:ncr.models:| epoch 99 | 246/417 batches | ms/batch 23.16 | loss 5.56 |
+INFO:ncr.models:| epoch 99 | 287/417 batches | ms/batch 22.85 | loss 6.82 |
+INFO:ncr.models:| epoch 99 | 328/417 batches | ms/batch 22.87 | loss 7.15 |
+INFO:ncr.models:| epoch 99 | 369/417 batches | ms/batch 29.03 | loss 6.44 |
+INFO:ncr.models:| epoch 99 | 410/417 batches | ms/batch 26.16 | loss 6.36 |
+INFO:ncr.models:| epoch 99 | loss 6.5075 | total time: 10.67s |
+INFO:ncr.models:| epoch 99 | ndcg@5 0.430 (0.0132) |
+INFO:ncr.models:| epoch 100 | 41/417 batches | ms/batch 25.58 | loss 4.26 |
+INFO:ncr.models:| epoch 100 | 82/417 batches | ms/batch 22.53 | loss 6.97 |
+INFO:ncr.models:| epoch 100 | 123/417 batches | ms/batch 24.37 | loss 7.09 |
+INFO:ncr.models:| epoch 100 | 164/417 batches | ms/batch 23.54 | loss 7.06 |
+INFO:ncr.models:| epoch 100 | 205/417 batches | ms/batch 22.98 | loss 5.93 |
+INFO:ncr.models:| epoch 100 | 246/417 batches | ms/batch 24.21 | loss 7.10 |
+INFO:ncr.models:| epoch 100 | 287/417 batches | ms/batch 22.50 | loss 5.71 |
+INFO:ncr.models:| epoch 100 | 328/417 batches | ms/batch 22.99 | loss 7.28 |
+INFO:ncr.models:| epoch 100 | 369/417 batches | ms/batch 24.17 | loss 6.45 |
+INFO:ncr.models:| epoch 100 | 410/417 batches | ms/batch 23.15 | loss 6.33 |
+INFO:ncr.models:| epoch 100 | loss 6.4259 | total time: 9.91s |
+INFO:ncr.models:| epoch 100 | ndcg@5 0.435 (0.0133) |
+INFO:ncr.models:Loading model checkpoint from saved-models/best_movielens.json...
+INFO:ncr.models:Model checkpoint loaded!
+INFO:ncr.models:ndcg@5: 0.374 (0.0130)
+INFO:ncr.models:ndcg@10: 0.426 (0.0119)
+INFO:ncr.models:hit@5: 0.528 (0.0163)
+INFO:ncr.models:hit@10: 0.687 (0.0152)

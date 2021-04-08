@@ -29,7 +29,8 @@ The repository is organized with the following folders:
 3. ncr: it contains the NCR framework (explained below);
 4. results: it contains the results obtained for the NCR model with the execution of the commands reported in "commands". These results are composed of the metrics ndcg@5, ndcg@10, hr@5, hr@10 computed on the test set of the three datasets reported in the paper (MovieLens 100k, Amazon Movies and TV, Amazon Electronics);
 5. saved-models: it contains the pytorch checkpoints of the best models (best ndcg@5 on validation) obtained during training. These are the so-called pre-trained models. For the MovieLens 100k dataset it has been possible to directly upload the model on GitHub. Since for the other two datasets the file is too big, it hes been provided a Google Drive link to the best models;
-6. tutorials: it contains an initial tutorial of NCR. The tutorial firstly presents a brief but detailed summary of the paper Neural Collaborative Reasoning, then it explains how to run a simple experiment on the MovieLens 100k dataset using the code provided in this repository.
+6. training-log: it contains one example of training log. It is the log of the training of NCR on the MovieLens 100k dataset using the first command in the /commands/commands.txt file;
+7. tutorials: it contains an initial tutorial of NCR. The tutorial firstly presents a brief but detailed summary of the paper Neural Collaborative Reasoning, then it explains how to run a simple experiment on the MovieLens 100k dataset using the code provided in this repository.
 
 ## NCR framework
 The NCR framework is composed of the modules explained below. This is the structure used in [rectorch](https://github.com/makgyver/rectorch), a state-of-the-art recommender systems framework. You will find this model in the rectorch framework very soon.
