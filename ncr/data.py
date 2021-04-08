@@ -1,5 +1,6 @@
 import pandas as pd
 from scipy import sparse
+import copy
 
 __all__ = ['Dataset']
 
@@ -178,9 +179,9 @@ class Dataset(object):
                     feedback_dict[uid] = []
 
                 # list containing the history for current interaction
-                tmp_his = history_dict[uid] if max_hist_length == 0 else history_dict[uid][-max_hist_length:]
+                tmp_his = copy.deepcopy(history_dict[uid]) if max_hist_length == 0 else history_dict[uid][-max_hist_length:]
                 # list containing the feedbacks for the history of current interaction
-                fb_his = feedback_dict[uid] if max_hist_length == 0 else feedback_dict[uid][-max_hist_length:]
+                fb_his = copy.deepcopy(feedback_dict[uid]) if max_hist_length == 0 else feedback_dict[uid][-max_hist_length:]
 
                 history.append(tmp_his)
                 fb.append(fb_his)
