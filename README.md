@@ -29,7 +29,8 @@ The repository is organized with the following folders:
 3. ncr: it contains the NCR framework (explained below);
 4. results: it contains the results obtained for the NCR model with the execution of the commands reported in "commands". These results are composed of the metrics ndcg@5, ndcg@10, hr@5, hr@10 computed on the test set of the three datasets reported in the paper (MovieLens 100k, Amazon Movies and TV, Amazon Electronics);
 5. saved-models: it contains the pytorch checkpoints of the best models (best ndcg@5 on validation) obtained during training. These are the so-called pre-trained models. For the MovieLens 100k dataset it has been possible to directly upload the model on GitHub. Since for the other two datasets the file is too big, it hes been provided a Google Drive link to the best models;
-6. tutorials: it contains an initial tutorial of NCR. The tutorial firstly presents a brief but detailed summary of the paper Neural Collaborative Reasoning, then it explains how to run a simple experiment on the MovieLens 100k dataset using the code provided in this repository.
+6. training-log: it contains one example of training log. It is the log of the training of NCR on the MovieLens 100k dataset using the first command in the /commands/commands.txt file;
+7. tutorials: it contains an initial tutorial of NCR. The tutorial firstly presents a brief but detailed summary of the paper Neural Collaborative Reasoning, then it explains how to run a simple experiment on the MovieLens 100k dataset using the code provided in this repository.
 
 ## NCR framework
 The NCR framework is composed of the modules explained below. This is the structure used in [rectorch](https://github.com/makgyver/rectorch), a state-of-the-art recommender systems framework. You will find this model in the rectorch framework very soon.
@@ -48,7 +49,7 @@ These commands contains only few parameters since the others have a default valu
 2. --order: Flag indicating whether the ratings have to be ordered by timestamp on not. Default=True;
 3. --leave_n: Number of positive interactions that are hold out from each user for validation and test sets. Default=1;
 4. --keep_n: Minimum number of positive interactions that are kept in training set for each user. Default=5;
-5. --max-history-length: Maximum length of history for each interaction (i.e. maximum number of items at the left of the implication in the logical expressions. Default=5;
+5. --max_history_length: Maximum length of history for each interaction (i.e. maximum number of items at the left of the implication in the logical expressions. Default=5;
 6. --n_neg_train: Number of negative items randomly sampled for each training interaction. The items are sampled from the set of items that the user has never seen. Default=1;
 7. --n_neg_val_test: Number of negative items randomly sampled for each validation/test interaction. The items are sampled from the set of items that the user has never seen. Default=100;
 8. --training_batch_size: Size of training set batches. Default=128;
@@ -67,4 +68,5 @@ These commands contains only few parameters since the others have a default valu
 21. --save_load_path: Path where the model has to be saved during training. The model is saved every time the validation metric increases. This path is also used for loading the best model before the test evaluation. Default="saved-models/best_model.json";
 22. --n_times: Number of times the test evaluation is performed (metrics are averaged across these n_times evaluations). This is required since the negative items are randomly sampled. Default=10;
 23. --dataset: Dataset on which the experiment has to be performed ('movielens_100k', 'amazon_movies_tv', 'amazon_electronics'). Default="movielens_100k";
-24. --test_only: Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path. Default=False.
+24. --test_only: Flag indicating whether it has to be computed only the test evaluation or not. If True, there should be a model checkpoint to load in the specified save path. Default=False;
+25. --premise_threshold: Threshold for filtering logical expressions based on the number of premises (number of propositional variables at the left side of the implication). All the logical expressions with a number of premises equal to or lower than premise_threshold are removed from the dataset before the training of the model.

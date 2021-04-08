@@ -76,7 +76,7 @@ class DataSampler(Sampler):
         # for each epoch, each positive interaction has a random sampled negative interaction for the pair-wise learning
         # instead, in validation, each positive interaction has 100 random sampled negative interactions for the
         # computation of the metrics
-        length = self.data.groupby("history_length") # histories could be of different lengths, so we need to group
+        length = self.data.groupby("history_length")  # histories could be of different lengths, so we need to group
         # histories of the same length in the same batch
 
         for i, (_, l) in enumerate(length):

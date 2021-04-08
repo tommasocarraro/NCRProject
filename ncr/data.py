@@ -51,7 +51,7 @@ class Dataset(object):
             values.extend([1] * len(items))
         return sparse.csr_matrix((values, (rows, cols)), (self.n_users, self.n_items))
 
-    def process_data(self, threshold=4, order=True, leave_n=1, keep_n=5, max_history_length=5):
+    def process_data(self, threshold=4, order=True, leave_n=1, keep_n=5, max_history_length=5, premise_threshold=0):
         """
         It processes the dataset given the preprocessing parameters. In particular, it filters the user-item
         interactions using the threshold and orders them by timestamp field (if order is set to True). Ratings equal
@@ -65,6 +65,7 @@ class Dataset(object):
         :param leave_n: see leave_out_out_by_time()
         :param keep_n: see leave_out_out_by_time()
         :param max_history_length: see generate_histories()
+        :param premise_threshold: see generate_histories()
         """
         # filter ratings by threshold
         self.proc_dataset = self.dataset.copy()
@@ -75,7 +76,7 @@ class Dataset(object):
             self.proc_dataset = self.proc_dataset.sort_values(by=['timestamp', 'userID', 'itemID']).reset_index(drop=True)
 
         self.leave_out_out_by_time(leave_n, keep_n)
-        self.generate_histories(max_hist_length=max_history_length)
+        self.generate_histories(max_hist_length=max_history_length, premise_threshold=premise_threshold)
 
 
     def leave_out_out_by_time(self, leave_n=1, keep_n=5):
@@ -141,7 +142,7 @@ class Dataset(object):
         self.train_set = pd.concat([train_set, processed_data])
         self.validation_set, self.test_set = validation_set.reset_index(drop=True), test_set.reset_index(drop=True)
 
-    def generate_histories(self, max_hist_length=5):
+    def generate_histories(self, max_hist_length=5, premise_threshold=0):
         """
         Generate history interaction sequence (items at the left side of implication) for each interaction in train,
         validation, and test sets, and appends it to the dataframe.
@@ -152,7 +153,15 @@ class Dataset(object):
             In particular, we force each batch to have only samples with the same history length.
         :param max_hist_length: the max history length to keep (max number of items at the left side of the
         implication), ==0 value means keeps all.
+        :param premise_threshold: it specifies a threshold for filtering logical expressions based on
+        the number of premises. Specifically, all the logical expressions with a number of premises equal to or lower
+        than premise_threshold will be removed from the dataset. The value should be between 0 (no filter) and
+        max_hist_length - 1 (maximum applicable filter). In fact, if premise_threshold is higher than
+        max_hist_length - 1, than all the logical expressions will be removed from the dataset.
+        For example, if we have logical expressions: a -> b, a ∧ b -> c and a ∧ b ∧ c -> d, and the parameter
+        premise_threshold is set to 2, the first two expressions will be removed from the dataset.
         """
+        # TODO insert an assert to check the value of the parameter premise_threshold (read doc)
         history_dict = {} # it contains for each user the list of all the items he has seen
         feedback_dict = {} # it contains for each user the list of feedbacks he gave to the items he has seen
         for df in [self.train_set, self.validation_set, self.test_set]:
@@ -183,6 +192,15 @@ class Dataset(object):
             df['history'] = history
             df['history_feedback'] = fb
             df['history_length'] = hist_len
+
+        # filtering logical expressions based on number of premises
+        # we remove from the dataset all the logical expressions with a number of premises equal to or lower than
+        # premise_threshold
+        if premise_threshold != 0:
+            self.train_set = self.train_set[self.train_set.history_length > premise_threshold]
+            self.validation_set = self.validation_set[self.validation_set.history_length > premise_threshold]
+            self.test_set = self.test_set[self.test_set.history_length > premise_threshold]
+
         self.clean_data()
 
 
