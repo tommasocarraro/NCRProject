@@ -23,6 +23,12 @@ INFO:ncr.models:ndcg@10: 0.420 (0.0118)
 INFO:ncr.models:hit@5: 0.520 (0.0164)
 INFO:ncr.models:hit@10: 0.688 (0.0152)
 
+MovieLens 100k with double negations removed:
+INFO:ncr.models:ndcg@5: 0.368 (0.0129)
+INFO:ncr.models:ndcg@10: 0.424 (0.0118)
+INFO:ncr.models:hit@5: 0.524 (0.0163)
+INFO:ncr.models:hit@10: 0.697 (0.0150)
+
 Amazon Movies and TV:
 INFO:ncr.models:ndcg@5: 0.415 (0.0017)
 INFO:ncr.models:ndcg@10: 0.457 (0.0015)
