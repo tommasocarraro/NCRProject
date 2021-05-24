@@ -32,7 +32,7 @@ class Dataset(object):
         self.n_users = self.dataset['userID'].nunique()
         self.n_items = self.dataset['itemID'].nunique()
 
-        self.user_item_matrix = self.compute_sparse_matrix()
+        #self.user_item_matrix = self.compute_sparse_matrix()
 
 
     def compute_sparse_matrix(self):
@@ -104,7 +104,7 @@ class Dataset(object):
                     if found >= keep_n:
                         break
             if found_idx > 0:
-                train_set.append(group.loc[:found_idx + 1])
+                train_set.append(group.loc[:found_idx])
         train_set = pd.concat(train_set)
         # drop the training data info
         processed_data = processed_data.drop(train_set.index)
