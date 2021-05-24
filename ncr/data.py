@@ -76,11 +76,11 @@ class Dataset(object):
         if order:
             self.proc_dataset = self.proc_dataset.sort_values(by=['timestamp', 'userID', 'itemID']).reset_index(drop=True)
 
-        self.leave_out_out_by_time(leave_n, keep_n)
+        self.leave_one_out_by_time(leave_n, keep_n)
         self.generate_histories(max_hist_length=max_history_length, premise_threshold=premise_threshold)
 
 
-    def leave_out_out_by_time(self, leave_n=1, keep_n=5):
+    def leave_one_out_by_time(self, leave_n=1, keep_n=5):
         """
         It generates train, validation, and test folds of the dataset using the procedure reported in the paper.
         The procedure starts with the dataset ordered by timestamp.
