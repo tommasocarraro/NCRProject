@@ -32,7 +32,7 @@ class Dataset(object):
         self.n_users = self.dataset['userID'].nunique()
         self.n_items = self.dataset['itemID'].nunique()
 
-        #self.user_item_matrix = self.compute_sparse_matrix()
+        self.user_item_matrix = self.compute_sparse_matrix()
 
 
     def compute_sparse_matrix(self):
